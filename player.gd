@@ -36,6 +36,8 @@ func _physics_process(_delta: float) -> void:
 		state_machine.travel("Walk")
 	else:
 		state_machine.travel("Idle")
+		
+		
 
 	move_and_slide()
 

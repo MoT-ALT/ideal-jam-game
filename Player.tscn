@@ -1663,14 +1663,13 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 radius = 18.0
 height = 68.0
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=2036114885]
+[node name="Player" type="CharacterBody2D" unique_id=2036114885]
 script = ExtResource("1_hp6x6")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1286402708]
 libraries/ = SubResource("AnimationLibrary_yt0h1")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=406417191]
-y_sort_enabled = true
 position = Vector2(2, -39)
 scale = Vector2(2, 2)
 texture = ExtResource("1_cxr5p")
@@ -1686,5 +1685,5 @@ parameters/Shoot/blend_position = Vector2(0.033761144, 0.8441067)
 parameters/Walk/blend_position = Vector2(-0.15990573, 0.7970891)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1979272579]
-position = Vector2(0, -32)
+position = Vector2(3, -33)
 shape = SubResource("CapsuleShape2D_8ftap")
