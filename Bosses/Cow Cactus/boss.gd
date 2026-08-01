@@ -3,11 +3,11 @@ extends Node2D
 const HITS_TO_KILL := 4
 const DRAW_DELAY_MIN := 0.8
 const DRAW_DELAY_MAX := 1.6
-const ROUND_TIME := 3.0
+const ROUND_TIME := 2.0
 const HIT_PAUSE := 1.0
 const BETWEEN_ROUNDS := 2.0
 const BASE_ZONE := 200.0
-const ZONE_DECAY := 35.0
+const ZONE_DECAY := 40.0
 const MIN_ZONE := 70.0
 const SWEEP_SPEED_BASE := 1.0
 const SWEEP_SPEED_STEP := 0.25
@@ -58,6 +58,13 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "intro":
 		animated_sprite_2d.play("Idle")
 		start_quickdraw()
+
+
+func _play_intro_dialog() -> void:
+	var sprouty := get_node("/root/SproutyDialogs")
+	var dialog: Resource = load("res://dialogs/cactus_intro.tres")
+	var dialog_player: Node = sprouty.start_dialog(dialog, "cactus_intro")
+	await dialog_player.dialog_ended
 
 
 func start_quickdraw() -> void:
@@ -134,7 +141,7 @@ func player_draw() -> void:
 func boss_fires() -> void:
 	player.duel_active = false
 	animated_sprite_2d.play("Shoot")
-	await get_tree().create_timer(0.4).timeout
+	await get_tree().create_timer(1.2).timeout
 	player.play_death()
 	await get_tree().create_timer(0.9).timeout
 	draw_label.text = "YOU LOSE!"

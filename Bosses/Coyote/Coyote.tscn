@@ -10,6 +10,8 @@
 [ext_resource type="Script" uid="uid://cay8eb2yfhrxv" path="res://Bosses/Coyote/orb.gd" id="8_orb"]
 [ext_resource type="Texture2D" uid="uid://30bl24tqesor" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Super Pixel Effects Mini Pack 1/spritesheet/Crystal.png" id="9_030na"]
 [ext_resource type="Texture2D" uid="uid://dmen4p42iu14s" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Super Pixel Effects Mini Pack 1/spritesheet/Cracks.png" id="10_pt1r0"]
+[ext_resource type="Script" uid="uid://1mxdpoyob13n" path="res://addons/sprouty_dialogs/nodes/dialog_player.gd" id="11_26mkj"]
+[ext_resource type="Resource" uid="uid://s44wrkn4bi16" path="res://dialogs/coyote_intro.tres" id="12_6a2u7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6he4g"]
 atlas = ExtResource("2_soxeu")
@@ -373,6 +375,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(10, 53)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Idle"]
+}
 
 [sub_resource type="Animation" id="Animation_e2fyd"]
 resource_name = "intro"
@@ -388,6 +402,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(10, 123), Vector2(626, 123)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.96),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Idle"]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8rwbu"]
@@ -462,6 +488,17 @@ size = Vector2(1143.46, 22)
 y_sort_enabled = true
 script = ExtResource("1_w8nrj")
 
+[node name="DialogPlayer" type="Node" parent="." unique_id=114557826]
+script = ExtResource("11_26mkj")
+_dialog_data_uid = 1325067129582911915
+_dialog_file_name = "coyote_intro"
+_dialog_data = ExtResource("12_6a2u7")
+_start_id = "1"
+_play_on_ready = false
+_destroy_on_end = false
+_print_debug = true
+metadata/_custom_type_script = "uid://1mxdpoyob13n"
+
 [node name="Player" parent="." unique_id=2036114885 instance=ExtResource("1_bjbqn")]
 position = Vector2(565, 545)
 collision_layer = 7
@@ -474,7 +511,7 @@ script = ExtResource("2_3427x")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Boss" unique_id=744075655]
 sprite_frames = SubResource("SpriteFrames_8ftap")
-animation = &"Hit"
+animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss" unique_id=1109616699]
 position = Vector2(-10, -1)

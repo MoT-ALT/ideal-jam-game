@@ -601,18 +601,19 @@ theme_override_font_sizes/font_size = 72
 horizontal_alignment = 1
 
 [node name="BarBackground" type="ColorRect" parent="UI/Control" unique_id=1827013076]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -300.0
-offset_top = -120.0
-offset_right = 300.0
-offset_bottom = -90.0
+offset_left = -302.0
+offset_top = -121.0
+offset_right = 298.0
+offset_bottom = -91.0
 grow_horizontal = 2
 grow_vertical = 0
-color = Color(0, 0, 0, 0.6)
+color = Color(0.15294118, 0.15294118, 0.15294118, 0.50980395)
 
 [node name="BarTarget" type="ColorRect" parent="UI/Control" unique_id=362467242]
 layout_mode = 0

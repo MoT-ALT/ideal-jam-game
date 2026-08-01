@@ -1,0 +1,112 @@
+[gd_resource type="Resource" script_class="SproutyDialogsDialogueData" format=3 uid="uid://xuiwciyitjxk"]
+
+[ext_resource type="Script" uid="uid://cbjdca3iwlx36" path="res://addons/sprouty_dialogs/resources/dialogue_data.gd" id="1_cm3q2"]
+
+[resource]
+script = ExtResource("1_cm3q2")
+graph_data = {
+"1": {
+"dialogue_node_1": {
+"char_expand": true,
+"character": "coyote",
+"dialog_key": "1_DIALOG_1",
+"node_index": 1,
+"node_type": "dialogue_node",
+"offset": Vector2(680, 100),
+"portrait": "",
+"size": Vector2(250, 439),
+"to_dialog": "",
+"to_node": ["dialogue_node_2"]
+},
+"dialogue_node_2": {
+"char_expand": true,
+"character": "player",
+"dialog_key": "1_DIALOG_2",
+"node_index": 2,
+"node_type": "dialogue_node",
+"offset": Vector2(1060, 480),
+"portrait": "",
+"size": Vector2(250, 439),
+"to_dialog": "",
+"to_node": ["dialogue_node_3"]
+},
+"dialogue_node_3": {
+"char_expand": true,
+"character": "coyote",
+"dialog_key": "1_DIALOG_3",
+"node_index": 3,
+"node_type": "dialogue_node",
+"offset": Vector2(1640, 760),
+"portrait": "",
+"size": Vector2(250, 439),
+"to_dialog": "",
+"to_node": ["dialogue_node_4"]
+},
+"dialogue_node_4": {
+"char_expand": true,
+"character": "player",
+"dialog_key": "1_DIALOG_4",
+"node_index": 4,
+"node_type": "dialogue_node",
+"offset": Vector2(2006, 1145),
+"portrait": "",
+"size": Vector2(250, 439),
+"to_dialog": "",
+"to_node": ["dialogue_node_5"]
+},
+"dialogue_node_5": {
+"char_expand": true,
+"character": "coyote",
+"dialog_key": "1_DIALOG_5",
+"node_index": 5,
+"node_type": "dialogue_node",
+"offset": Vector2(2382, 1536),
+"portrait": "",
+"size": Vector2(250, 439),
+"to_dialog": "",
+"to_node": ["END"]
+},
+"start_node_1": {
+"node_index": 1,
+"node_type": "start_node",
+"offset": Vector2(360, 180),
+"size": Vector2(191, 46),
+"start_id": "1",
+"to_dialog": "",
+"to_node": ["dialogue_node_1"]
+}
+}
+}
+dialogs = {
+"1_DIALOG_1": {
+"": "",
+"default": "No... no, this ain't — I've outrun sheriffs before, outrun the law itself...",
+"en": ""
+},
+"1_DIALOG_2": {
+"": "",
+"default": "You didn't outrun nothin'. You just hadn't met the right one yet.",
+"en": ""
+},
+"1_DIALOG_3": {
+"": "",
+"default": "The desert remembers me, lawdog. Long after your bones are dust, they'll still be tellin' tales of the coyote who danced with death...",
+"en": ""
+},
+"1_DIALOG_4": {
+"": "",
+"default": "Maybe. But it'll be a story that ends right here.",
+"en": ""
+},
+"1_DIALOG_5": {
+"": "",
+"default": "Heh... heh heh heh... this ain't over, tin star... it's never over...",
+"en": ""
+}
+}
+characters = {
+"1": {
+"coyote": 8730363075475109103,
+"player": 1825937622487938634
+}
+}
