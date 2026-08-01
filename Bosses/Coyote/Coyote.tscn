@@ -7,7 +7,13 @@
 [ext_resource type="Texture2D" uid="uid://cbw26k3dhvp43" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/Mobs/Coyote/Coyote Side Sheet.png" id="3_3427x"]
 [ext_resource type="Texture2D" uid="uid://dsro7t2q28hvm" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/Atlas.png" id="5_6kfnb"]
 [ext_resource type="Script" uid="uid://bc6snu1r16e13" path="res://Bosses/Coyote/platforms.gd" id="5_e2fyd"]
-[ext_resource type="Texture2D" uid="uid://cu5glesidtteb" path="res://icon.svg" id="7_8rwbu"]
+[ext_resource type="Script" uid="uid://cay8eb2yfhrxv" path="res://Bosses/Coyote/orb.gd" id="8_orb"]
+[ext_resource type="Texture2D" uid="uid://30bl24tqesor" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Super Pixel Effects Mini Pack 1/spritesheet/Crystal.png" id="9_030na"]
+[ext_resource type="Texture2D" uid="uid://dmen4p42iu14s" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Super Pixel Effects Mini Pack 1/spritesheet/Cracks.png" id="10_pt1r0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6he4g"]
+atlas = ExtResource("2_soxeu")
+region = Rect2(0, 210, 70, 70)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6kfnb"]
 atlas = ExtResource("2_soxeu")
@@ -191,6 +197,14 @@ region = Rect2(910, 70, 70, 70)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8ftap"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6he4g")
+}],
+"loop": 1,
+"name": &"Hit",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_6kfnb")
@@ -388,12 +402,70 @@ size = Vector2(124, 38)
 [sub_resource type="CircleShape2D" id="CircleShape2D_7fklg"]
 radius = 33.13608
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_yq7v4"]
+atlas = ExtResource("9_030na")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_51kqo"]
+atlas = ExtResource("9_030na")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1d56i"]
+atlas = ExtResource("9_030na")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3uavv"]
+atlas = ExtResource("9_030na")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aaor5"]
+atlas = ExtResource("9_030na")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05t1m"]
+atlas = ExtResource("9_030na")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7fklg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yq7v4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_51kqo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1d56i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3uavv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aaor5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05t1m")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_030na"]
+size = Vector2(370.24478, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7fklg"]
+size = Vector2(1143.46, 22)
+
 [node name="Coyote" type="Node2D" unique_id=2096895844]
 y_sort_enabled = true
 script = ExtResource("1_w8nrj")
 
 [node name="Player" parent="." unique_id=2036114885 instance=ExtResource("1_bjbqn")]
 position = Vector2(565, 545)
+collision_layer = 7
+collision_mask = 7
 
 [node name="Boss" type="CharacterBody2D" parent="." unique_id=517527894]
 position = Vector2(10, 53)
@@ -402,7 +474,7 @@ script = ExtResource("2_3427x")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Boss" unique_id=744075655]
 sprite_frames = SubResource("SpriteFrames_8ftap")
-animation = &"Walk"
+animation = &"Hit"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss" unique_id=1109616699]
 position = Vector2(-10, -1)
@@ -412,110 +484,151 @@ disabled = true
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Boss" unique_id=152821329]
 libraries/ = SubResource("AnimationLibrary_8rwbu")
 
-[node name="platforms" type="Node2D" parent="." unique_id=311415602]
+[node name="Blocks" type="Node2D" parent="." unique_id=311415602]
 position = Vector2(-9, 215)
 script = ExtResource("5_e2fyd")
 
-[node name="platform0" type="StaticBody2D" parent="platforms" unique_id=717014859]
+[node name="Block0" type="StaticBody2D" parent="Blocks" unique_id=717014859]
 position = Vector2(-400, 0)
 
-[node name="platform1" type="Sprite2D" parent="platforms/platform0" unique_id=708426809]
+[node name="platform1" type="Sprite2D" parent="Blocks/Block0" unique_id=708426809]
 position = Vector2(0, -14)
 scale = Vector2(2, 2)
 texture = ExtResource("5_6kfnb")
 region_enabled = true
 region_rect = Rect2(546.1643, 360.1557, 75.99219, 24.48413)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="platforms/platform0" unique_id=1989320481]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block0" unique_id=1989320481]
 position = Vector2(-1, -19)
 shape = SubResource("RectangleShape2D_8ftap")
 
-[node name="platform1" type="StaticBody2D" parent="platforms" unique_id=1996830511]
+[node name="Block1" type="StaticBody2D" parent="Blocks" unique_id=1996830511]
 
-[node name="platform1" type="Sprite2D" parent="platforms/platform1" unique_id=227669246]
+[node name="platform1" type="Sprite2D" parent="Blocks/Block1" unique_id=227669246]
 position = Vector2(0, -14)
 scale = Vector2(2, 2)
 texture = ExtResource("5_6kfnb")
 region_enabled = true
 region_rect = Rect2(546.1643, 360.1557, 75.99219, 24.48413)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="platforms/platform1" unique_id=2091119563]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block1" unique_id=2091119563]
 position = Vector2(-1, -14)
 shape = SubResource("RectangleShape2D_8ftap")
 
-[node name="platform2" type="StaticBody2D" parent="platforms" unique_id=92149575]
+[node name="Block2" type="StaticBody2D" parent="Blocks" unique_id=92149575]
 position = Vector2(400, 0)
 
-[node name="platform1" type="Sprite2D" parent="platforms/platform2" unique_id=432884318]
+[node name="platform1" type="Sprite2D" parent="Blocks/Block2" unique_id=432884318]
 position = Vector2(0, -14)
 scale = Vector2(2, 2)
 texture = ExtResource("5_6kfnb")
 region_enabled = true
 region_rect = Rect2(546.1643, 360.1557, 75.99219, 24.48413)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="platforms/platform2" unique_id=1057901200]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block2" unique_id=1057901200]
 position = Vector2(-1, -14)
 shape = SubResource("RectangleShape2D_8ftap")
 
-[node name="platform3" type="StaticBody2D" parent="platforms" unique_id=36748073]
+[node name="Block3" type="StaticBody2D" parent="Blocks" unique_id=36748073]
 position = Vector2(800, 0)
 
-[node name="platform1" type="Sprite2D" parent="platforms/platform3" unique_id=875650174]
+[node name="platform1" type="Sprite2D" parent="Blocks/Block3" unique_id=875650174]
 position = Vector2(0, -14)
 scale = Vector2(2, 2)
 texture = ExtResource("5_6kfnb")
 region_enabled = true
 region_rect = Rect2(546.1643, 360.1557, 75.99219, 24.48413)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="platforms/platform3" unique_id=1858238636]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block3" unique_id=1858238636]
 position = Vector2(-1, -14)
 shape = SubResource("RectangleShape2D_8ftap")
 
-[node name="platform4" type="StaticBody2D" parent="platforms" unique_id=2140702847]
+[node name="Block4" type="StaticBody2D" parent="Blocks" unique_id=2140702847]
 position = Vector2(1200, 0)
 
-[node name="platform1" type="Sprite2D" parent="platforms/platform4" unique_id=1823143756]
+[node name="platform1" type="Sprite2D" parent="Blocks/Block4" unique_id=1823143756]
 position = Vector2(0, -14)
 scale = Vector2(2, 2)
 texture = ExtResource("5_6kfnb")
 region_enabled = true
 region_rect = Rect2(546.1643, 360.1557, 75.99219, 24.48413)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="platforms/platform4" unique_id=1004212535]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block4" unique_id=1004212535]
 position = Vector2(-1, -14)
 shape = SubResource("RectangleShape2D_8ftap")
 
 [node name="Orbs" type="Node2D" parent="." unique_id=488725675]
 position = Vector2(595, 41)
 
-[node name="Orb" type="Area2D" parent="Orbs" unique_id=1860370750]
+[node name="Orb" type="Area2D" parent="Orbs" unique_id=1860370750 groups=["Orb"]]
 position = Vector2(-381, -1)
+script = ExtResource("8_orb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Orbs/Orb" unique_id=1200313696]
 shape = SubResource("CircleShape2D_7fklg")
 
-[node name="Sprite2D" type="Sprite2D" parent="Orbs/Orb" unique_id=871497813]
-scale = Vector2(0.513, 0.513)
-texture = ExtResource("7_8rwbu")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Orbs/Orb" unique_id=1736848768]
+sprite_frames = SubResource("SpriteFrames_7fklg")
+autoplay = "default"
+frame_progress = 0.46975687
 
-[node name="Orb2" type="Area2D" parent="Orbs" unique_id=942550946]
+[node name="Crack" type="Sprite2D" parent="Orbs/Orb" unique_id=249228724]
+texture = ExtResource("10_pt1r0")
+hframes = 6
+
+[node name="Orb2" type="Area2D" parent="Orbs" unique_id=942550946 groups=["Orb"]]
 position = Vector2(379, 1)
+script = ExtResource("8_orb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Orbs/Orb2" unique_id=1451682191]
 shape = SubResource("CircleShape2D_7fklg")
 
-[node name="Sprite2D" type="Sprite2D" parent="Orbs/Orb2" unique_id=174661383]
-scale = Vector2(0.513, 0.513)
-texture = ExtResource("7_8rwbu")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Orbs/Orb2" unique_id=1198209689]
+sprite_frames = SubResource("SpriteFrames_7fklg")
+autoplay = "default"
+frame_progress = 0.77491415
 
-[node name="Orb3" type="Area2D" parent="Orbs" unique_id=1525021888]
+[node name="Crack" type="Sprite2D" parent="Orbs/Orb2" unique_id=291040150]
+texture = ExtResource("10_pt1r0")
+hframes = 6
+
+[node name="Orb3" type="Area2D" parent="Orbs" unique_id=1525021888 groups=["Orb"]]
 position = Vector2(1, 0)
+script = ExtResource("8_orb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Orbs/Orb3" unique_id=1682434802]
 shape = SubResource("CircleShape2D_7fklg")
 
-[node name="Sprite2D" type="Sprite2D" parent="Orbs/Orb3" unique_id=680156257]
-scale = Vector2(0.513, 0.513)
-texture = ExtResource("7_8rwbu")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Orbs/Orb3" unique_id=1743918243]
+sprite_frames = SubResource("SpriteFrames_7fklg")
+autoplay = "default"
+frame_progress = 0.46975687
+
+[node name="Crack" type="Sprite2D" parent="Orbs/Orb3" unique_id=302989064]
+texture = ExtResource("10_pt1r0")
+hframes = 6
+
+[node name="Border" type="StaticBody2D" parent="." unique_id=6810157]
+position = Vector2(532, 453)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Border" unique_id=557590223]
+position = Vector2(605, -21)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_030na")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Border" unique_id=994899631]
+position = Vector2(-514, -21)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_030na")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border" unique_id=1920432065]
+position = Vector2(44, 172)
+shape = SubResource("RectangleShape2D_7fklg")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Border" unique_id=1960689349]
+position = Vector2(43, -216)
+shape = SubResource("RectangleShape2D_7fklg")
 
 [connection signal="animation_finished" from="Boss/AnimationPlayer" to="Boss" method="_on_animation_player_animation_finished"]

@@ -111,7 +111,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5xem2")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Hit",
 "speed": 5.0
 }, {
@@ -166,7 +166,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_dqns5")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Shoot",
 "speed": 5.0
 }, {
@@ -425,7 +425,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jsknh")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Death",
 "speed": 5.0
 }, {
@@ -433,7 +433,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_do8e8")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Hit",
 "speed": 5.0
 }, {
@@ -479,7 +479,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_d7t22")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Shoot",
 "speed": 5.0
 }, {
@@ -560,8 +560,7 @@ script = ExtResource("1_rwea2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Boss" unique_id=1357828965]
 sprite_frames = SubResource("SpriteFrames_8ftap")
-animation = &"Idle"
-frame_progress = 0.12719138
+animation = &"Hit"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Boss" unique_id=64463851]
 libraries/ = SubResource("AnimationLibrary_njt4c")
@@ -573,10 +572,73 @@ script = ExtResource("2_rwea2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=1823628696]
 sprite_frames = SubResource("SpriteFrames_7fklg")
-animation = &"Idle"
-frame_progress = 0.8167651
+animation = &"Walk"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Player" unique_id=2071224385]
 libraries/ = SubResource("AnimationLibrary_uxlv2")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1313202896]
+layer = 100
+
+[node name="Control" type="Control" parent="UI" unique_id=1259292838]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DrawLabel" type="Label" parent="UI/Control" unique_id=118230888]
+layout_mode = 0
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 40.0
+offset_right = 200.0
+offset_bottom = 120.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 72
+horizontal_alignment = 1
+
+[node name="BarBackground" type="ColorRect" parent="UI/Control" unique_id=1827013076]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -120.0
+offset_right = 300.0
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0, 0, 0.6)
+
+[node name="BarTarget" type="ColorRect" parent="UI/Control" unique_id=362467242]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -120.0
+offset_right = 80.0
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.2, 1, 0.2, 0.7)
+
+[node name="BarMarker" type="ColorRect" parent="UI/Control" unique_id=633092425]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -120.0
+offset_right = 4.0
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 0
 
 [connection signal="animation_finished" from="Player/AnimationPlayer" to="Player" method="_on_animation_player_animation_finished"]

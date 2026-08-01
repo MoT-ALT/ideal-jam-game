@@ -1687,3 +1687,6 @@ parameters/Walk/blend_position = Vector2(-0.15990573, 0.7970891)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1979272579]
 position = Vector2(3, -33)
 shape = SubResource("CapsuleShape2D_8ftap")
+
+[node name="Muzzle" type="Marker2D" parent="." unique_id=1132160567]
+position = Vector2(3, -33)

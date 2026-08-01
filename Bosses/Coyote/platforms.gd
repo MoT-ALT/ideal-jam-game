@@ -1,9 +1,9 @@
 extends Node2D
 
+const SPEED := 300.0
+const LIMIT := 400.0
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	position.x += 5
-	position.x = wrap(position.x,0,400)
-	
+	position.x += SPEED * delta
+	position.x = wrapf(position.x, 0.0, LIMIT)
