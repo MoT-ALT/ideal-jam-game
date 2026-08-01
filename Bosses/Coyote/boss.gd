@@ -20,6 +20,8 @@ signal boss_init
 @onready var player := get_node("../Player") as CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var dialog_player: DialogPlayer = $"../DialogPlayer"
+const COYOTE_OUTRO = preload("res://dialogs/coyote_outro.tres")
 
 
 func _ready() -> void:
@@ -120,4 +122,6 @@ func on_orb_destroyed(_orb: Area2D) -> void:
 
 func die() -> void:
 	set_physics_process(false)
-	queue_free()
+	dialog_player._dialog_data = COYOTE_OUTRO
+	dialog_player.start()
+	

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="SproutyDialogsCharacterData" format=3 uid="uid://1aq6qkm2vc8i"]
+
+[ext_resource type="Script" uid="uid://kwoapf8il7ee" path="res://addons/sprouty_dialogs/resources/character_data.gd" id="1_shskw"]
+
+[resource]
+script = ExtResource("1_shskw")
+key_name = "player"
+display_name = {
+"default": "Player",
+"en": ""
+}
+dialog_box_uid = 3860301589206726282
+dialog_box_path = "res://dialogs/Scenes/new_dialog_box.tscn"
