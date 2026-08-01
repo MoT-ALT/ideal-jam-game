@@ -121,8 +121,8 @@ internal/last_opened_files=[{
 "path": "res://dialogs/coyote_intro.tres",
 "uid": 1325067129582911915,
 "view_state": {
-"scroll_offset": Vector2(-553.73047, 305.39746),
-"zoom": 1.0
+"scroll_offset": Vector2(-683.83044, -205.9693),
+"zoom": 0.26333106
 }
 }, {
 "path": "res://dialogs/characters/coyote.tres",
@@ -199,8 +199,15 @@ internal/last_opened_files=[{
 "path": "res://dialogs/bobo.tres",
 "uid": 6676508376685487451,
 "view_state": {
-"scroll_offset": Vector2(-955.306, -793.9326),
+"scroll_offset": Vector2(-213, -181),
 "zoom": 1.0
 }
+}, {
+"path": "res://dialogs/coffinator.tres",
+"uid": 1416578523556282747,
+"view_state": {
+"scroll_offset": Vector2(-559, -371.34082),
+"zoom": 0.45320922
+}
 }]
-internal/last_selected_file_index=1
+internal/last_selected_file_index=8
