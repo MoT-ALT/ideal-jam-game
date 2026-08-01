@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bt5k2nh80gp75"
-path="res://.godot/imported/Coffin Side Sheet.png-74e9b27ee4c18e9880988fa914b3e4d5.ctex"
+uid="uid://b1wjlbhaxua1h"
+path="res://.godot/imported/UI books & more.png-8a79e6b2bf423b0f013f467dc63a186f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/Mobs/Coffin/Coffin Side Sheet.png"
-dest_files=["res://.godot/imported/Coffin Side Sheet.png-74e9b27ee4c18e9880988fa914b3e4d5.ctex"]
+source_file="res://Western_HUD/UI assets pack 2/UI assets pack 2/UI books & more.png"
+dest_files=["res://.godot/imported/UI books & more.png-8a79e6b2bf423b0f013f467dc63a186f.ctex"]
 
 [params]
 

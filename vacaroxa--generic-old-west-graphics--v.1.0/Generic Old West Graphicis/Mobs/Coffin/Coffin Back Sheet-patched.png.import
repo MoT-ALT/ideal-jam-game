@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxrmybeded2k4"
-path="res://.godot/imported/Coffin Front Sheet.png-6e5a8e675561d0ebd1e610ab29d46890.ctex"
+uid="uid://cheejtrxca7sm"
+path="res://.godot/imported/Coffin Back Sheet-patched.png-84e35424031fcc991506667108e86810.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/Mobs/Coffin/Coffin Front Sheet.png"
-dest_files=["res://.godot/imported/Coffin Front Sheet.png-6e5a8e675561d0ebd1e610ab29d46890.ctex"]
+source_file="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/Mobs/Coffin/Coffin Back Sheet-patched.png"
+dest_files=["res://.godot/imported/Coffin Back Sheet-patched.png-84e35424031fcc991506667108e86810.ctex"]
 
 [params]
 

@@ -1,11 +1,10 @@
 [gd_scene format=3 uid="uid://cve3d6ui8c3b0"]
 
-[ext_resource type="Script" uid="uid://44x8ig0glm6y" path="res://area_2d.gd" id="1_e4vdg"]
+[ext_resource type="Script" uid="uid://dprf74kq1ojrh" path="res://coffinatorFightUI.gd" id="1_76ls5"]
 [ext_resource type="Texture2D" uid="uid://cbwvq37lqceh2" path="res://Western_HUD/crosshair.png" id="2_qf7gk"]
-[ext_resource type="Script" uid="uid://cq4a1v0g6r7mj" path="res://dual_start.gd" id="3_76ls5"]
+[ext_resource type="Texture2D" uid="uid://b4ipguma2t453" path="res://Western_HUD/UI assets pack 2/ammo background1.png" id="3_exv82"]
 [ext_resource type="Texture2D" uid="uid://d3tx5fg8fiajp" path="res://Western_HUD/crosshair-red.png" id="3_qgq22"]
 [ext_resource type="FontFile" uid="uid://dbof3n7w3356q" path="res://Western_HUD/minecraft/Minecraft.ttf" id="4_qf7gk"]
-[ext_resource type="Script" uid="uid://dgad0sjq233c8" path="res://dual_timer.gd" id="5_76ls5"]
 [ext_resource type="Texture2D" uid="uid://cg018p7g6rlim" path="res://Western_HUD/player_ammo_indicator_strip.png" id="7_oua8b"]
 
 [sub_resource type="Theme" id="Theme_1ydei"]
@@ -122,13 +121,14 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ql73s"]
 
-[node name="cursor" type="Node2D" unique_id=1057135122]
+[node name="coffinatorFightUI" type="Node2D" unique_id=1057135122]
+script = ExtResource("1_76ls5")
 
 [node name="dualStart" type="Timer" parent="." unique_id=801598320]
+unique_name_in_owner = true
 wait_time = 3.0
 one_shot = true
 autostart = true
-script = ExtResource("3_76ls5")
 
 [node name="Label" type="Label" parent="dualStart" unique_id=1516697826]
 anchors_preset = 8
@@ -148,9 +148,8 @@ theme = SubResource("Theme_1ydei")
 
 [node name="dualTimer" type="Timer" parent="." unique_id=1992771589]
 unique_name_in_owner = true
-wait_time = 3.0
+wait_time = 13.0
 one_shot = true
-script = ExtResource("5_76ls5")
 
 [node name="Label" type="Label" parent="dualTimer" unique_id=1642400024]
 anchors_preset = 5
@@ -165,23 +164,32 @@ size_flags_horizontal = 4
 size_flags_vertical = 0
 theme = SubResource("Theme_ql73s")
 
+[node name="TileMap" type="Sprite2D" parent="." unique_id=568517798]
+position = Vector2(1080, 568)
+rotation = -1.5707964
+scale = Vector2(3.417, 3.567)
+texture = ExtResource("3_exv82")
+
 [node name="ammo" type="AnimatedSprite2D" parent="." unique_id=514075114]
 unique_name_in_owner = true
-position = Vector2(1080, 584)
+position = Vector2(1072.0001, 568.00006)
+rotation = -1.5707964
+scale = Vector2(0.785, 0.785)
 sprite_frames = SubResource("SpriteFrames_v0s4m")
 animation = &"6"
 
-[node name="Area2D" type="Area2D" parent="." unique_id=318100798]
-script = ExtResource("1_e4vdg")
+[node name="Cursor" type="Area2D" parent="." unique_id=318100798]
+unique_name_in_owner = true
 
-[node name="CursorState" type="AnimatedSprite2D" parent="Area2D" unique_id=1257062995]
+[node name="CursorState" type="AnimatedSprite2D" parent="Cursor" unique_id=1257062995]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_ql73s")
+animation = &"shoot"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1346534054]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cursor" unique_id=1346534054]
 scale = Vector2(0.65, 0.65)
 shape = SubResource("CircleShape2D_ql73s")
 
-[connection signal="timeout" from="dualStart" to="Area2D" method="_on_dual_start_timeout"]
-[connection signal="timeout" from="dualTimer" to="Area2D" method="_on_dual_timer_timeout"]
-[connection signal="area_shape_entered" from="Area2D" to="Area2D" method="_on_area_shape_entered"]
+[connection signal="timeout" from="dualStart" to="." method="_on_dual_start_timeout"]
+[connection signal="timeout" from="dualTimer" to="." method="_on_dual_timer_timeout"]
+[connection signal="area_shape_entered" from="Cursor" to="Cursor" method="_on_area_shape_entered"]
