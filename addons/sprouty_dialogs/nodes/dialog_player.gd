@@ -26,6 +26,8 @@ signal dialog_ended()
 signal option_selected(option_index: int, option_dialog: Dictionary)
 ## Emitted when a signal event is emitted.
 signal signal_event(signal_id: String, args: Array)
+## Emitted when a dialogue line is displayed.
+signal line_processed(character_name: String, dialog_key: String, dialog_name: String)
 
 ## Emitted when the dialog player stops.
 signal dialog_player_stop()
@@ -308,6 +310,7 @@ func _enter_tree() -> void:
 		dialog_ended.connect(sprouty_dialogs_manager.dialog_ended.emit)
 		option_selected.connect(sprouty_dialogs_manager.option_selected.emit)
 		signal_event.connect(sprouty_dialogs_manager.signal_event.emit)
+		line_processed.connect(sprouty_dialogs_manager.line_processed.emit)
 
 
 func _exit_tree() -> void:
@@ -614,6 +617,8 @@ func _process_node(node_name: String) -> void:
 func _on_dialogue_processed(character_name: String, translated_name: String,
 		portrait: String, dialog_data: Dictionary, next_node: String) -> void:
 	_next_node = next_node
+	var node_data: Dictionary = _dialog_data.graph_data.get(_start_id, {}).get(_current_node, {})
+	line_processed.emit(character_name, node_data.get("dialog_key", ""), _dialog_file_name)
 	_update_dialog_box(character_name)
 	if character_name.is_empty():
 		_current_dialog_box.play_dialog(translated_name, dialog_data)

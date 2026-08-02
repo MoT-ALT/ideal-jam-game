@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 SproutyDialogs="*uid://c8gxm75j80u8c"
+Global="uid://tduhcyiryu0v"
+Voice="*uid://dg6jvrq1om8q4"
 
 [display]
 
@@ -114,15 +116,15 @@ internal/last_opened_files=[{
 "path": "res://dialogs/cactus_intro.tres",
 "uid": 2217390277731406286,
 "view_state": {
-"scroll_offset": Vector2(-88, -243.73438),
+"scroll_offset": Vector2(-88, -165),
 "zoom": 1.0
 }
 }, {
 "path": "res://dialogs/coyote_intro.tres",
 "uid": 1325067129582911915,
 "view_state": {
-"scroll_offset": Vector2(-360.4663, 625.7521),
-"zoom": 1.2230926
+"scroll_offset": Vector2(-844.00684, -181.4643),
+"zoom": 0.8232149
 }
 }, {
 "path": "res://dialogs/characters/coyote.tres",
@@ -226,4 +228,4 @@ internal/last_opened_files=[{
 "selected_portrait_path": ""
 }
 }]
-internal/last_selected_file_index=2
+internal/last_selected_file_index=1

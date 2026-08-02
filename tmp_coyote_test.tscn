@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://iaifxmits52t"]
-
-[ext_resource type="Script" path="res://tmp_coyote_test.gd" id="1"]
-
-[node name="CoyoteTest" type="Node" unique_id=1779477315]
-script = ExtResource("1")

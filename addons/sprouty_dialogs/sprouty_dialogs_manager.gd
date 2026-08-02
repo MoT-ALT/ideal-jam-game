@@ -25,6 +25,8 @@ signal dialog_ended()
 signal option_selected(option_index: int, option_dialog: Dictionary)
 ## Emitted when a signal event is emitted.
 signal signal_event(signal_id: String, args: Array)
+## Emitted when a dialogue line is displayed.
+signal line_processed(character_name: String, dialog_key: String, dialog_name: String)
 
 ## The list of dialog players currently running.
 ## This is used to keep track of multiple dialog players running at the same time.
