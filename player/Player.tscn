@@ -1494,6 +1494,12 @@ _data = {
 &"Walk_RightUp": SubResource("Animation_3vjad")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_mhpjh"]
+animation = &"Death"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ndjxb"]
+animation = &"Hit"
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_q26ax"]
 animation = &"Idle_Front"
 
@@ -1651,67 +1657,28 @@ blend_point_7/name = &"Walk_LeftUp"
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_51rcv"]
+states/Death/node = SubResource("AnimationNodeAnimation_mhpjh")
+states/Death/position = Vector2(656.7578, 186.59375)
+states/End/position = Vector2(980.5117, 86.21875)
+states/Hit/node = SubResource("AnimationNodeAnimation_ndjxb")
+states/Hit/position = Vector2(505.30078, 177.40625)
 states/Idle/node = SubResource("AnimationNodeBlendSpace2D_gueye")
 states/Idle/position = Vector2(433.9453, 75.4375)
 states/Shoot/node = SubResource("AnimationNodeBlendSpace2D_3tfrk")
-states/Shoot/position = Vector2(642, 125.44141)
+states/Shoot/position = Vector2(656.7578, 113.19531)
 states/Walk/node = SubResource("AnimationNodeBlendSpace2D_f7new")
 states/Walk/position = Vector2(647.04297, 48.46875)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_ictha")]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8ftap"]
-radius = 18.0
-height = 68.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6h6hy"]
+radius = 6.999405
+height = 32.049416
 
-[sub_resource type="Animation" id="Animation_q26ax"]
-resource_name = "Coyote_Intro_Anim"
-length = 3.0000000000000004
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.96),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(576, 651), Vector2(576, 450)]
-}
-tracks/1/type = "animation"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimationPlayer")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"clips": PackedStringArray("Walk_Back"),
-"times": PackedFloat32Array(0.15730469)
-}
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7fklg"]
+radius = 22.0
+height = 74.0
 
-[sub_resource type="Animation" id="Animation_p01ps"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(576, 651)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_m7dl7"]
-_data = {
-&"Coyote_Intro_Anim": SubResource("Animation_q26ax"),
-&"RESET": SubResource("Animation_p01ps")
-}
-
-[node name="Player" type="CharacterBody2D" unique_id=2036114885]
-position = Vector2(576, 651)
+[node name="Player" type="CharacterBody2D" unique_id=2036114885 groups=["Player"]]
 script = ExtResource("1_hp6x6")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1286402708]
@@ -1733,11 +1700,16 @@ parameters/Shoot/blend_position = Vector2(0.033761144, 0.8441067)
 parameters/Walk/blend_position = Vector2(-0.15990573, 0.7970891)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1979272579]
-position = Vector2(3, -33)
-shape = SubResource("CapsuleShape2D_8ftap")
+position = Vector2(-1, -9)
+rotation = 1.5838298
+shape = SubResource("CapsuleShape2D_6h6hy")
 
 [node name="Muzzle" type="Marker2D" parent="." unique_id=1132160567]
 position = Vector2(3, -33)
 
-[node name="IntroAnimation" type="AnimationPlayer" parent="." unique_id=1881119411]
-libraries/ = SubResource("AnimationLibrary_m7dl7")
+[node name="Hitbox" type="Area2D" parent="." unique_id=1088511356 groups=["Hitbox"]]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=674231837]
+position = Vector2(0, -38)
+shape = SubResource("CapsuleShape2D_7fklg")

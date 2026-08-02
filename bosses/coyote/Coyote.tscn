@@ -425,8 +425,9 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ftap"]
 size = Vector2(124, 38)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_7fklg"]
-radius = 33.13608
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sq12r"]
+radius = 17.0
+height = 76.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yq7v4"]
 atlas = ExtResource("9_030na")
@@ -500,6 +501,7 @@ _print_debug = true
 metadata/_custom_type_script = "uid://1mxdpoyob13n"
 
 [node name="Player" parent="." unique_id=2036114885 instance=ExtResource("1_bjbqn")]
+position = Vector2(630, 369)
 collision_layer = 7
 collision_mask = 7
 
@@ -602,7 +604,7 @@ position = Vector2(-381, -1)
 script = ExtResource("8_orb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Orbs/Orb" unique_id=1200313696]
-shape = SubResource("CircleShape2D_7fklg")
+shape = SubResource("CapsuleShape2D_sq12r")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Orbs/Orb" unique_id=1736848768]
 sprite_frames = SubResource("SpriteFrames_7fklg")
@@ -617,9 +619,6 @@ hframes = 6
 position = Vector2(379, 1)
 script = ExtResource("8_orb")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Orbs/Orb2" unique_id=1451682191]
-shape = SubResource("CircleShape2D_7fklg")
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Orbs/Orb2" unique_id=1198209689]
 sprite_frames = SubResource("SpriteFrames_7fklg")
 autoplay = "default"
@@ -629,12 +628,12 @@ frame_progress = 0.77491415
 texture = ExtResource("10_pt1r0")
 hframes = 6
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Orbs/Orb2" unique_id=2085331078]
+shape = SubResource("CapsuleShape2D_sq12r")
+
 [node name="Orb3" type="Area2D" parent="Orbs" unique_id=1525021888 groups=["Orb"]]
 position = Vector2(1, 0)
 script = ExtResource("8_orb")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Orbs/Orb3" unique_id=1682434802]
-shape = SubResource("CircleShape2D_7fklg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Orbs/Orb3" unique_id=1743918243]
 sprite_frames = SubResource("SpriteFrames_7fklg")
@@ -645,6 +644,9 @@ frame_progress = 0.46975687
 texture = ExtResource("10_pt1r0")
 hframes = 6
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Orbs/Orb3" unique_id=83076108]
+shape = SubResource("CapsuleShape2D_sq12r")
+
 [node name="Border" type="StaticBody2D" parent="." unique_id=6810157]
 position = Vector2(532, 453)
 collision_layer = 2
@@ -654,18 +656,25 @@ collision_mask = 2
 position = Vector2(605, -21)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_030na")
+disabled = true
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Border" unique_id=994899631]
 position = Vector2(-514, -21)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_030na")
+disabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border" unique_id=1920432065]
 position = Vector2(44, 172)
 shape = SubResource("RectangleShape2D_7fklg")
+disabled = true
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Border" unique_id=1960689349]
 position = Vector2(43, -216)
 shape = SubResource("RectangleShape2D_7fklg")
+disabled = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=576002434]
+position = Vector2(573, 323)
 
 [connection signal="animation_finished" from="Boss/AnimationPlayer" to="Boss" method="_on_animation_player_animation_finished"]

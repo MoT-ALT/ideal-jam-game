@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://edft7gqw2yrf" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/Mobs/Coyote/Coyote Front Sheet.png" id="4_vbegm"]
 [ext_resource type="Texture2D" uid="uid://dyrqnen8fxti5" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/Mobs/Cactus/Cactus Side Sheet.png" id="7_vbegm"]
 [ext_resource type="Texture2D" uid="uid://dsro7t2q28hvm" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/Atlas.png" id="8_ehkex"]
+[ext_resource type="PackedScene" path="res://npc/npc.tscn" id="9_npc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ehkex"]
 atlas = ExtResource("3_g14j6")
@@ -147,6 +148,10 @@ animations = [{
 y_sort_enabled = true
 
 [node name="CharacterBody2D" parent="." unique_id=2036114885 instance=ExtResource("1_37kl0")]
+min_x = -2000
+max_x = 2000
+min_y = -2000
+max_y = 2000
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=343071937]
 position_smoothing_enabled = true
@@ -217,3 +222,6 @@ frame = 23
 [node name="Atlas" type="Sprite2D" parent="." unique_id=1823255362]
 position = Vector2(-217, 1364)
 texture = ExtResource("8_ehkex")
+
+[node name="NPC" parent="." unique_id=999999999 instance=ExtResource("9_npc")]
+position = Vector2(200, 0)

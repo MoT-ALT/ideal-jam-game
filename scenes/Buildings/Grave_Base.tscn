@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://b0lmpcl6lvngt"]
+
+[ext_resource type="Texture2D" uid="uid://o3u6mryv7vdo" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/Buildings/buildings.png" id="1_en15d"]
+[ext_resource type="Texture2D" uid="uid://dsro7t2q28hvm" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/Atlas.png" id="2_urb3d"]
+[ext_resource type="PackedScene" uid="uid://b7tj8lurn6iii" path="res://scenes/Decor/barrel.tscn" id="3_5gexc"]
+[ext_resource type="PackedScene" uid="uid://ds5k55qimws3q" path="res://scenes/Decor/bag.tscn" id="4_a0cqp"]
+[ext_resource type="PackedScene" uid="uid://bruwaoopmu8y1" path="res://scenes/Buildings/chair.tscn" id="5_a0cqp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ftap"]
+size = Vector2(95, 20.5)
+
+[node name="GraveBase" type="StaticBody2D" unique_id=108594236]
+scale = Vector2(2, 2)
+
+[node name="Buildings" type="Sprite2D" parent="." unique_id=578289677]
+position = Vector2(-4.5, -35.5)
+texture = ExtResource("1_en15d")
+region_enabled = true
+region_rect = Rect2(16, 20, 122, 136)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1835326196]
+position = Vector2(-1.5, -17.75)
+shape = SubResource("RectangleShape2D_8ftap")
+
+[node name="Atlas" type="Sprite2D" parent="." unique_id=1850380079]
+position = Vector2(-1, -52)
+texture = ExtResource("2_urb3d")
+region_enabled = true
+region_rect = Rect2(206, 385, 35, 30)
+
+[node name="Atlas2" type="Sprite2D" parent="." unique_id=2643520]
+position = Vector2(24.5, -20.5)
+texture = ExtResource("2_urb3d")
+region_enabled = true
+region_rect = Rect2(591, 272, 17, 17)
+
+[node name="Atlas4" type="Sprite2D" parent="." unique_id=1226688702]
+position = Vector2(-47, 21.5)
+texture = ExtResource("2_urb3d")
+region_enabled = true
+region_rect = Rect2(500, 251, 24, 23)
+
+[node name="Atlas8" type="Sprite2D" parent="." unique_id=797501610]
+position = Vector2(59, -10)
+texture = ExtResource("2_urb3d")
+region_enabled = true
+region_rect = Rect2(528, 256, 17, 17)
+
+[node name="Atlas8" type="Sprite2D" parent="Atlas8" unique_id=1826381976]
+position = Vector2(5.5, 11.5)
+texture = ExtResource("2_urb3d")
+region_enabled = true
+region_rect = Rect2(528, 256, 17, 17)
+
+[node name="Barrel" parent="." unique_id=936406709 instance=ExtResource("3_5gexc")]
+position = Vector2(55.5, 13)
+
+[node name="Barrel2" parent="." unique_id=193074406 instance=ExtResource("3_5gexc")]
+position = Vector2(-35.5, 28.5)
+
+[node name="Bag" parent="." unique_id=1728724031 instance=ExtResource("4_a0cqp")]
+
+[node name="Chair" parent="." unique_id=1707727768 instance=ExtResource("5_a0cqp")]

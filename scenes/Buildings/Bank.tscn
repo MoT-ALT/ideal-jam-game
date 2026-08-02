@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dh6lf54dj7sse"]
+
+[ext_resource type="Texture2D" uid="uid://o3u6mryv7vdo" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/Buildings/buildings.png" id="1_ckr8h"]
+[ext_resource type="Texture2D" uid="uid://dsro7t2q28hvm" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/Atlas.png" id="2_o1a0j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ftap"]
+size = Vector2(95.5, 32)
+
+[node name="Saloon" type="StaticBody2D" unique_id=108594236]
+scale = Vector2(2, 2)
+
+[node name="Buildings" type="Sprite2D" parent="." unique_id=578289677]
+position = Vector2(0.5, -74.5)
+texture = ExtResource("1_ckr8h")
+region_enabled = true
+region_rect = Rect2(235, 168, 104, 149)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1835326196]
+position = Vector2(1, -21)
+shape = SubResource("RectangleShape2D_8ftap")
+
+[node name="Atlas" type="Sprite2D" parent="." unique_id=1367334930]
+position = Vector2(2, -58)
+scale = Vector2(0.703, 0.703)
+texture = ExtResource("2_o1a0j")
+region_enabled = true
+region_rect = Rect2(192, 455, 81, 42)

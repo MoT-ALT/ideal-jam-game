@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bruwaoopmu8y1"]
+
+[ext_resource type="Texture2D" uid="uid://dsro7t2q28hvm" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/Atlas.png" id="1_f11wl"]
+
+[node name="Chair" type="StaticBody2D" unique_id=1707727768]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1647734011]
+position = Vector2(-27, -1)
+polygon = PackedVector2Array(-12, 13.5, 12, 13.5, 12, -13.5, -12, -13.5)
+
+[node name="Atlas3" type="Sprite2D" parent="." unique_id=285883800]
+position = Vector2(-27, -1)
+texture = ExtResource("1_f11wl")
+region_enabled = true
+region_rect = Rect2(500, 279, 24, 27)

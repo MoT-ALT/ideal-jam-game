@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="SproutyDialogsCharacterData" format=3 uid="uid://dbjcfxv5bnd6a"]
+
+[ext_resource type="Script" path="res://addons/sprouty_dialogs/resources/character_data.gd" id="1_orhwe"]
+
+[resource]
+script = ExtResource("1_orhwe")
+key_name = "barman"
+display_name = {
+"default": "Barman",
+"en": ""
+}
+dialog_box_uid = 3860301589206726282
+dialog_box_path = "res://dialogs/Scenes/coyote_boss.tscn"

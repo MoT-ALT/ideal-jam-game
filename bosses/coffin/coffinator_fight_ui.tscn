@@ -1,17 +1,25 @@
 [gd_scene format=3 uid="uid://cve3d6ui8c3b0"]
 
 [ext_resource type="Script" uid="uid://dprf74kq1ojrh" path="res://bosses/coffin/coffinator_fight_ui.gd" id="1_76ls5"]
+[ext_resource type="FontFile" uid="uid://c2cbm4lkixqu4" path="res://UI/font/PixelGlobal-Regular.ttf" id="2_57lqq"]
 [ext_resource type="Texture2D" uid="uid://cbwvq37lqceh2" path="res://Western_HUD/crosshair.png" id="2_qf7gk"]
+[ext_resource type="FontFile" uid="uid://bkiir7e68sdai" path="res://UI/font/PixelGlobal-Regular.otf" id="3_34vph"]
 [ext_resource type="Texture2D" uid="uid://b4ipguma2t453" path="res://Western_HUD/UI assets pack 2/ammo background1.png" id="3_exv82"]
 [ext_resource type="Texture2D" uid="uid://d3tx5fg8fiajp" path="res://Western_HUD/crosshair-red.png" id="3_qgq22"]
-[ext_resource type="FontFile" uid="uid://dbof3n7w3356q" path="res://Western_HUD/minecraft/Minecraft.ttf" id="4_qf7gk"]
 [ext_resource type="Texture2D" uid="uid://cg018p7g6rlim" path="res://Western_HUD/player_ammo_indicator_strip.png" id="7_oua8b"]
 
 [sub_resource type="Theme" id="Theme_1ydei"]
-default_font = ExtResource("4_qf7gk")
+default_font = ExtResource("2_57lqq")
+default_font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_57lqq"]
+font = ExtResource("3_34vph")
+font_size = 64
+shadow_size = 0
 
 [sub_resource type="Theme" id="Theme_ql73s"]
-default_font = ExtResource("4_qf7gk")
+default_font = ExtResource("2_57lqq")
+default_font_size = 64
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6cchd"]
 atlas = ExtResource("7_oua8b")
@@ -136,15 +144,18 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -48.0
-offset_top = -12.0
-offset_right = -47.0
-offset_bottom = 11.0
+offset_left = -40.0
+offset_top = -23.0
+offset_right = 40.0
+offset_bottom = 23.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(3, 3)
 size_flags_horizontal = 4
 theme = SubResource("Theme_1ydei")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "Test"
+label_settings = SubResource("LabelSettings_57lqq")
 
 [node name="dualTimer" type="Timer" parent="." unique_id=1992771589]
 unique_name_in_owner = true
@@ -155,11 +166,10 @@ one_shot = true
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -64.0
-offset_right = -24.0
-offset_bottom = 23.0
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 35.0
 grow_horizontal = 2
-scale = Vector2(3, 3)
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme = SubResource("Theme_ql73s")

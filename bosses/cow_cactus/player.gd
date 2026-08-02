@@ -43,4 +43,5 @@ func fire() -> void:
 
 func play_death() -> void:
 	duel_active = false
+	Juice.damage_number(self, global_position+Vector2(0,-60), 10000)
 	animated_sprite_2d.play("Death")

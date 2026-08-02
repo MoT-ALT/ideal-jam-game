@@ -1,0 +1,249 @@
+[gd_scene format=3 uid="uid://cbbyw7buhrvnj"]
+
+[ext_resource type="Script" uid="uid://c0cb5exvnvq4m" path="res://dialogs/Scenes/town/Town_Dialog.gd" id="1_7udbb"]
+[ext_resource type="Theme" uid="uid://cxl05c1b2bxyw" path="res://dialogs/new_theme.tres" id="2_oabjs"]
+[ext_resource type="Script" uid="uid://cdtkvrnke623v" path="res://addons/sprouty_dialogs/nodes/dialog_option.gd" id="3_oabjs"]
+[ext_resource type="Texture2D" uid="uid://l71s5ifm8b0y" path="res://Western_HUD/kenney_ui-pack-pixel-adventure/Tiles/Large tiles/Thick outline/tile_0031.png" id="4_lgluv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s1q1p"]
+texture = ExtResource("4_lgluv")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(0, 0, 32, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fwqsx"]
+load_path = "res://.godot/imported/tile_0031.png-00025e84a54e22ce8e47183a0c666ea0.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hjxqk"]
+texture = SubResource("CompressedTexture2D_fwqsx")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(0, 0, 32, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5xfit"]
+load_path = "res://.godot/imported/tile_0031.png-00025e84a54e22ce8e47183a0c666ea0.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_od657"]
+texture = SubResource("CompressedTexture2D_5xfit")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(0, 0, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lecvf"]
+texture = ExtResource("4_lgluv")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(0, 0, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nwwt2"]
+texture = ExtResource("4_lgluv")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(0, 0, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_88tpy"]
+texture = ExtResource("4_lgluv")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(0, 0, 32, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nyh8e"]
+load_path = "res://.godot/imported/tile_0031.png-00025e84a54e22ce8e47183a0c666ea0.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k3u05"]
+texture = SubResource("CompressedTexture2D_nyh8e")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(0, 0, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hvfsx"]
+texture = ExtResource("4_lgluv")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(0, 0, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_crmc8"]
+texture = ExtResource("4_lgluv")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(0, 0, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ahkbk"]
+texture = ExtResource("4_lgluv")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="TownDialog" type="Control" unique_id=774581004 node_paths=PackedStringArray("dialog_display", "name_display", "continue_indicator", "options_container", "option_template")]
+custom_minimum_size = Vector2(600, 150)
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -298.0
+offset_top = -167.0
+offset_right = 302.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_7udbb")
+typing_speed = 0.05
+max_characters = 0
+dialog_display = NodePath("DialogPanel/MarginContainer/DialogContainer/DialogDisplay")
+name_display = NodePath("DialogPanel/MarginContainer/DialogContainer/NameDisplay")
+continue_indicator = NodePath("")
+options_container = NodePath("OptionsContainer")
+option_template = NodePath("OptionsContainer/DialogOption")
+
+[node name="DialogPanel" type="Panel" parent="." unique_id=614092727]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -125.0
+offset_right = 400.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_oabjs")
+
+[node name="MarginContainer" type="MarginContainer" parent="DialogPanel" unique_id=367054610]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="DialogContainer" type="VBoxContainer" parent="DialogPanel/MarginContainer" unique_id=1205038500]
+layout_mode = 2
+
+[node name="NameDisplay" type="RichTextLabel" parent="DialogPanel/MarginContainer/DialogContainer" unique_id=1148155352]
+layout_mode = 2
+bbcode_enabled = true
+text = "Name"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="DialogDisplay" type="RichTextLabel" parent="DialogPanel/MarginContainer/DialogContainer" unique_id=90582794]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.654902, 0.37254903, 0.14117648, 1)
+bbcode_enabled = true
+text = "Dialog text"
+horizontal_alignment = 1
+
+[node name="OptionsContainer" type="VBoxContainer" parent="." unique_id=9269261]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -275.0
+offset_right = 150.0
+offset_bottom = -162.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialogOption" type="Button" parent="OptionsContainer" unique_id=1192925395]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.1882353, 0.09019608, 0.015686275, 1)
+theme_override_colors/font_focus_color = Color(0.1882353, 0.09019608, 0.015686275, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.09019608, 0.015686275, 1)
+theme_override_colors/font_hover_color = Color(0.1882353, 0.09019608, 0.015686275, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.1882353, 0.09019608, 0.015686275, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_s1q1p")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hjxqk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_od657")
+text = "Option 1"
+script = ExtResource("3_oabjs")
+metadata/_custom_type_script = "uid://cdtkvrnke623v"
+
+[node name="DialogOption2" type="Button" parent="OptionsContainer" unique_id=23014098]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.1882353, 0.09019608, 0.015686275, 1)
+theme_override_colors/font_focus_color = Color(0.1882353, 0.09019608, 0.015686275, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.09019608, 0.015686275, 1)
+theme_override_colors/font_hover_color = Color(0.1882353, 0.09019608, 0.015686275, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.1882353, 0.09019608, 0.015686275, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_lecvf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_nwwt2")
+theme_override_styles/hover = SubResource("StyleBoxTexture_88tpy")
+text = "Option 2"
+script = ExtResource("3_oabjs")
+metadata/_custom_type_script = "uid://cdtkvrnke623v"
+
+[node name="DialogOption3" type="Button" parent="OptionsContainer" unique_id=1994312773]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.1882353, 0.09019608, 0.015686275, 1)
+theme_override_colors/font_focus_color = Color(0.1882353, 0.09019608, 0.015686275, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.09019608, 0.015686275, 1)
+theme_override_colors/font_hover_color = Color(0.1882353, 0.09019608, 0.015686275, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.1882353, 0.09019608, 0.015686275, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_k3u05")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hvfsx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_crmc8")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_ahkbk")
+text = "Option 2"
+script = ExtResource("3_oabjs")
+metadata/_custom_type_script = "uid://cdtkvrnke623v"
+
+[node name="Timer" type="Timer" parent="." unique_id=1890995588]
+
+[connection signal="meta_clicked" from="DialogPanel/MarginContainer/DialogContainer/DialogDisplay" to="." method="_on_dialog_meta_clicked"]

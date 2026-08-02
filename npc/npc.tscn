@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dpxeilbs7f383"]
+
+[ext_resource type="Script" uid="uid://daqnfo7hb5yag" path="res://npc/npc.gd" id="1_npc"]
+[ext_resource type="Texture2D" uid="uid://vj0jbim760nx" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/NPC/NPC's.png" id="2_npc"]
+[ext_resource type="Resource" uid="uid://bdktpjdkp1ayl" path="res://dialogs/barman_intro.tres" id="3_npc"]
+[ext_resource type="Script" uid="uid://1mxdpoyob13n" path="res://addons/sprouty_dialogs/nodes/dialog_player.gd" id="4_o6cys"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_body"]
+size = Vector2(40, 80)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_interact"]
+radius = 90.0
+
+[node name="NPC" type="Node2D" unique_id=311656898]
+script = ExtResource("1_npc")
+dialog_data = ExtResource("3_npc")
+freeze_player = false
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=63331032]
+position = Vector2(1, -37)
+scale = Vector2(2, 2)
+texture = ExtResource("2_npc")
+hframes = 3
+vframes = 3
+frame = 3
+
+[node name="Body" type="StaticBody2D" parent="." unique_id=1681574879]
+position = Vector2(0, -40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body" unique_id=1759376108]
+shape = SubResource("RectangleShape2D_body")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=2112263995]
+position = Vector2(1, -33)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=358129501]
+shape = SubResource("CircleShape2D_interact")
+
+[node name="DialogPlayer" type="Node" parent="." unique_id=859890860]
+script = ExtResource("4_o6cys")
+_dialog_data_uid = 2618811879738918779
+_dialog_file_name = "barman_intro"
+_dialog_data = ExtResource("3_npc")
+_start_id = "1"
+_play_on_ready = false
+_destroy_on_end = false
+_print_debug = false
+metadata/_custom_type_script = "uid://1mxdpoyob13n"

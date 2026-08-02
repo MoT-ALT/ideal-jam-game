@@ -136,6 +136,7 @@ func player_draw() -> void:
 		start_quickdraw()
 	else:
 		draw_label.text = "MISS!"
+		Juice.shake(get_viewport().get_camera_2d(),0.7)
 		boss_fires()
 
 

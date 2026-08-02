@@ -1,15 +1,14 @@
 extends Area2D
 
 const SPEED := 275.0
-const LIFETIME := 4.0
+const LIFETIME := 3.5
 
 var direction := Vector2.DOWN
 var target: Node2D
-var shooter: Node2D
 
 
 func _ready() -> void:
-	body_entered.connect(_on_body_entered)
+	area_entered.connect(_on_area_entered)
 	await get_tree().create_timer(LIFETIME).timeout
 	if is_inside_tree():
 		queue_free()
@@ -23,9 +22,7 @@ func _physics_process(delta: float) -> void:
 	position += direction * SPEED * delta
 
 
-func _on_body_entered(body: Node2D) -> void:
-	if body == shooter:
-		return
-	if body == target and target.has_method("take_damage"):
-		target.take_damage()
+func _on_area_entered(area: Area2D) -> void:
+	if area.is_in_group("Hitbox") and area.get_parent().has_method("take_damage"):
+		area.get_parent().take_damage()
 	queue_free()

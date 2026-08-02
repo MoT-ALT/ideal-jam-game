@@ -573,7 +573,7 @@ script = ExtResource("1_rwea2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Boss" unique_id=1357828965]
 sprite_frames = SubResource("SpriteFrames_8ftap")
-animation = &"Hit"
+animation = &"Shoot"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Boss" unique_id=64463851]
 libraries/ = SubResource("AnimationLibrary_njt4c")
@@ -654,5 +654,8 @@ offset_right = 4.0
 offset_bottom = -90.0
 grow_horizontal = 2
 grow_vertical = 0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1143013437]
+position = Vector2(584, 301)
 
 [connection signal="animation_finished" from="Player/AnimationPlayer" to="Player" method="_on_animation_player_animation_finished"]

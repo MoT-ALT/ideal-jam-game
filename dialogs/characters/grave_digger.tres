@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="SproutyDialogsCharacterData" format=3 uid="uid://djuq4gl24bj4"]
+
+[ext_resource type="Script" uid="uid://kwoapf8il7ee" path="res://addons/sprouty_dialogs/resources/character_data.gd" id="1_pv5mb"]
+
+[resource]
+script = ExtResource("1_pv5mb")
+key_name = "grave_digger"
+display_name = {
+"default": "Grave Digger",
+"en": ""
+}
+dialog_box_uid = 4846592767281361871
+dialog_box_path = "res://dialogs/Scenes/town/Town_Dialog.tscn"

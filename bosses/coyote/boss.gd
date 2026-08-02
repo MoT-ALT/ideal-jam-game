@@ -86,7 +86,6 @@ func spawn_boss_bullet() -> void:
 	bullet.global_position = global_position
 	bullet.direction = (player.global_position - global_position).normalized()
 	bullet.target = player
-	bullet.shooter = self
 	get_tree().current_scene.add_child(bullet)
 
 
@@ -113,6 +112,7 @@ func start_boss_fight() -> void:
 
 func on_orb_destroyed(_orb: Area2D) -> void:
 	is_shooting = false
+	Juice.shake(get_viewport().get_camera_2d(),0.75,1.5,Vector2(24,16),0.12)
 	animated_sprite_2d.play("Hit")
 	is_hit = true
 	hit_time_left = HIT_TIME
