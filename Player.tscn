@@ -1663,7 +1663,55 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 radius = 18.0
 height = 68.0
 
+[sub_resource type="Animation" id="Animation_q26ax"]
+resource_name = "Coyote_Intro_Anim"
+length = 3.0000000000000004
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.96),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(576, 651), Vector2(576, 450)]
+}
+tracks/1/type = "animation"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": PackedStringArray("Walk_Back"),
+"times": PackedFloat32Array(0.15730469)
+}
+
+[sub_resource type="Animation" id="Animation_p01ps"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(576, 651)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m7dl7"]
+_data = {
+&"Coyote_Intro_Anim": SubResource("Animation_q26ax"),
+&"RESET": SubResource("Animation_p01ps")
+}
+
 [node name="Player" type="CharacterBody2D" unique_id=2036114885]
+position = Vector2(576, 651)
 script = ExtResource("1_hp6x6")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1286402708]
@@ -1690,3 +1738,6 @@ shape = SubResource("CapsuleShape2D_8ftap")
 
 [node name="Muzzle" type="Marker2D" parent="." unique_id=1132160567]
 position = Vector2(3, -33)
+
+[node name="IntroAnimation" type="AnimationPlayer" parent="." unique_id=1881119411]
+libraries/ = SubResource("AnimationLibrary_m7dl7")

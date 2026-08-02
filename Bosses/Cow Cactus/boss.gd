@@ -29,12 +29,14 @@ var sweeping := false
 @onready var bar_background: ColorRect = get_node("../UI/Control/BarBackground")
 @onready var bar_target: ColorRect = get_node("../UI/Control/BarTarget")
 @onready var bar_marker: ColorRect = get_node("../UI/Control/BarMarker")
+@onready var dialog_player: DialogPlayer = $"../DialogPlayer"
 
 
 func _ready() -> void:
 	animation_player.animation_finished.connect(_on_animation_player_animation_finished)
 	animation_player.play("intro")
 	animated_sprite_2d.play("Walk")
+	
 
 
 func _process(delta: float) -> void:
@@ -57,14 +59,13 @@ func _hide_bar() -> void:
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "intro":
 		animated_sprite_2d.play("Idle")
+		dialog_player.start()
+		await dialog_player.dialog_ended
 		start_quickdraw()
+		
 
 
-func _play_intro_dialog() -> void:
-	var sprouty := get_node("/root/SproutyDialogs")
-	var dialog: Resource = load("res://dialogs/cactus_intro.tres")
-	var dialog_player: Node = sprouty.start_dialog(dialog, "cactus_intro")
-	await dialog_player.dialog_ended
+	
 
 
 func start_quickdraw() -> void:

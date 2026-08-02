@@ -10,6 +10,7 @@ const BULLET_SCENE := preload("res://Bullet.tscn")
 var last_direction := Vector2.DOWN
 var is_shooting := false
 var can_shoot := false
+var can_move := true
 
 func _ready() -> void:
 	animation_tree.active = true
@@ -17,14 +18,14 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	var direction := Input.get_vector("move_left", "move_right", "move_up", "move_down")
 
-	if direction and not is_shooting:
+	if direction and not is_shooting and can_move:
 		velocity = direction * SPEED
 		last_direction = direction
 	else:
 		velocity = Vector2.ZERO
 
 	var blend := direction if direction else last_direction
-	if !is_shooting:
+	if !is_shooting and can_move:
 		animation_tree["parameters/Idle/blend_position"] = blend
 		animation_tree["parameters/Walk/blend_position"] = blend
 		animation_tree["parameters/Shoot/blend_position"] = blend
@@ -33,7 +34,7 @@ func _physics_process(_delta: float) -> void:
 		pass
 	elif can_shoot and Input.is_action_just_pressed("shoot"):
 		shoot()
-	elif direction:
+	elif direction and can_move :
 		state_machine.travel("Walk")
 	else:
 		state_machine.travel("Idle")

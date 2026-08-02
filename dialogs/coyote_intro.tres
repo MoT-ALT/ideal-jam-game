@@ -33,8 +33,8 @@ graph_data = {
 "start_node_1": {
 "node_index": 1,
 "node_type": "start_node",
-"offset": Vector2(-920, -180),
-"size": Vector2(191, 46),
+"offset": Vector2(-880, 0),
+"size": Vector2(191, 75),
 "start_id": "1",
 "to_dialog": "",
 "to_node": ["dialogue_node_1"]

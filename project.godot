@@ -114,15 +114,15 @@ internal/last_opened_files=[{
 "path": "res://dialogs/cactus_intro.tres",
 "uid": 2217390277731406286,
 "view_state": {
-"scroll_offset": Vector2(-173, -165),
+"scroll_offset": Vector2(-88, -243.73438),
 "zoom": 1.0
 }
 }, {
 "path": "res://dialogs/coyote_intro.tres",
 "uid": 1325067129582911915,
 "view_state": {
-"scroll_offset": Vector2(-738.1677, -119.81886),
-"zoom": 0.58963805
+"scroll_offset": Vector2(-360.4663, 625.7521),
+"zoom": 1.2230926
 }
 }, {
 "path": "res://dialogs/characters/coyote.tres",
@@ -209,5 +209,21 @@ internal/last_opened_files=[{
 "scroll_offset": Vector2(-173, -165),
 "zoom": 0.45320922
 }
+}, {
+"path": "res://dialogs/characters/Player_Talking_to_cactus.tres",
+"uid": 6467739772000091068,
+"view_state": {
+"portrait_search": "",
+"portrait_tree_state": {
+"selected_path": "",
+"tree_items": {}
+},
+"section_visibility": {
+"dialog_box_settings": true,
+"portrait_list": true,
+"portrait_settings": true
+},
+"selected_portrait_path": ""
+}
 }]
-internal/last_selected_file_index=1
+internal/last_selected_file_index=2

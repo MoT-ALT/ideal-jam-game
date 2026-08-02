@@ -16,6 +16,7 @@ var orbs_remaining := 0
 var volley_fired := false
 
 signal boss_init
+signal boss_died
 
 @onready var player := get_node("../Player") as CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
@@ -121,6 +122,7 @@ func on_orb_destroyed(_orb: Area2D) -> void:
 
 
 func die() -> void:
+	emit_signal("boss_died")
 	set_physics_process(false)
 	dialog_player._dialog_data = COYOTE_OUTRO
 	dialog_player.start()

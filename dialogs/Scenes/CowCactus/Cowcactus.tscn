@@ -1,0 +1,134 @@
+[gd_scene format=3 uid="uid://br67tek3ihl6u"]
+
+[ext_resource type="Script" uid="uid://bgp0m15g2sgnl" path="res://dialogs/Scenes/CowCactus/Cowcactus.gd" id="1_ugvg3"]
+[ext_resource type="Theme" uid="uid://cxl05c1b2bxyw" path="res://dialogs/new_theme.tres" id="2_ugvg3"]
+[ext_resource type="Script" uid="uid://cdtkvrnke623v" path="res://addons/sprouty_dialogs/nodes/dialog_option.gd" id="3_p11l0"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ampuf"]
+load_path = "res://.godot/imported/tile_0031.png-00025e84a54e22ce8e47183a0c666ea0.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p11l0"]
+texture = SubResource("CompressedTexture2D_ampuf")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Cowcactus" type="Control" unique_id=1922972006 node_paths=PackedStringArray("dialog_display", "name_display", "continue_indicator", "options_container", "option_template")]
+custom_minimum_size = Vector2(600, 150)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -75.0
+offset_right = 300.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_ugvg3")
+typing_speed = 0.05
+max_characters = 0
+dialog_display = NodePath("DialogPanel/MarginContainer/DialogContainer/DialogDisplay")
+name_display = NodePath("DialogPanel/MarginContainer/DialogContainer/NameDisplay")
+continue_indicator = NodePath("DialogPanel/MarginContainer/DialogContainer/ContinueIndicator")
+options_container = NodePath("OptionsContainer")
+option_template = NodePath("OptionsContainer/DialogOption")
+
+[node name="DialogPanel" type="Panel" parent="." unique_id=1136639669]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -290.0
+offset_top = -320.0
+offset_right = 310.0
+offset_bottom = -170.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_ugvg3")
+theme_override_styles/panel = SubResource("StyleBoxTexture_p11l0")
+
+[node name="MarginContainer" type="MarginContainer" parent="DialogPanel" unique_id=344710237]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="DialogContainer" type="VBoxContainer" parent="DialogPanel/MarginContainer" unique_id=410910562]
+layout_mode = 2
+
+[node name="NameDisplay" type="RichTextLabel" parent="DialogPanel/MarginContainer/DialogContainer" unique_id=956105320]
+layout_mode = 2
+bbcode_enabled = true
+text = "Name"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="DialogDisplay" type="RichTextLabel" parent="DialogPanel/MarginContainer/DialogContainer" unique_id=88084230]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.654902, 0.37254903, 0.14117648, 1)
+bbcode_enabled = true
+text = "Dialog text"
+horizontal_alignment = 1
+
+[node name="ContinueIndicator" type="TextureRect" parent="DialogPanel/MarginContainer/DialogContainer" unique_id=1181984220]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+expand_mode = 2
+stretch_mode = 5
+
+[node name="OptionsContainer" type="VBoxContainer" parent="." unique_id=144750487]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -175.0
+offset_bottom = -175.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialogOption" type="Button" parent="OptionsContainer" unique_id=796925317]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+text = "Option 1"
+script = ExtResource("3_p11l0")
+metadata/_custom_type_script = "uid://cdtkvrnke623v"
+
+[node name="DialogOption2" type="Button" parent="OptionsContainer" unique_id=658304694]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Option 2"
+script = ExtResource("3_p11l0")
+metadata/_custom_type_script = "uid://cdtkvrnke623v"
+
+[node name="DialogOption3" type="Button" parent="OptionsContainer" unique_id=859526185]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Option 2"
+script = ExtResource("3_p11l0")
+metadata/_custom_type_script = "uid://cdtkvrnke623v"
+
+[node name="Timer" type="Timer" parent="." unique_id=621556251]
+
+[connection signal="meta_clicked" from="DialogPanel/MarginContainer/DialogContainer/DialogDisplay" to="." method="_on_dialog_meta_clicked"]

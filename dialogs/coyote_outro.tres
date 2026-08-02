@@ -70,7 +70,7 @@ graph_data = {
 "node_index": 1,
 "node_type": "start_node",
 "offset": Vector2(360, 180),
-"size": Vector2(191, 46),
+"size": Vector2(191, 75),
 "start_id": "1",
 "to_dialog": "",
 "to_node": ["dialogue_node_1"]
@@ -79,27 +79,22 @@ graph_data = {
 }
 dialogs = {
 "1_DIALOG_1": {
-"": "",
 "default": "No... no, this ain't — I've outrun sheriffs before, outrun the law itself...",
 "en": ""
 },
 "1_DIALOG_2": {
-"": "",
 "default": "You didn't outrun nothin'. You just hadn't met the right one yet.",
 "en": ""
 },
 "1_DIALOG_3": {
-"": "",
 "default": "The desert remembers me, lawdog. Long after your bones are dust, they'll still be tellin' tales of the coyote who danced with death...",
 "en": ""
 },
 "1_DIALOG_4": {
-"": "",
 "default": "Maybe. But it'll be a story that ends right here.",
 "en": ""
 },
 "1_DIALOG_5": {
-"": "",
 "default": "Heh... heh heh heh... this ain't over, tin star... it's never over...",
 "en": ""
 }

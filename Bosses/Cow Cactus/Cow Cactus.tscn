@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://d0frbmdh2v1ee"]
 
 [ext_resource type="Texture2D" uid="uid://dyrqnen8fxti5" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/Mobs/Cactus/Cactus Side Sheet.png" id="1_0k8qw"]
+[ext_resource type="Script" uid="uid://1mxdpoyob13n" path="res://addons/sprouty_dialogs/nodes/dialog_player.gd" id="1_njt4c"]
 [ext_resource type="Script" uid="uid://dffvujc34moao" path="res://Bosses/Cow Cactus/boss.gd" id="1_rwea2"]
+[ext_resource type="Resource" uid="uid://6uedgtauialy" path="res://dialogs/cactus_intro.tres" id="2_fqy1s"]
 [ext_resource type="Script" uid="uid://p56rbbp12k3s" path="res://Bosses/Cow Cactus/player.gd" id="2_rwea2"]
 [ext_resource type="Texture2D" uid="uid://clfpy3aqqbk46" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/Player/Player Side Sheet.png" id="3_oicm2"]
 
@@ -552,6 +554,17 @@ _data = {
 
 [node name="CowCactus" type="Node2D" unique_id=579617613]
 position = Vector2(-7, 21)
+
+[node name="DialogPlayer" type="Node" parent="." unique_id=227387550]
+script = ExtResource("1_njt4c")
+_dialog_data_uid = 2217390277731406286
+_dialog_file_name = "cactus_intro"
+_dialog_data = ExtResource("2_fqy1s")
+_start_id = "1"
+_play_on_ready = false
+_destroy_on_end = true
+_print_debug = false
+metadata/_custom_type_script = "uid://1mxdpoyob13n"
 
 [node name="Boss" type="Node2D" parent="." unique_id=993685526]
 position = Vector2(787, 258)

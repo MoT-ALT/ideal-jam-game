@@ -76,11 +76,12 @@ func _pick_new_action() -> void:
 			%sand.hide()
 
 func _go_underground() -> void:
+	
 	var tween = create_tween().set_parallel(true)
 
 	tween.tween_property(%coffinatorAnimation, "scale:y", 0.0, 0.8).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
 	tween.tween_property(%coffinatorAnimation, "modulate:a", 0.0, 0.8)
-
+	%coffinatorAnimation.play("ATTACK")
 	tween.chain().tween_callback(func():
 		var viewport_size := get_viewport_rect().size
 		var random_x := randf_range(edge_margin, viewport_size.x - edge_margin)
@@ -109,6 +110,15 @@ func take_damage() -> void:
 			%coffinatorAnimation.play("DEAD")
 			monitorable = false
 			action_timer.stop()
+	if health <= 0:
+		return
+	move_direction = Vector2.ZERO
+	%coffinatorAnimation.play("IDLE")
+	_go_underground()
+	%sand.play("default")
+	%sand.show()
+	await get_tree().create_timer(1.0).timeout
+	%sand.hide()
 
 func _process(delta: float) -> void:
 	if health <= 0:
@@ -129,6 +139,7 @@ func _process(delta: float) -> void:
 
 	if move_direction.x != 0.0:
 		%coffinatorAnimation.flip_h = move_direction.x < 0.0
+	%coffinatorAnimation.offset.x = -17.5 if move_direction.x < 0.0 else 0.0
 
 	if global_position.y <= edge_margin and move_direction.y < 0:
 		move_direction = Vector2.DOWN

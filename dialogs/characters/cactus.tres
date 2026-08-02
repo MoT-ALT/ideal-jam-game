@@ -9,3 +9,5 @@ display_name = {
 "default": "Cow Cactus",
 "en": ""
 }
+dialog_box_uid = 3645603836592840726
+dialog_box_path = "res://dialogs/Scenes/CowCactus/Cowcactus.tscn"

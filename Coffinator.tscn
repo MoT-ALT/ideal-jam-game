@@ -591,7 +591,9 @@ script = ExtResource("1_ed4fi")
 [node name="coffinatorAnimation" type="AnimatedSprite2D" parent="." unique_id=2034897319]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_ql73s")
-animation = &"MOVE_UP"
+animation = &"ATTACK"
+frame = 17
+frame_progress = 1.0
 
 [node name="sand" type="AnimatedSprite2D" parent="." unique_id=1292700750]
 unique_name_in_owner = true
@@ -617,14 +619,14 @@ frame_progress = 0.113602586
 
 [node name="heart2" type="AnimatedSprite2D" parent="heart1" unique_id=1735266552]
 unique_name_in_owner = true
-position = Vector2(-253.95209, 499.4392)
+position = Vector2(-70.89496, 21.16272)
 scale = Vector2(1.0000001, 1)
 sprite_frames = SubResource("SpriteFrames_ed4fi")
 frame_progress = 0.55270237
 
 [node name="heart3" type="AnimatedSprite2D" parent="heart1" unique_id=1321373030]
 unique_name_in_owner = true
-position = Vector2(279.34735, 499.4392)
+position = Vector2(71.953156, 14.813904)
 scale = Vector2(1.0000001, 1)
 sprite_frames = SubResource("SpriteFrames_ed4fi")
 frame_progress = 0.07298256

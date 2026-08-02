@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="SproutyDialogsCharacterData" format=3 uid="uid://cyfay13nstfy7"]
+
+[ext_resource type="Script" uid="uid://kwoapf8il7ee" path="res://addons/sprouty_dialogs/resources/character_data.gd" id="1_7fbp0"]
+
+[resource]
+script = ExtResource("1_7fbp0")
+key_name = "Player_Talking_to_cactus"
+display_name = {
+"default": "Player",
+"en": ""
+}
+dialog_box_uid = 3645603836592840726
+dialog_box_path = "res://dialogs/Scenes/CowCactus/Cowcactus.tscn"

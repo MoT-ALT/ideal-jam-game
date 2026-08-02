@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var health := 7
+@export var health := 1
 
 @onready var crack: Sprite2D = $Crack
 

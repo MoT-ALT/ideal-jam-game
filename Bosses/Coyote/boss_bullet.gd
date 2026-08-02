@@ -1,7 +1,7 @@
 extends Area2D
 
 const SPEED := 275.0
-const LIFETIME := 6.0
+const LIFETIME := 4.0
 
 var direction := Vector2.DOWN
 var target: Node2D
