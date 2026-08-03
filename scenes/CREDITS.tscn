@@ -1,0 +1,265 @@
+[gd_scene format=3 uid="uid://d2knrac60e8o3"]
+
+[ext_resource type="Script" uid="uid://bkjh1gpwwpfr" path="res://node_2d.gd" id="1_6vsdt"]
+[ext_resource type="Theme" uid="uid://bld8u24d1r6g4" path="res://dialogs/new_theme.tres" id="2_46yyy"]
+[ext_resource type="Script" uid="uid://ixnxrp5mtkkc" path="res://theend.gd" id="3_46yyy"]
+
+[node name="Node2D" type="Node2D" unique_id=759967816]
+script = ExtResource("1_6vsdt")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=493983485]
+offset_right = 1153.0
+offset_bottom = 651.0
+color = Color(0, 0, 0, 1)
+
+[node name="THEEND" type="Label" parent="." unique_id=190942769]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 392.0
+offset_top = 256.0
+offset_right = 480.0
+offset_bottom = 288.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.61, 3.61)
+size_flags_horizontal = 4
+theme = ExtResource("2_46yyy")
+text = "THE END"
+script = ExtResource("3_46yyy")
+
+[node name="THEEND13" type="Label" parent="." unique_id=501062941]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 280.0
+offset_top = 24.0
+offset_right = 460.0
+offset_bottom = 196.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.61, 3.61)
+size_flags_horizontal = 4
+theme = ExtResource("2_46yyy")
+text = "IceFields
+Pimen
+Untiedgames
+Dogobongocat
+bakudas"
+script = ExtResource("3_46yyy")
+
+[node name="THEEND12" type="Label" parent="." unique_id=33055810]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = 256.0
+offset_right = 344.0
+offset_bottom = 288.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.385, 3.385)
+size_flags_horizontal = 4
+theme = ExtResource("2_46yyy")
+text = "Game Font And Assets by"
+script = ExtResource("3_46yyy")
+
+[node name="THEEND2" type="Label" parent="." unique_id=2101560242]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 392.0
+offset_top = 256.0
+offset_right = 480.0
+offset_bottom = 288.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.61, 3.61)
+size_flags_horizontal = 4
+theme = ExtResource("2_46yyy")
+text = "Game by"
+script = ExtResource("3_46yyy")
+
+[node name="THEEND3" type="Label" parent="." unique_id=1073380566]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 228.845
+offset_top = 256.0
+offset_right = 426.84543
+offset_bottom = 288.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.61, 3.61)
+size_flags_horizontal = 4
+theme = ExtResource("2_46yyy")
+text = "Motronics Team"
+script = ExtResource("3_46yyy")
+
+[node name="THEEND4" type="Label" parent="." unique_id=1438970744]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 228.845
+offset_top = 256.0
+offset_right = 406.845
+offset_bottom = 288.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.61, 3.61)
+size_flags_horizontal = 4
+theme = ExtResource("2_46yyy")
+text = "Game Director"
+script = ExtResource("3_46yyy")
+
+[node name="THEEND5" type="Label" parent="." unique_id=816689373]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 112.000015
+offset_top = 256.0
+offset_right = 376.0
+offset_bottom = 288.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.61, 3.61)
+size_flags_horizontal = 4
+theme = ExtResource("2_46yyy")
+text = "Mohamed AL-Masallati"
+script = ExtResource("3_46yyy")
+
+[node name="THEEND6" type="Label" parent="." unique_id=1738851117]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 112.0
+offset_top = 256.0
+offset_right = 370.0
+offset_bottom = 288.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.61, 3.61)
+size_flags_horizontal = 4
+theme = ExtResource("2_46yyy")
+text = "Game Programing by"
+script = ExtResource("3_46yyy")
+
+[node name="THEEND7" type="Label" parent="." unique_id=868716820]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 104.00003
+offset_top = 208.0
+offset_right = 370.00003
+offset_bottom = 275.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.61, 3.61)
+size_flags_horizontal = 4
+theme = ExtResource("2_46yyy")
+text = "Mohamed AL-Masallati
+Mohamed AL-Gheryani"
+script = ExtResource("3_46yyy")
+
+[node name="THEEND8" type="Label" parent="." unique_id=1313902880]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 128.0
+offset_top = 256.0
+offset_right = 369.0
+offset_bottom = 288.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.61, 3.61)
+size_flags_horizontal = 4
+theme = ExtResource("2_46yyy")
+text = "Game UI Design by"
+script = ExtResource("3_46yyy")
+
+[node name="THEEND9" type="Label" parent="." unique_id=1103041774]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 144.0
+offset_top = 272.0
+offset_right = 375.0
+offset_bottom = 304.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.61, 3.61)
+size_flags_horizontal = 4
+theme = ExtResource("2_46yyy")
+text = "Saad AL-Magherbi"
+script = ExtResource("3_46yyy")
+
+[node name="THEEND10" type="Label" parent="." unique_id=914036862]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 16.000002
+offset_top = 256.0
+offset_right = 324.0
+offset_bottom = 288.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.61, 3.61)
+size_flags_horizontal = 4
+theme = ExtResource("2_46yyy")
+text = "Game SFX And Story By"
+script = ExtResource("3_46yyy")
+
+[node name="THEEND11" type="Label" parent="." unique_id=978239429]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 128.0
+offset_top = 264.0
+offset_right = 394.0
+offset_bottom = 296.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.61, 3.61)
+size_flags_horizontal = 4
+theme = ExtResource("2_46yyy")
+text = "Mohamed A-Gheryani"
+script = ExtResource("3_46yyy")
