@@ -31,7 +31,7 @@ graph_data = {
 }
 dialogs = {
 "1_DIALOG_1": {
-"default": "The loose coffin's still out there, wandering the outskirts. Remember what I told you — hit the hole in the coffin.",
+"default": "The loose coffin's still out there, wandering the outskirts. Remember what I told you  hit the hole in the coffin.",
 "en": ""
 }
 }

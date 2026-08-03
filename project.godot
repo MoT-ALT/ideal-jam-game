@@ -13,7 +13,6 @@ config_version=5
 config/name="game jam"
 run/main_scene="res://UI/ui.tscn"
 config/features=PackedStringArray("4.7", "Forward Plus")
-boot_splash/image="uid://dqbjfqhoa8h4x"
 config/icon="res://icon.svg"
 
 [autoload]
@@ -150,14 +149,14 @@ internal/last_opened_files=[{
 "path": "res://dialogs/grave_digger_before_cactus.tres",
 "uid": 6569045158861190805,
 "view_state": {
-"scroll_offset": Vector2(-439.80298, -490.5182),
-"zoom": 0.75741935
+"scroll_offset": Vector2(-338.62, -548.2839),
+"zoom": 1.3252443
 }
 }, {
 "path": "res://dialogs/grave_digger_after_cactus.tres",
 "uid": 887458352162706293,
 "view_state": {
-"scroll_offset": Vector2(-142.53052, -165),
+"scroll_offset": Vector2(783.2954, -602.8947),
 "zoom": 1.0
 }
 }, {
@@ -255,5 +254,19 @@ internal/last_opened_files=[{
 "scroll_offset": Vector2(-173, -158.5),
 "zoom": 1.0
 }
+}, {
+"path": "res://dialogs/grave_digger_after_coffinator.tres",
+"uid": 8565338112557653493,
+"view_state": {
+"scroll_offset": Vector2(84.13098, 94.8772),
+"zoom": 1.0
+}
+}, {
+"path": "res://dialogs/grave_digger_before_coffinator.tres",
+"uid": 2478008925985367863,
+"view_state": {
+"scroll_offset": Vector2(750, 131.51385),
+"zoom": 1.0
+}
 }]
-internal/last_selected_file_index=4
+internal/last_selected_file_index=16

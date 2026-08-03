@@ -54,7 +54,7 @@ graph_data = {
 }
 dialogs = {
 "1_DIALOG_1": {
-"default": "Well, well. Just as I expected — from someone who could take down my fastest gunslinger.",
+"default": "Well, well. Just as I expected  from someone who could take down my fastest gunslinger.",
 "en": ""
 },
 "1_DIALOG_2": {
