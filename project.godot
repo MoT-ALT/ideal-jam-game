@@ -148,28 +148,35 @@ internal/last_opened_files=[{
 "path": "res://dialogs/grave_digger_before_cactus.tres",
 "uid": 6569045158861190805,
 "view_state": {
-"scroll_offset": Vector2(-272.2342, -438.70996),
-"zoom": 0.666943
+"scroll_offset": Vector2(-439.80298, -490.5182),
+"zoom": 0.75741935
 }
 }, {
 "path": "res://dialogs/grave_digger_after_cactus.tres",
 "uid": 887458352162706293,
 "view_state": {
-"scroll_offset": Vector2(-142.53052, -165),
+"scroll_offset": Vector2(-142.53052, -650),
 "zoom": 1.0
 }
 }, {
 "path": "res://dialogs/Town_Dialogs/Bartender_intro.tres",
 "uid": 3904601056577148566,
 "view_state": {
-"scroll_offset": Vector2(0, -165),
+"scroll_offset": Vector2(4331.5, -228),
 "zoom": 1.0
 }
 }, {
 "path": "res://dialogs/coyote_win_dialog.tres",
 "uid": 7764377318161501168,
 "view_state": {
-"scroll_offset": Vector2(-18.5, 0),
+"scroll_offset": Vector2(-18.5, 60.5),
+"zoom": 1.0
+}
+}, {
+"path": "res://dialogs/Town_Dialogs/coyote_lose_dialog.tres",
+"uid": 891030884947807307,
+"view_state": {
+"scroll_offset": Vector2(114, 91.657104),
 "zoom": 1.0
 }
 }, {
@@ -192,7 +199,7 @@ internal/last_opened_files=[{
 "path": "res://dialogs/bosses_dialogs/coyote_lose_dialog.tres",
 "uid": 2991064488057007720,
 "view_state": {
-"scroll_offset": Vector2(0, -74.1073),
+"scroll_offset": Vector2(397.72437, -74.1073),
 "zoom": 1.0
 }
 }, {
@@ -206,7 +213,7 @@ internal/last_opened_files=[{
 "path": "res://dialogs/Town_Dialogs/cactus_npc_dialog.tres",
 "uid": 5440575095388731027,
 "view_state": {
-"scroll_offset": Vector2(-173, -165),
+"scroll_offset": Vector2(-1480.5, -479.75),
 "zoom": 1.0
 }
 }, {
@@ -229,7 +236,7 @@ internal/last_opened_files=[{
 "path": "res://dialogs/coyote_lose_dialog.tres",
 "uid": 6276197589722870097,
 "view_state": {
-"scroll_offset": Vector2(-173, -156.25),
+"scroll_offset": Vector2(-306, -156.25),
 "zoom": 1.0
 }
 }, {
@@ -243,15 +250,15 @@ internal/last_opened_files=[{
 "path": "res://dialogs/bosses_dialogs/cactus_lose_dialog.tres",
 "uid": 1490290497522660676,
 "view_state": {
-"scroll_offset": Vector2(0, 0),
+"scroll_offset": Vector2(510, 0),
 "zoom": 1.0
 }
 }, {
 "path": "res://dialogs/Town_Dialogs/cactus_win_dialog.tres",
 "uid": 700733806497330277,
 "view_state": {
-"scroll_offset": Vector2(-173, -158.5),
+"scroll_offset": Vector2(-460, -158.5),
 "zoom": 1.0
 }
 }]
-internal/last_selected_file_index=8
+internal/last_selected_file_index=2
