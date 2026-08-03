@@ -2,8 +2,8 @@ extends Area2D
 
 signal game_won
 signal game_over
-@export var move_speed: float = 220.0
-@export var horizontal_move_speed: float = 220.0
+@export var move_speed: float = 190.0
+@export var horizontal_move_speed: float = 190.0
 @export var edge_margin: float = 26.0
 
 var health: int
