@@ -56,4 +56,4 @@ func _play_outro_dialog():
 	player.can_shoot = false
 	player.can_move = false
 	await dialog_player.dialog_ended
-	#SceneTransitionManager.load_scene("") # Credict Scene
+	SceneTransitionManager.load_scene("res://scenes/CREDITS.tscn") 

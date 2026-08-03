@@ -2580,6 +2580,7 @@ position = Vector2(75, -12)
 shape = SubResource("RectangleShape2D_8ftap")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=993409307]
+layer = 0
 
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=1841199845]
 anchors_preset = 7

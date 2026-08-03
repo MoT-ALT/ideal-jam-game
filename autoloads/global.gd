@@ -24,8 +24,7 @@ func is_npc_stage_played(npc_key: String, stage_path: String) -> bool:
 	return played.has(stage_path)
 
 func if_he_choosed_not_to():
-	print("YOU SHOULD RETURN TO MAIN MENU")
-	pass
+	SceneTransitionManager.load_scene("res://scenes/CREDITS.tscn")
 
 func set_coyote_disquise():
 	is_grave_digger_coyote = true

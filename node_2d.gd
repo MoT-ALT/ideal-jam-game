@@ -1,6 +1,7 @@
 extends Node2D
 
 func _ready() -> void:
+	SceneTransitionManager.init_scene()
 	var labels = [%THEEND, %THEEND2, %THEEND3, %THEEND4, %THEEND5, %THEEND6,
 		%THEEND7, %THEEND8, %THEEND9, %THEEND10, %THEEND11, %THEEND12, %THEEND13]
 
