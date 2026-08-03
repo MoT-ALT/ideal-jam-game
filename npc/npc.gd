@@ -23,6 +23,7 @@ enum TriggerMode { MANUAL, ON_ENTER }
 
 @export_group("Sprite")
 @export var sprite_frame: int = 0
+@export var hide_default_sprite: bool = false
 
 var player: Node2D
 var can_interact: bool = false
@@ -43,6 +44,8 @@ var _dialog_box_refs: Array[PackedScene] = []
 
 func _ready() -> void:
 	sprite.frame = sprite_frame
+	if hide_default_sprite:
+		sprite.visible = false
 	interaction_area.body_entered.connect(_on_body_entered)
 	interaction_area.body_exited.connect(_on_body_exited)
 	if prompt_label:
