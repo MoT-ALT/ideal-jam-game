@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bwn3w28r74d83"]
+[gd_scene format=3 uid="uid://dhwq75gjkrhsd"]
 
 [ext_resource type="PackedScene" uid="uid://cve3d6ui8c3b0" path="res://bosses/coffin/coffinator_fight_ui.tscn" id="1_iurqe"]
 [ext_resource type="PackedScene" uid="uid://ddan30jqkaes0" path="res://bosses/coffin/Coffinator.tscn" id="2_ivw60"]
