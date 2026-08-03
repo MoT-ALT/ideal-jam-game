@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="NPCDialogStage" format=3 uid="uid://bhrt1ghd06wsx"]
+
+[ext_resource type="Script" uid="uid://dgttedykiibqo" path="res://npc/npc_dialog_stage.gd" id="1_sta"]
+[ext_resource type="Resource" uid="uid://c0udhjnysgbab" path="res://dialogs/grave_digger_before_cactus.tres" id="2_sta"]
+
+[resource]
+script = ExtResource("1_sta")
+boss_key = "cow_cactus"
+condition = 2
+dialog_data = ExtResource("2_sta")
+one_shot = false

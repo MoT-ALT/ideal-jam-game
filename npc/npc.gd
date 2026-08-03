@@ -12,39 +12,52 @@ enum TriggerMode { MANUAL, ON_ENTER }
 @export_group("Dialog")
 @export var dialog_data: SproutyDialogsDialogueData
 @export var start_id: String = "1"
+@export var dialogs: Array = []
 
 @export_group("Interaction")
 @export var trigger_mode: TriggerMode = TriggerMode.MANUAL
 @export var interact_action: StringName = &"interact"
 @export var freeze_player: bool = true
-@export var can_repeat: bool = true
 @export var flip_sprite: Sprite2D
 @export var prompt_label: Label
+
+@export_group("Sprite")
+@export var sprite_frame: int = 0
 
 var player: Node2D
 var can_interact: bool = false
 var dialog_running: bool = false
 
-var _has_played := false
+var _played_stages: Array[NPCDialogStage] = []
 var _saved_movement: Dictionary = { "can_move": true, "can_shoot": false }
+var _known_boss_count := -1
+var _fallback_stage: NPCDialogStage
+var _fallback_stage_data: SproutyDialogsDialogueData
+var _fallback_stage_id: String
+var _dialog_box_refs: Array[PackedScene] = []
 
 @onready var interaction_area: Area2D = $InteractionArea
 @onready var dialog_player: DialogPlayer = $DialogPlayer
+@onready var sprite: Sprite2D = $Sprite
 
 
 func _ready() -> void:
+	sprite.frame = sprite_frame
 	interaction_area.body_entered.connect(_on_body_entered)
 	interaction_area.body_exited.connect(_on_body_exited)
 	if prompt_label:
 		prompt_label.visible = false
+	_known_boss_count = Global.Bosses_Beaten.size()
+	_keep_all_stage_dialog_boxes()
 	_preload_dialog()
 
 
-func _preload_dialog() -> void:
-	if dialog_data == null or start_id.is_empty():
-		return
-	dialog_player._starts_ids = dialog_data.get_start_ids()
-	dialog_player.set_dialog(dialog_data, start_id)
+func _process(_delta: float) -> void:
+	var count := Global.Bosses_Beaten.size()
+	if count != _known_boss_count:
+		_known_boss_count = count
+		_preload_dialog()
+		_update_interaction_state()
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -83,31 +96,116 @@ func try_interact() -> void:
 func play_dialog() -> void:
 	if dialog_running:
 		return
-	if dialog_data == null or start_id.is_empty():
-		push_warning("NPC '%s' has no dialog_data assigned" % name)
+	var stage := _active_stage()
+	if stage == null:
 		return
+	if dialog_player.get_dialog_data() != stage.dialog_data \
+			or dialog_player.get_start_id() != stage.start_id:
+		_apply_stage(stage)
+	_played_stages.append(stage)
 	dialog_running = true
-	_has_played = true
 	_freeze(true)
 	_set_prompt_visible(false)
-	_flip_toward_player()
 	dialog_started.emit()
 	dialog_player.start()
 	await dialog_player.dialog_ended
 	dialog_running = false
 	_freeze(false)
-	if not can_repeat:
-		player = null
-		_update_interaction_state()
+	_update_interaction_state()
 	dialog_finished.emit()
 
 
+func _stage_list() -> Array[NPCDialogStage]:
+	if not dialogs.is_empty():
+		var result: Array[NPCDialogStage] = []
+		for item in dialogs:
+			if item is NPCDialogStage:
+				result.append(item)
+		return result
+	if dialog_data != null:
+		return [_fallback_stage_get()]
+	return []
+
+
+func _fallback_stage_get() -> NPCDialogStage:
+	if _fallback_stage == null or _fallback_stage_data != dialog_data \
+			or _fallback_stage_id != start_id:
+		_fallback_stage = NPCDialogStage.new()
+		_fallback_stage.dialog_data = dialog_data
+		_fallback_stage.start_id = start_id
+		_fallback_stage.one_shot = false
+		_fallback_stage_data = dialog_data
+		_fallback_stage_id = start_id
+	return _fallback_stage
+
+
+func _active_stage() -> NPCDialogStage:
+	for stage in _stage_list():
+		if _stage_condition_passes(stage) \
+				and (not stage.one_shot or not _played_stages.has(stage)):
+			return stage
+	return null
+
+
+func _stage_condition_passes(stage: NPCDialogStage) -> bool:
+	match stage.condition:
+		NPCDialogStage.Condition.BOSS_DEFEATED:
+			return Global.Bosses_Beaten.has(stage.boss_key)
+		NPCDialogStage.Condition.BOSS_NOT_DEFEATED:
+			return not Global.Bosses_Beaten.has(stage.boss_key)
+		_:
+			return true
+
+
 func _can_start_dialog() -> bool:
-	return can_interact and not dialog_running and (can_repeat or not _has_played)
+	return can_interact and not dialog_running and _active_stage() != null
+
+
+func _preload_dialog() -> void:
+	var stage := _active_stage()
+	if stage == null:
+		return
+	if dialog_player.get_dialog_data() == stage.dialog_data \
+			and dialog_player.get_start_id() == stage.start_id:
+		return
+	_apply_stage(stage)
+
+
+func _apply_stage(stage: NPCDialogStage) -> void:
+	_keep_dialog_box_refs(stage)
+	dialog_player._starts_ids = stage.dialog_data.get_start_ids()
+	dialog_player.set_dialog(stage.dialog_data, stage.start_id)
+
+
+func _keep_all_stage_dialog_boxes() -> void:
+	for stage in _stage_list():
+		_keep_dialog_box_refs(stage)
+
+
+func _keep_dialog_box_refs(stage: NPCDialogStage) -> void:
+	for sid in stage.dialog_data.get_start_ids():
+		if not stage.dialog_data.characters.has(sid):
+			continue
+		for char_uid in stage.dialog_data.characters[sid].values():
+			if not ResourceUID.has_id(char_uid):
+				continue
+			var char_data: SproutyDialogsCharacterData = load(ResourceUID.get_id_path(char_uid))
+			if char_data == null or char_data.dialog_box_uid == -1:
+				continue
+			if not ResourceUID.has_id(char_data.dialog_box_uid):
+				continue
+			var box_path := ResourceUID.get_id_path(char_data.dialog_box_uid)
+			var already_held := false
+			for held in _dialog_box_refs:
+				if held.resource_path == box_path:
+					already_held = true
+					break
+			if not already_held:
+				_dialog_box_refs.append(load(box_path))
 
 
 func _update_interaction_state() -> void:
-	can_interact = is_instance_valid(player) and (can_repeat or not _has_played)
+	can_interact = is_instance_valid(player) and _active_stage() != null
 	_set_prompt_visible(can_interact)
 
 

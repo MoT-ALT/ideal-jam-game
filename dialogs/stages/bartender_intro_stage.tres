@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="NPCDialogStage" format=3 uid="uid://1lobsbhayfcp"]
+
+[ext_resource type="Script" uid="uid://dgttedykiibqo" path="res://npc/npc_dialog_stage.gd" id="1_sta"]
+[ext_resource type="Resource" uid="uid://bvvohdr48pfes" path="res://dialogs/Town_Dialogs/Bartender_intro.tres" id="2_sta"]
+
+[resource]
+script = ExtResource("1_sta")
+boss_key = ""
+condition = 0
+dialog_data = ExtResource("2_sta")
+one_shot = true

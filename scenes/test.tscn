@@ -9,6 +9,13 @@
 [ext_resource type="Texture2D" uid="uid://dyrqnen8fxti5" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/Mobs/Cactus/Cactus Side Sheet.png" id="7_vbegm"]
 [ext_resource type="Texture2D" uid="uid://dsro7t2q28hvm" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/Atlas.png" id="8_ehkex"]
 [ext_resource type="PackedScene" path="res://npc/npc.tscn" id="9_npc"]
+[ext_resource type="Resource" uid="uid://1lobsbhayfcp" path="res://dialogs/stages/bartender_intro_stage.tres" id="10_sta"]
+[ext_resource type="Resource" uid="uid://ba4adaq8ch32u" path="res://dialogs/stages/bartender_before_stage.tres" id="11_sta"]
+[ext_resource type="Resource" uid="uid://vsex721v84w" path="res://dialogs/stages/bartender_after_stage.tres" id="12_sta"]
+[ext_resource type="Resource" uid="uid://bhrt1ghd06wsx" path="res://dialogs/stages/grave_digger_before_stage.tres" id="13_sta"]
+[ext_resource type="Resource" uid="uid://cqynmmln2ogq0" path="res://dialogs/stages/grave_digger_after_stage.tres" id="14_sta"]
+[ext_resource type="Resource" uid="uid://cm55jdho5r3uv" path="res://dialogs/stages/grave_digger_before_coffinator_stage.tres" id="15_sta"]
+[ext_resource type="Resource" uid="uid://cep2387tg3n76" path="res://dialogs/stages/grave_digger_after_coffinator_stage.tres" id="16_sta"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ehkex"]
 atlas = ExtResource("3_g14j6")
@@ -225,3 +232,10 @@ texture = ExtResource("8_ehkex")
 
 [node name="NPC" parent="." unique_id=999999999 instance=ExtResource("9_npc")]
 position = Vector2(200, 0)
+sprite_frame = 3
+dialogs = [ExtResource("10_sta"), ExtResource("11_sta"), ExtResource("12_sta")]
+
+[node name="GraveNPC" parent="." unique_id=999999998 instance=ExtResource("9_npc")]
+position = Vector2(0, 300)
+sprite_frame = 6
+dialogs = [ExtResource("13_sta"), ExtResource("14_sta"), ExtResource("15_sta"), ExtResource("16_sta")]

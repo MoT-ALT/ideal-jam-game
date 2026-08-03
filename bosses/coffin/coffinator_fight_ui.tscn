@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dprf74kq1ojrh" path="res://bosses/coffin/coffinator_fight_ui.gd" id="1_76ls5"]
 [ext_resource type="FontFile" uid="uid://c2cbm4lkixqu4" path="res://UI/font/PixelGlobal-Regular.ttf" id="2_57lqq"]
+[ext_resource type="PackedScene" uid="uid://dspipifgsxq4u" path="res://UI/game_over_screen.tscn" id="2_f1efb"]
 [ext_resource type="Texture2D" uid="uid://cbwvq37lqceh2" path="res://Western_HUD/crosshair.png" id="2_qf7gk"]
 [ext_resource type="FontFile" uid="uid://bkiir7e68sdai" path="res://UI/font/PixelGlobal-Regular.otf" id="3_34vph"]
 [ext_resource type="Texture2D" uid="uid://b4ipguma2t453" path="res://Western_HUD/UI assets pack 2/ammo background1.png" id="3_exv82"]
@@ -131,6 +132,9 @@ animations = [{
 
 [node name="coffinatorFightUI" type="Node2D" unique_id=1057135122]
 script = ExtResource("1_76ls5")
+
+[node name="GameOverScreen" parent="." unique_id=27115222 instance=ExtResource("2_f1efb")]
+visible = false
 
 [node name="dualStart" type="Timer" parent="." unique_id=801598320]
 unique_name_in_owner = true

@@ -479,12 +479,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_030na"]
-size = Vector2(370.24478, 22)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7fklg"]
-size = Vector2(1143.46, 22)
-
 [node name="Coyote" type="Node2D" unique_id=2096895844]
 y_sort_enabled = true
 script = ExtResource("1_w8nrj")
@@ -647,34 +641,7 @@ hframes = 6
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Orbs/Orb3" unique_id=83076108]
 shape = SubResource("CapsuleShape2D_sq12r")
 
-[node name="Border" type="StaticBody2D" parent="." unique_id=6810157]
-position = Vector2(532, 453)
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Border" unique_id=557590223]
-position = Vector2(605, -21)
-rotation = 1.5707964
-shape = SubResource("RectangleShape2D_030na")
-disabled = true
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Border" unique_id=994899631]
-position = Vector2(-514, -21)
-rotation = 1.5707964
-shape = SubResource("RectangleShape2D_030na")
-disabled = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Border" unique_id=1920432065]
-position = Vector2(44, 172)
-shape = SubResource("RectangleShape2D_7fklg")
-disabled = true
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Border" unique_id=1960689349]
-position = Vector2(43, -216)
-shape = SubResource("RectangleShape2D_7fklg")
-disabled = true
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=576002434]
-position = Vector2(573, 323)
+position = Vector2(576, 324)
 
 [connection signal="animation_finished" from="Boss/AnimationPlayer" to="Boss" method="_on_animation_player_animation_finished"]

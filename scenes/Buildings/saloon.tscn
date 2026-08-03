@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://clv6lurkdnspj"]
 
 [ext_resource type="Texture2D" uid="uid://o3u6mryv7vdo" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/Buildings/buildings.png" id="1_jx808"]
+[ext_resource type="Texture2D" uid="uid://dsro7t2q28hvm" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/Atlas.png" id="2_f27r1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ftap"]
 size = Vector2(188.5, 20)
@@ -39,3 +40,9 @@ shape = SubResource("RectangleShape2D_8bbhl")
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="." unique_id=705651658]
 position = Vector2(-30, 21.5)
 shape = SubResource("RectangleShape2D_f27r1")
+
+[node name="Atlas" type="Sprite2D" parent="." unique_id=1567350185]
+position = Vector2(-71.5, -29.5)
+texture = ExtResource("2_f27r1")
+region_enabled = true
+region_rect = Rect2(660, 260, 24, 27)

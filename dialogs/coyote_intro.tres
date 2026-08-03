@@ -19,7 +19,7 @@ graph_data = {
 "type": 4,
 "value": "icon"
 }],
-"size": Vector2(347, 194),
+"size": Vector2(347, 44),
 "to_dialog": "",
 "to_node": ["END"]
 },
@@ -53,7 +53,7 @@ graph_data = {
 "node_type": "signal_node",
 "offset": Vector2(-720, 120),
 "signal_id": "voice_coyote_intro",
-"size": Vector2(383, 179),
+"size": Vector2(383, 44),
 "to_dialog": "",
 "to_node": ["dialogue_node_1"]
 },
@@ -61,7 +61,7 @@ graph_data = {
 "node_index": 1,
 "node_type": "start_node",
 "offset": Vector2(-1200, -20),
-"size": Vector2(191, 75),
+"size": Vector2(191, 46),
 "start_id": "1",
 "to_dialog": "",
 "to_node": ["signal_node_1"]
@@ -70,10 +70,12 @@ graph_data = {
 }
 dialogs = {
 "1_DIALOG_1": {
+"": "",
 "default": "ggg",
 "en": ""
 },
 "1_DIALOG_2": {
+"": "",
 "default": "bbb",
 "en": ""
 }

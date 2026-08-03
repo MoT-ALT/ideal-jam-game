@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SceneTransitionData" format=3 uid="uid://djjafnpqxnboh"]
+
+[ext_resource type="Script" uid="uid://bhq233umovq4s" path="res://addons/scene_transitions/scripts/scene_transition_data.gd" id="1_data"]
+[ext_resource type="PackedScene" uid="uid://gmn27slusg0d" path="res://UI/shader/circle_screen_transition.tscn" id="2_scene"]
+
+[resource]
+script = ExtResource("1_data")
+name = "circle"
+transition = ExtResource("2_scene")
+metadata/_custom_type_script = "uid://bhq233umovq4s"

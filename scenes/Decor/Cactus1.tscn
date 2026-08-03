@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c4ocrfnxn58k1"]
+
+[ext_resource type="Texture2D" uid="uid://dsro7t2q28hvm" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/Atlas.png" id="1_xlgee"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_51rcv"]
+size = Vector2(7, 9)
+
+[node name="Cactus1" type="StaticBody2D" unique_id=2051911756]
+
+[node name="Atlas" type="Sprite2D" parent="." unique_id=1837281313]
+position = Vector2(2, 1)
+texture = ExtResource("1_xlgee")
+region_enabled = true
+region_rect = Rect2(81, 484, 16, 28)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=855897630]
+position = Vector2(-0.5, 10.5)
+shape = SubResource("RectangleShape2D_51rcv")

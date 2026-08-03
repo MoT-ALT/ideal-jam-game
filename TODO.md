@@ -12,3 +12,7 @@ TODO List total 51%/100%:
 
 Optionally:
 1. add another mode to the game
+
+
+create a scene transition scene using canvas layer with color rect that has animation using color rect shader that has uniform progress
+add circle in from 0 to 1 and circle out from 1 to 0

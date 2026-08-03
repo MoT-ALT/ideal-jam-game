@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 SproutyDialogs="*uid://c8gxm75j80u8c"
 Juice="*uid://cbd5j33lx814s"
 Global="*uid://tduhcyiryu0v"
+SceneTransitionManager="*uid://d245pplff6u38"
 
 [display]
 
@@ -28,7 +29,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/saltmire_juice/plugin.cfg", "res://addons/sprouty_dialogs/plugin.cfg")
+enabled=PackedStringArray("res://addons/scene_transitions/plugin.cfg", "res://addons/saltmire_juice/plugin.cfg", "res://addons/sprouty_dialogs/plugin.cfg")
 
 [global_group]
 
@@ -76,6 +77,11 @@ interact={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"location":0,"echo":false,"script":null)
 ]
 }
+restart={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":82,"key_label":0,"unicode":114,"location":0,"echo":false,"script":null)
+]
+}
 
 [physics]
 
@@ -85,7 +91,13 @@ interact={
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
 environment/defaults/default_clear_color=Color(0.7921569, 0.6745098, 0.4392157, 1)
+
+[scene_manager]
+
+initial_scene=""
 
 [sprouty_dialogs]
 
@@ -122,162 +134,15 @@ internal/last_opened_files=[{
 "path": "res://dialogs/cactus_intro.tres",
 "uid": 2217390277731406286,
 "view_state": {
-"scroll_offset": Vector2(-88, -34),
-"zoom": 1.0
+"scroll_offset": Vector2(-173, -176.48839),
+"zoom": 0.67578775
 }
 }, {
 "path": "res://dialogs/coyote_intro.tres",
 "uid": 1325067129582911915,
 "view_state": {
-"scroll_offset": Vector2(-691.16223, -235.09027),
+"scroll_offset": Vector2(-691.16223, -9.7304),
 "zoom": 0.48652
 }
-}, {
-"path": "res://dialogs/characters/coyote.tres",
-"uid": 8730363075475109103,
-"view_state": {
-"portrait_search": "",
-"portrait_tree_state": {
-"selected_path": "",
-"tree_items": {}
-},
-"section_visibility": {
-"dialog_box_settings": true,
-"portrait_list": true,
-"portrait_settings": true
-},
-"selected_portrait_path": ""
-}
-}, {
-"path": "res://dialogs/characters/cactus.tres",
-"uid": 8655597707894758612,
-"view_state": {
-"portrait_search": "",
-"portrait_tree_state": {
-"selected_path": "",
-"tree_items": {}
-},
-"section_visibility": {
-"dialog_box_settings": true,
-"portrait_list": true,
-"portrait_settings": true
-},
-"selected_portrait_path": ""
-}
-}, {
-"path": "res://dialogs/characters/player.tres",
-"uid": 1825937622487938634,
-"view_state": {
-"portrait_search": "",
-"portrait_tree_state": {
-"selected_path": "",
-"tree_items": {}
-},
-"section_visibility": {
-"dialog_box_settings": true,
-"portrait_list": true,
-"portrait_settings": true
-},
-"selected_portrait_path": ""
-}
-}, {
-"path": "res://dialogs/coyote_outro.tres",
-"uid": 1656156100671014228,
-"view_state": {
-"scroll_offset": Vector2(54.725983, 3.8885498),
-"zoom": 0.85490865
-}
-}, {
-"path": "res://dialogs/characters/ggg.tres",
-"uid": 1790789820789514920,
-"view_state": {
-"portrait_search": "",
-"portrait_tree_state": {
-"selected_path": "",
-"tree_items": {}
-},
-"section_visibility": {
-"dialog_box_settings": true,
-"portrait_list": true,
-"portrait_settings": true
-},
-"selected_portrait_path": ""
-}
-}, {
-"path": "res://dialogs/bobo.tres",
-"uid": 6676508376685487451,
-"view_state": {
-"scroll_offset": Vector2(-173, -165),
-"zoom": 1.0
-}
-}, {
-"path": "res://dialogs/coffinator.tres",
-"uid": 1416578523556282747,
-"view_state": {
-"scroll_offset": Vector2(-173, -165),
-"zoom": 0.45320922
-}
-}, {
-"path": "res://dialogs/characters/Player_Talking_to_cactus.tres",
-"uid": 6467739772000091068,
-"view_state": {
-"portrait_search": "",
-"portrait_tree_state": {
-"selected_path": "",
-"tree_items": {}
-},
-"section_visibility": {
-"dialog_box_settings": true,
-"portrait_list": true,
-"portrait_settings": true
-},
-"selected_portrait_path": ""
-}
-}, {
-"path": "res://dialogs/characters/grave_digger.tres",
-"uid": 230390376241435467,
-"view_state": {
-"portrait_search": "",
-"portrait_tree_state": {
-"selected_path": "",
-"tree_items": {}
-},
-"section_visibility": {
-"dialog_box_settings": true,
-"portrait_list": true,
-"portrait_settings": true
-},
-"selected_portrait_path": ""
-}
-}, {
-"path": "res://dialogs/characters/bartender.tres",
-"uid": 6006888287895139915,
-"view_state": {
-"portrait_search": "",
-"portrait_tree_state": {
-"selected_path": "",
-"tree_items": {}
-},
-"section_visibility": {
-"dialog_box_settings": true,
-"portrait_list": true,
-"portrait_settings": true
-},
-"selected_portrait_path": ""
-}
-}, {
-"path": "res://dialogs/Town_Dialogs/Bartender_intro.tres",
-"uid": 3904601056577148566,
-"view_state": {
-"scroll_offset": Vector2(-283.521, -34.0011),
-"zoom": 0.98229635
-}
-}, {
-"path": "res://dialogs/barman_intro.tres",
-"uid": 2618811879738918779,
-"view_state": {
-"scroll_offset": Vector2(-1062.5, -648.25),
-"zoom": 1.0
-}
 }]
-internal/last_selected_file_index=0
+internal/last_selected_file_index=1

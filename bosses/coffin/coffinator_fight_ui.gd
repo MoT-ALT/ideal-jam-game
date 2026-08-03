@@ -78,6 +78,8 @@ func _trigger_game_won() -> void:
 	stop_aiming()
 	%dualTimer.stop()
 	%dualTimer/Label.text = "You Win!"
+	if not Global.Bosses_Beaten.has("coffinator"):
+		Global.Bosses_Beaten.append("coffinator")
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	round_won.emit()
 
@@ -88,6 +90,8 @@ func _trigger_game_over() -> void:
 	stop_aiming()
 	%dualTimer.stop()
 	%dualTimer/Label.text = "You Lost!"
+	await get_tree().create_timer(0.7).timeout
+	$GameOverScreen.show()
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	round_lost.emit()
 

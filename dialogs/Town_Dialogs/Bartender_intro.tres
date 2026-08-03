@@ -13,7 +13,7 @@ graph_data = {
 "node_type": "call_method_node",
 "offset": Vector2(3340, 400),
 "parameters": [],
-"size": Vector2(264, 194),
+"size": Vector2(264, 44),
 "to_dialog": "",
 "to_node": ["END"]
 },
@@ -147,7 +147,7 @@ graph_data = {
 "visibility": 0
 }],
 "options_keys": ["1_OPT1_1", "1_OPT1_2"],
-"size": Vector2(279, 311),
+"size": Vector2(279, 46),
 "to_dialog": "",
 "to_node": ["dialogue_node_8", "call_method_node_1"]
 },
@@ -155,7 +155,7 @@ graph_data = {
 "node_index": 1,
 "node_type": "start_node",
 "offset": Vector2(-80, 100),
-"size": Vector2(191, 97),
+"size": Vector2(191, 46),
 "start_id": "1",
 "to_dialog": "",
 "to_node": ["dialogue_node_1"]
@@ -190,36 +190,44 @@ graph_data = {
 }
 dialogs = {
 "1_DIALOG_1": {
+"": "",
 "default": "You the new sheriff they sent?",
 "en": ""
 },
 "1_DIALOG_10": {
+"": "",
 "default": "You go up against him, you'd better have fast hands. Slow ones just end up buried.",
 "en": ""
 },
 "1_DIALOG_3": {
+"": "",
 "default": "Well, you can turn right back around. They already sent one before you. Didn't end well.",
 "en": ""
 },
 "1_DIALOG_5": {
+"": "",
 "default": "What, they didn't tell you about her? A woman, sent here to do exactly what you're about to do. Those things out there made quick work of her.",
 "en": ""
 },
 "1_DIALOG_6": {
+"": "",
 "default": "We managed to pull her out while they weren't looking. But I don't think she's gonna make it.",
 "en": ""
 },
 "1_DIALOG_7": {
+"": "",
 "default": "Anyway if you still wanna do this after hearing that, I've got some information that might help.
 ",
 "en": ""
 },
 "1_DIALOG_8": {
+"": "",
 "default": "Huh. Guess you've got some meat on your bones after all.
 ",
 "en": ""
 },
 "1_DIALOG_9": {
+"": "",
 "default": " happen to know one of the monsters. Calls himself Cow Cact now. Used to be a regular in here fastest gunslinger this town ever saw. Man didn't want anybody messing with him, or his hat , [color=#ff0000][shake]Especially[/shake][/color] the hat.",
 "en": ""
 },
@@ -230,10 +238,12 @@ dialogs = {
 "default": "Turn back and leave"
 },
 "UNPLUGGED_DIALOG_2": {
+"": "",
 "default": "Nods",
 "en": ""
 },
 "UNPLUGGED_DIALOG_4": {
+"": "",
 "default": "Confused",
 "en": ""
 }

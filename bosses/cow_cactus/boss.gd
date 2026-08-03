@@ -36,6 +36,7 @@ func _ready() -> void:
 	animation_player.animation_finished.connect(_on_animation_player_animation_finished)
 	animation_player.play("intro")
 	animated_sprite_2d.play("Walk")
+	SceneTransitionManager.init_scene()
 	
 
 
@@ -63,10 +64,6 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 		await dialog_player.dialog_ended
 		start_quickdraw()
 		
-
-
-	
-
 
 func start_quickdraw() -> void:
 	round += 1
@@ -126,8 +123,12 @@ func player_draw() -> void:
 			await get_tree().create_timer(0.9).timeout
 			draw_label.text = "VICTORY!"
 			_hide_bar()
+			if not Global.Bosses_Beaten.has("cow_cactus"):
+				Global.Bosses_Beaten.append("cow_cactus")
 			var tween := create_tween()
 			tween.tween_property(animated_sprite_2d, "modulate:a", 0.0, 1.2)
+			await get_tree().create_timer(1.2).timeout
+			SceneTransitionManager.load_scene("res://UI/tile_map_layer.tscn")
 			return
 		await get_tree().create_timer(HIT_PAUSE).timeout
 		animated_sprite_2d.play("Idle")
@@ -147,3 +148,5 @@ func boss_fires() -> void:
 	player.play_death()
 	await get_tree().create_timer(0.9).timeout
 	draw_label.text = "YOU LOSE!"
+	if Input.is_action_just_pressed("restart"):
+		get_tree().reload_current_scene()

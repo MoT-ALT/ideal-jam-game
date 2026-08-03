@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://03qku52kpgau"]
+
+[ext_resource type="Texture2D" uid="uid://o3u6mryv7vdo" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/Buildings/buildings.png" id="1_8eqi4"]
+[ext_resource type="Texture2D" uid="uid://dsro7t2q28hvm" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/Atlas.png" id="2_0udqr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ftap"]
+size = Vector2(143, 89.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f27r1"]
+size = Vector2(19.9375, 22.5)
+
+[node name="Saloon" type="StaticBody2D" unique_id=108594236]
+scale = Vector2(2, 2)
+
+[node name="Buildings" type="Sprite2D" parent="." unique_id=578289677]
+position = Vector2(4.5, -51.5)
+texture = ExtResource("1_8eqi4")
+region_enabled = true
+region_rect = Rect2(352, 173, 145, 149)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1835326196]
+position = Vector2(3.5, -50.25)
+shape = SubResource("RectangleShape2D_8ftap")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=668337407]
+position = Vector2(60.96875, -1.25)
+shape = SubResource("RectangleShape2D_f27r1")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=623210491]
+position = Vector2(-52, -1)
+shape = SubResource("RectangleShape2D_f27r1")
+
+[node name="Atlas" type="Sprite2D" parent="." unique_id=1338626745]
+position = Vector2(19, -48)
+texture = ExtResource("2_0udqr")
+region_enabled = true
+region_rect = Rect2(191, 415, 65, 40)

@@ -1,5 +1,7 @@
 extends Button
 
+@export var st : SceneTransition
+
 func _ready() -> void:
 	pressed.connect(_on_pressed)
 

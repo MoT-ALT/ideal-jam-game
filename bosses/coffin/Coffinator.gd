@@ -16,6 +16,8 @@ var action_timer: Timer
 var hittable_states: Array[String] = ["IDLE", "MOVE_DOWN", "MOVE_UP", "MOVE_RIGHT_LEFT"]
 
 func _ready() -> void:
+	SceneTransitionManager.init_scene()
+	
 	%sand.hide()
 	randomize()
 	%coffinatorAnimation.play("IDLE")
@@ -110,6 +112,8 @@ func take_damage() -> void:
 			%coffinatorAnimation.play("DEAD")
 			monitorable = false
 			action_timer.stop()
+			await get_tree().create_timer(1).timeout
+			SceneTransitionManager.load_scene("res://UI/tile_map_layer.tscn")
 	if health <= 0:
 		return
 	move_direction = Vector2.ZERO
