@@ -30,6 +30,7 @@ var can_interact: bool = false
 var dialog_running: bool = false
 
 var _played_stages: Array[NPCDialogStage] = []
+var _npc_key: String
 var _saved_movement: Dictionary = { "can_move": true, "can_shoot": false }
 var _known_boss_count := -1
 var _fallback_stage: NPCDialogStage
@@ -51,6 +52,8 @@ func _ready() -> void:
 	if prompt_label:
 		prompt_label.visible = false
 	_known_boss_count = Global.Bosses_Beaten.size()
+	_npc_key = _build_npc_key()
+	_restore_played_stages()
 	_keep_all_stage_dialog_boxes()
 	_preload_dialog()
 
@@ -106,6 +109,7 @@ func play_dialog() -> void:
 			or dialog_player.get_start_id() != stage.start_id:
 		_apply_stage(stage)
 	_played_stages.append(stage)
+	Global.mark_npc_stage_played(_npc_key, stage.resource_path)
 	dialog_running = true
 	_freeze(true)
 	_set_prompt_visible(false)
@@ -158,6 +162,22 @@ func _stage_condition_passes(stage: NPCDialogStage) -> bool:
 			return not Global.Bosses_Beaten.has(stage.boss_key)
 		_:
 			return true
+
+
+func _build_npc_key() -> String:
+	var owner_scene := ""
+	if owner and owner.get_scene_file_path() != "":
+		owner_scene = owner.get_scene_file_path()
+	else:
+		owner_scene = get_scene_file_path()
+	return Global.get_npc_key(owner_scene, name)
+
+
+func _restore_played_stages() -> void:
+	_played_stages.clear()
+	for stage in _stage_list():
+		if Global.is_npc_stage_played(_npc_key, stage.resource_path):
+			_played_stages.append(stage)
 
 
 func _can_start_dialog() -> bool:

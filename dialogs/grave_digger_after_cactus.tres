@@ -70,7 +70,7 @@ graph_data = {
 "node_index": 1,
 "node_type": "start_node",
 "offset": Vector2(-620, -680),
-"size": Vector2(191, 75),
+"size": Vector2(191, 46),
 "start_id": "1",
 "to_dialog": "",
 "to_node": ["dialogue_node_1"]
@@ -79,22 +79,27 @@ graph_data = {
 }
 dialogs = {
 "1_DIALOG_1": {
+"": "",
 "default": "Heard you got one of 'em.",
 "en": ""
 },
 "1_DIALOG_2": {
+"": "",
 "default": "Never thought I'd live long enough to see this town breathe free again.",
 "en": ""
 },
 "1_DIALOG_3": {
+"": "",
 "default": "...I've got some information on that damn loose coffin roaming the outskirts on the [color=#ab1200][wave]East[/wave][/color]. Might seem impossible to put down, but ",
 "en": ""
 },
 "1_DIALOG_4": {
+"": "",
 "default": "Hit the hole in the coffin. That ought to do enough damage to send him back where he came from.",
 "en": ""
 },
 "1_DIALOG_5": {
+"": "",
 "default": "Six feet under. Where he belongs.",
 "en": ""
 }

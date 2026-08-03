@@ -176,6 +176,7 @@ func _input(event: InputEvent) -> void:
 	
 	if Input.is_action_just_pressed(
 			SproutyDialogsSettingsManager.get_setting("continue_input_action")):
+		AudioManager.play_text_skip()
 		if not _display_completed and _can_skip: # Skip dialog typing and show the full text
 			_skip_dialog_typing()
 		elif _display_completed: # Continue dialog when the text is fully displayed

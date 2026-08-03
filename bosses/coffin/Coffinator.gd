@@ -72,6 +72,7 @@ func _pick_new_action() -> void:
 			move_direction = Vector2.ZERO
 			%coffinatorAnimation.play("IDLE")
 			_go_underground()
+			AudioManager.play_digging()
 			%sand.play("default")
 			%sand.show()
 			await get_tree().create_timer(1.0).timeout
@@ -102,6 +103,7 @@ func take_damage() -> void:
 	if health <= 0:
 		return
 	health -= 1
+	AudioManager.play_hit()
 	match health:
 		2:
 			%heart3.hide()

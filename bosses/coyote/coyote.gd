@@ -10,6 +10,7 @@ var can_restart : bool
 const COYOTE_WIN_DIALOG = preload("res://dialogs/coyote_win_dialog.tres")
 
 func _ready() -> void:
+	SceneTransitionManager.init_scene()
 	player.min_x = 0 + padding
 	player.max_y = get_viewport_rect().size.y - padding
 	player.min_y = 275 + padding

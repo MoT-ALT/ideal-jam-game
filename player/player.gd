@@ -56,8 +56,10 @@ func _physics_process(_delta: float) -> void:
 	elif can_shoot and Input.is_action_just_pressed("shoot"):
 		shoot()
 	elif direction and can_move:
+		AudioManager.play_walking()
 		state_machine.travel("Walk")
 	else:
+		AudioManager.stop_walking()
 		state_machine.travel("Idle")
 
 	move_and_slide()
@@ -67,6 +69,7 @@ func _physics_process(_delta: float) -> void:
 
 func shoot() -> void:
 	is_shooting = true
+	AudioManager.play_shooting()
 	state_machine.travel("Shoot")
 	var bullet := BULLET_SCENE.instantiate()
 	bullet.global_position = $Muzzle.global_position
@@ -81,6 +84,7 @@ func take_damage(amount: int = 20) -> void:
 	if is_dead:
 		return
 	health -= amount
+	AudioManager.play_hit()
 	Juice.damage_number(self, global_position+Vector2(0,-60), amount)
 	Juice.shake(get_viewport().get_camera_2d())
 	if health <= 0:
@@ -100,6 +104,7 @@ func die() -> void:
 	if is_dead:
 		return
 	is_dead = true
+	AudioManager.stop_walking()
 	can_move = false
 	can_shoot = false
 	hit_active = false

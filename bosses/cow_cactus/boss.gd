@@ -123,8 +123,10 @@ func player_draw() -> void:
 	if marker_offset <= zone_width / 2.0:
 		player_hits += 1
 		draw_label.text = "HIT! %d/%d" % [player_hits, HITS_TO_KILL]
+		AudioManager.play_shooting()
 		player.fire()
 		await get_tree().create_timer(0.35).timeout
+		AudioManager.play_hit()
 		animated_sprite_2d.play("Hit")
 		if player_hits >= HITS_TO_KILL:
 			await get_tree().create_timer(0.9).timeout
@@ -153,6 +155,7 @@ func player_draw() -> void:
 
 func boss_fires() -> void:
 	player.duel_active = false
+	AudioManager.play_shooting()
 	animated_sprite_2d.play("Shoot")
 	await get_tree().create_timer(1.2).timeout
 	player.play_death()

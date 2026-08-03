@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://clv6lurkdnspj" path="res://scenes/Buildings/saloon.tscn" id="3_bbpda"]
 [ext_resource type="PackedScene" uid="uid://dpxeilbs7f383" path="res://npc/npc.tscn" id="5_6h6hy"]
 [ext_resource type="PackedScene" uid="uid://b0lmpcl6lvngt" path="res://scenes/Buildings/Grave_Base.tscn" id="8_x8lp8"]
-[ext_resource type="PackedScene" uid="uid://03qku52kpgau" path="res://scenes/Buildings/Hotel.tscn" id="9_ity57"]
+[ext_resource type="PackedScene" uid="uid://bdy0qntjj7dgr" path="res://scenes/Buildings/Hotel.tscn" id="9_ity57"]
 [ext_resource type="PackedScene" uid="uid://r8q01hwcrco5" path="res://scenes/Buildings/Sheriff.tscn" id="9_v32jt"]
 [ext_resource type="Resource" uid="uid://1lobsbhayfcp" path="res://dialogs/stages/bartender_intro_stage.tres" id="10_sta"]
 [ext_resource type="Resource" uid="uid://ba4adaq8ch32u" path="res://dialogs/stages/bartender_before_stage.tres" id="11_sta"]
