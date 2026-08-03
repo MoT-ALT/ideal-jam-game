@@ -22,7 +22,7 @@ func _process(delta: float) -> void:
 	if Input.is_key_pressed(KEY_3):
 		print(Global.Bosses_Beaten)
 	if Input.is_action_pressed("interact") and player_is_in_cow_cactus_area:
-		SceneTransitionManager.load_scene("res://bosses/cow_cactus/cow_cactus.tscn")
+		SceneTransitionManager.load_scene("res://UI/i2.tscn")
 	
 	if Input.is_action_pressed("interact") and player_is_in_coffinator_area and Global.Bosses_Beaten.has("cow_cactus"):
 		SceneTransitionManager.load_scene("res://scenes/test_fight.tscn")
