@@ -560,7 +560,7 @@ animations = [{
 }]
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_oeq8l"]
-points = PackedVector2Array(3.8540595, -1.0435252, 1.9371033, -1.5120277, -4.261627, -1.5120296, -4.8815002, 0.21600342, -4.8815002, 1.9440365, -3.641758, 6.264121, 2.5569687, 6.264121, 4.4165916, 2.808055)
+points = PackedVector2Array(3.8540595, -1.0435252, 1.6335673, -3.8294353, -1.7269132, -4.67321, -4.8815002, 0.21600342, -4.8815002, 1.9440365, -3.641758, 6.264121, 2.5569687, 6.264121, 4.4165916, 2.808055)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n8c8l"]
 atlas = ExtResource("4_bi8xx")
@@ -604,9 +604,9 @@ frame = 5
 frame_progress = 1.0
 
 [node name="criticalHit" type="CollisionShape2D" parent="." unique_id=100033274]
-position = Vector2(-9.006836, -10.293526)
+position = Vector2(-9.489345, -10.776035)
 rotation = -3.1415925
-scale = Vector2(1.0378667, -0.74459845)
+scale = Vector2(1.723, -1.239)
 shape = SubResource("ConvexPolygonShape2D_oeq8l")
 debug_color = Color(0.61249703, 0, 0.18263006, 0.41960785)
 

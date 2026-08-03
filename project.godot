@@ -163,7 +163,7 @@ internal/last_opened_files=[{
 "path": "res://dialogs/Town_Dialogs/Bartender_intro.tres",
 "uid": 3904601056577148566,
 "view_state": {
-"scroll_offset": Vector2(4550, -241),
+"scroll_offset": Vector2(0, -181),
 "zoom": 1.0
 }
 }, {
