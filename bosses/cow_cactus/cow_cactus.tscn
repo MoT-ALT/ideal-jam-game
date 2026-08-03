@@ -7,6 +7,7 @@
 [ext_resource type="Resource" uid="uid://6uedgtauialy" path="res://dialogs/cactus_intro.tres" id="2_fqy1s"]
 [ext_resource type="Script" uid="uid://p56rbbp12k3s" path="res://bosses/cow_cactus/player.gd" id="2_rwea2"]
 [ext_resource type="Texture2D" uid="uid://clfpy3aqqbk46" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/Player/Player Side Sheet.png" id="3_oicm2"]
+[ext_resource type="Theme" uid="uid://bld8u24d1r6g4" path="res://dialogs/new_theme.tres" id="8_fn5sg"]
 [ext_resource type="PackedScene" uid="uid://dspipifgsxq4u" path="res://UI/game_over_screen.tscn" id="8_q75vi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q75vi"]
@@ -1852,6 +1853,7 @@ offset_top = 525.0
 offset_right = 200.0
 offset_bottom = 624.0
 grow_horizontal = 2
+theme = ExtResource("8_fn5sg")
 theme_override_font_sizes/font_size = 72
 horizontal_alignment = 1
 
