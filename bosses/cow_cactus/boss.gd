@@ -159,6 +159,7 @@ func boss_fires() -> void:
 	animated_sprite_2d.play("Shoot")
 	await get_tree().create_timer(1.2).timeout
 	player.play_death()
+	AudioManager.play_hit()
 	await get_tree().create_timer(0.9).timeout
 	dialog_player._dialog_data = CACTUS_WIN_DIALOG
 	dialog_player.start() # starts the cactus_win_dialog

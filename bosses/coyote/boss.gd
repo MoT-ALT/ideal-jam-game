@@ -57,16 +57,13 @@ func _physics_process(delta: float) -> void:
 		return
 
 	if in_range and shoot_cooldown == 0.0:
-		AudioManager.stop_walking()
 		start_shoot()
 	elif absf(to_player.x) > X_DEADZONE:
-		AudioManager.play_walking()
 		animated_sprite_2d.flip_h = to_player.x < 0
 		velocity = Vector2(signf(to_player.x), 0) * SPEED
 		play_anim("Walk")
 		move_and_slide()
 	else:
-		AudioManager.stop_walking()
 		velocity = Vector2.ZERO
 		play_anim("Idle")
 
@@ -128,7 +125,6 @@ func on_orb_destroyed(_orb: Area2D) -> void:
 
 func die() -> void:
 	emit_signal("boss_died")
-	AudioManager.stop_walking()
 	set_physics_process(false)
 	dialog_player._dialog_data = COYOTE_OUTRO # start the coyote lose dialog
 	dialog_player.start()
