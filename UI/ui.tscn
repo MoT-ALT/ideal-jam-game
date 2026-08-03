@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dsro7t2q28hvm" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/Atlas.png" id="2_nltto"]
 [ext_resource type="Script" uid="uid://cj2ex1i0jq0wb" path="res://UI/exit.gd" id="3_27fn8"]
 [ext_resource type="Script" uid="uid://brv3fcffta604" path="res://UI/play.gd" id="3_y4yjw"]
+[ext_resource type="Script" path="res://UI/music.gd" id="10_music"]
 [ext_resource type="Texture2D" uid="uid://y5hjaneuu2q0" path="res://UI/min/1785497664912.png" id="4_ibotj"]
 [ext_resource type="Texture2D" uid="uid://cheejtrxca7sm" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/Mobs/Coffin/Coffin Back Sheet-patched.png" id="4_n5ude"]
 [ext_resource type="Texture2D" uid="uid://5fcxmnykwj8a" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/Mobs/Cactus/Cactus Back Sheet.png" id="5_y4yjw"]
@@ -3053,6 +3054,13 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 41
 text = "EXIT"
 script = ExtResource("3_27fn8")
+
+[node name="MUSIC" type="Button" parent="NinePatchRect/VBoxContainer" unique_id=641836037]
+z_index = 2000
+layout_mode = 2
+theme_override_font_sizes/font_size = 41
+text = "MUSIC: ON"
+script = ExtResource("10_music")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="NinePatchRect/VBoxContainer" unique_id=1928851910]
 tile_map_data = PackedByteArray("AAANAP7/AAAAAAAAAAANAP//AAAAAAEAAAAOAP7/AAABAAAAAAAOAP//AAABAAEAAAD2////AQA4AAUAAAD2/wAAAQA4AAYAAAD2/wEAAQA4AAcAAAD3////AQA5AAUAAAD3/wAAAQA5AAYAAAD3/wEAAQA5AAcAAAA=")
