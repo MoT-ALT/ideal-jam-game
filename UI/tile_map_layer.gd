@@ -21,16 +21,22 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	
-	if player_is_in_coffinator_area or player_is_in_cow_cactus_area:
+	if player_is_in_cow_cactus_area or (player_is_in_coffinator_area and Global.Bosses_Beaten.has("cow_cactus")):
 		prompt_label.show()
 	else: 
 		prompt_label.hide()
 	
 	if Input.is_action_pressed("interact") and player_is_in_cow_cactus_area:
-		SceneTransitionManager.load_scene("res://UI/i2.tscn")
+		if Global.Bosses_Beaten.has("cow_cactus"):
+			Juice.shake(get_viewport().get_camera_2d())
+		else :
+			SceneTransitionManager.load_scene("res://UI/i2.tscn")
 	
 	if Input.is_action_pressed("interact") and player_is_in_coffinator_area and Global.Bosses_Beaten.has("cow_cactus"):
-		SceneTransitionManager.load_scene("res://scenes/test_fight.tscn")
+		if Global.Bosses_Beaten.has("coffinator"):
+			Juice.shake(get_viewport().get_camera_2d())
+		else :
+			SceneTransitionManager.load_scene("res://scenes/test_fight.tscn")
 
 func _on_cow_cactus_body_entered(body: Node2D) -> void: 
 	if body.is_in_group("Player"):

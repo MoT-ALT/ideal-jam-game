@@ -9,7 +9,7 @@
 size = Vector2(40, 80)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_interact"]
-radius = 90.0
+radius = 96.02083
 
 [node name="NPC" type="Node2D" unique_id=311656898]
 script = ExtResource("1_npc")
@@ -34,6 +34,7 @@ position = Vector2(1, -33)
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=358129501]
+position = Vector2(-2, 34)
 shape = SubResource("CircleShape2D_interact")
 
 [node name="DialogPlayer" type="Node" parent="." unique_id=859890860]

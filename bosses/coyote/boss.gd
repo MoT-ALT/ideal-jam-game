@@ -84,6 +84,7 @@ func fire_volley() -> void:
 
 func spawn_boss_bullet() -> void:
 	var bullet := BOSS_BULLET_SCENE.instantiate()
+	
 	bullet.global_position = global_position
 	bullet.direction = (player.global_position - global_position).normalized()
 	bullet.target = player
@@ -124,8 +125,15 @@ func on_orb_destroyed(_orb: Area2D) -> void:
 
 
 func die() -> void:
+	clear_bullets()
 	emit_signal("boss_died")
 	set_physics_process(false)
 	dialog_player._dialog_data = COYOTE_OUTRO # start the coyote lose dialog
 	dialog_player.start()
+
+
+func clear_bullets() -> void:
+	for bullet in get_tree().get_nodes_in_group("boss_bullets"):
+		if is_instance_valid(bullet):
+			bullet.queue_free()
 	

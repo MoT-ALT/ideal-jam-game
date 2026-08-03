@@ -19,7 +19,7 @@ enum TriggerMode { MANUAL, ON_ENTER }
 @export var interact_action: StringName = &"interact"
 @export var freeze_player: bool = true
 @export var flip_sprite: Sprite2D
-@export var prompt_label: Label
+@export var prompt_text: String = "Press E to interact"
 
 @export_group("Sprite")
 @export var sprite_frame: int = 0
@@ -28,6 +28,9 @@ enum TriggerMode { MANUAL, ON_ENTER }
 var player: Node2D
 var can_interact: bool = false
 var dialog_running: bool = false
+var player_is_in: bool = false
+
+var prompt_label: Label
 
 var _played_stages: Array[NPCDialogStage] = []
 var _npc_key: String
@@ -47,10 +50,9 @@ func _ready() -> void:
 	sprite.frame = sprite_frame
 	if hide_default_sprite:
 		sprite.visible = false
+	_create_prompt_label()
 	interaction_area.body_entered.connect(_on_body_entered)
 	interaction_area.body_exited.connect(_on_body_exited)
-	if prompt_label:
-		prompt_label.visible = false
 	_known_boss_count = Global.Bosses_Beaten.size()
 	_npc_key = _build_npc_key()
 	_restore_played_stages()
@@ -58,12 +60,47 @@ func _ready() -> void:
 	_preload_dialog()
 
 
+func _create_prompt_label() -> void:
+	var canvas := CanvasLayer.new()
+	canvas.layer = 0
+	canvas.name = "PromptCanvas"
+	add_child(canvas)
+	prompt_label = Label.new()
+	prompt_label.text = prompt_text
+	prompt_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	prompt_label.add_theme_font_size_override("font_size", 121)
+	prompt_label.anchor_left = 0.5
+	prompt_label.anchor_right = 0.5
+	prompt_label.anchor_top = 1.0
+	prompt_label.anchor_bottom = 1.0
+	prompt_label.offset_left = -140.0
+	prompt_label.offset_top = -40.0
+	prompt_label.offset_right = 140.0
+	prompt_label.offset_bottom = -8.0
+	prompt_label.grow_horizontal = Control.GROW_DIRECTION_BOTH
+	prompt_label.grow_vertical = Control.GROW_DIRECTION_BEGIN
+	prompt_label.visible = false
+	prompt_label.theme = load("res://dialogs/new_theme.tres")
+	canvas.add_child(prompt_label)
+
+
 func _process(_delta: float) -> void:
+	_update_prompt_label()
 	var count := Global.Bosses_Beaten.size()
 	if count != _known_boss_count:
 		_known_boss_count = count
 		_preload_dialog()
 		_update_interaction_state()
+
+
+func _update_prompt_label() -> void:
+	if prompt_label == null:
+		return
+	if player_is_in and can_interact and not dialog_running:
+		if not prompt_label.visible:
+			prompt_label.show()
+	elif prompt_label.visible:
+		prompt_label.hide()
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -77,8 +114,10 @@ func _on_body_entered(body: Node2D) -> void:
 	if not body.is_in_group("Player"):
 		return
 	player = body
+	player_is_in = true
 	_update_interaction_state()
 	player_entered.emit(player)
+	
 	if trigger_mode == TriggerMode.ON_ENTER:
 		try_interact()
 
@@ -87,9 +126,9 @@ func _on_body_exited(body: Node2D) -> void:
 	if body != player:
 		return
 	player = null
+	player_is_in = false
 	can_interact = false
 	player_exited.emit(body)
-	_set_prompt_visible(false)
 
 
 func try_interact() -> void:
@@ -112,7 +151,6 @@ func play_dialog() -> void:
 	Global.mark_npc_stage_played(_npc_key, stage.resource_path)
 	dialog_running = true
 	_freeze(true)
-	_set_prompt_visible(false)
 	dialog_started.emit()
 	dialog_player.start()
 	await dialog_player.dialog_ended
@@ -229,7 +267,6 @@ func _keep_dialog_box_refs(stage: NPCDialogStage) -> void:
 
 func _update_interaction_state() -> void:
 	can_interact = is_instance_valid(player) and _active_stage() != null
-	_set_prompt_visible(can_interact)
 
 
 func _freeze(frozen: bool) -> void:
@@ -249,8 +286,3 @@ func _flip_toward_player() -> void:
 	if not flip_sprite or not is_instance_valid(player):
 		return
 	flip_sprite.flip_h = player.global_position.x < global_position.x
-
-
-func _set_prompt_visible(_visible: bool) -> void:
-	if prompt_label:
-		prompt_label.visible = _visible

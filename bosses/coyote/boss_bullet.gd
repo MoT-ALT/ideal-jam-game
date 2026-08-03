@@ -8,6 +8,7 @@ var target: Node2D
 
 
 func _ready() -> void:
+	add_to_group("boss_bullets")
 	area_entered.connect(_on_area_entered)
 	await get_tree().create_timer(LIFETIME).timeout
 	if is_inside_tree():

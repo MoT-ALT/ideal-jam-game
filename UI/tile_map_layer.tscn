@@ -2515,10 +2515,9 @@ position_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
-[node name="NPC" parent="." unique_id=1724991048 node_paths=PackedStringArray("prompt_label") instance=ExtResource("5_6h6hy")]
+[node name="NPC" parent="." unique_id=1724991048 instance=ExtResource("5_6h6hy")]
 position = Vector2(487, 957)
 dialogs = [ExtResource("10_sta"), ExtResource("11_sta"), ExtResource("12_sta")]
-prompt_label = NodePath("../CanvasLayer/Label")
 sprite_frame = 3
 
 [node name="Saloon" parent="." unique_id=108594236 instance=ExtResource("3_bbpda")]
@@ -2527,10 +2526,9 @@ position = Vector2(533, 935)
 [node name="GraveBase" parent="." unique_id=2119790384 instance=ExtResource("8_x8lp8")]
 position = Vector2(1748, 302)
 
-[node name="GraveNPC" parent="." unique_id=1724991049 node_paths=PackedStringArray("prompt_label") instance=ExtResource("5_6h6hy")]
+[node name="GraveNPC" parent="." unique_id=1724991049 instance=ExtResource("5_6h6hy")]
 position = Vector2(1750, 350)
 dialogs = [ExtResource("13_sta"), ExtResource("14_sta"), ExtResource("15_sta"), ExtResource("16_sta")]
-prompt_label = NodePath("../CanvasLayer/Label")
 sprite_frame = 6
 
 [node name="CoyoteReveal" type="Sprite2D" parent="GraveNPC" unique_id=1724991050]
