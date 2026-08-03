@@ -13,6 +13,9 @@ const SWEEP_SPEED_BASE := 1.0
 const SWEEP_SPEED_STEP := 0.25
 const BAR_WIDTH := 600.0
 
+const CACTUS_WIN_DIALOG = preload("res://dialogs/bosses_dialogs/cactus_win_dialog.tres")
+const CACTUS_LOSE_DIALOG = preload("res://dialogs/bosses_dialogs/cactus_lose_dialog.tres")
+
 var player_hits := 0
 var round := 0
 var round_active := false
@@ -21,6 +24,7 @@ var round_token := 0
 var zone_width := BASE_ZONE
 var sweep_t := 0.0
 var sweeping := false
+var can_restart:bool
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
@@ -41,6 +45,9 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	if can_restart:
+		if Input.is_action_just_pressed("restart"):
+			get_tree().reload_current_scene()
 	if not sweeping:
 		return
 	bar_marker.visible = true
@@ -125,6 +132,9 @@ func player_draw() -> void:
 			_hide_bar()
 			if not Global.Bosses_Beaten.has("cow_cactus"):
 				Global.Bosses_Beaten.append("cow_cactus")
+			dialog_player._dialog_data = CACTUS_LOSE_DIALOG
+			dialog_player.start() # starts the cactus_lose_dialog
+			await dialog_player.dialog_ended
 			var tween := create_tween()
 			tween.tween_property(animated_sprite_2d, "modulate:a", 0.0, 1.2)
 			await get_tree().create_timer(1.2).timeout
@@ -147,6 +157,10 @@ func boss_fires() -> void:
 	await get_tree().create_timer(1.2).timeout
 	player.play_death()
 	await get_tree().create_timer(0.9).timeout
+	dialog_player._dialog_data = CACTUS_WIN_DIALOG
+	dialog_player.start() # starts the cactus_win_dialog
+	await dialog_player.dialog_ended
 	draw_label.text = "YOU LOSE!"
-	if Input.is_action_just_pressed("restart"):
-		get_tree().reload_current_scene()
+	$"../CanvasLayer".show()
+	$"../UI/Control".hide()
+	can_restart = true

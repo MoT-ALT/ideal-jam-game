@@ -1,14 +1,14 @@
-[gd_resource type="Resource" script_class="SproutyDialogsDialogueData" format=3 uid="uid://c0udhjnysgbab"]
+[gd_resource type="Resource" script_class="SproutyDialogsDialogueData" format=3 uid="uid://cjrpqhl1hg5o6"]
 
-[ext_resource type="Script" uid="uid://cbjdca3iwlx36" path="res://addons/sprouty_dialogs/resources/dialogue_data.gd" id="1_a5z3b"]
+[ext_resource type="Script" uid="uid://cbjdca3iwlx36" path="res://addons/sprouty_dialogs/resources/dialogue_data.gd" id="1_khxbd"]
 
 [resource]
-script = ExtResource("1_a5z3b")
+script = ExtResource("1_khxbd")
 graph_data = {
 "1": {
 "dialogue_node_1": {
 "char_expand": true,
-"character": "grave_digger",
+"character": "cow_cactus_npc",
 "dialog_key": "1_DIALOG_1",
 "node_index": 1,
 "node_type": "dialogue_node",
@@ -20,7 +20,7 @@ graph_data = {
 },
 "dialogue_node_2": {
 "char_expand": true,
-"character": "grave_digger",
+"character": "cow_cactus_npc",
 "dialog_key": "1_DIALOG_2",
 "node_index": 2,
 "node_type": "dialogue_node",
@@ -43,16 +43,16 @@ graph_data = {
 }
 dialogs = {
 "1_DIALOG_1": {
-"default": "Get him first, and I might have some information on that handsome cat who caused all this.",
+"default": "Bank's under my watch, partner. Touch the hat, and you'll be planted next to them graves.",
 "en": ""
 },
 "1_DIALOG_2": {
-"default": "Go Talk to the Bartender",
+"default": "Everything else in this town is fair game.",
 "en": ""
 }
 }
 characters = {
 "1": {
-"grave_digger": 230390376241435467
+"cow_cactus_npc": 4369002243234080413
 }
 }

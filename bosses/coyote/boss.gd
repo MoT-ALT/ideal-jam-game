@@ -22,7 +22,7 @@ signal boss_died
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var dialog_player: DialogPlayer = $"../DialogPlayer"
-const COYOTE_OUTRO = preload("res://dialogs/coyote_outro.tres")
+const COYOTE_OUTRO = preload("res://dialogs/coyote_lose_dialog.tres")
 
 
 func _ready() -> void:
@@ -124,6 +124,6 @@ func on_orb_destroyed(_orb: Area2D) -> void:
 func die() -> void:
 	emit_signal("boss_died")
 	set_physics_process(false)
-	dialog_player._dialog_data = COYOTE_OUTRO
+	dialog_player._dialog_data = COYOTE_OUTRO # start the coyote lose dialog
 	dialog_player.start()
 	

@@ -7,6 +7,7 @@ signal round_won
 signal round_lost
 
 var game_ended: bool = false
+var can_restart: bool
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED_HIDDEN)
@@ -30,6 +31,9 @@ func stop_aiming() -> void:
 	is_active = false
 
 func _process(delta: float) -> void:
+	if can_restart:
+		if Input.is_action_just_pressed("restart"):
+			get_tree().reload_current_scene()
 	if not %dualStart.is_stopped():
 		%dualStart/Label.text = str(ceil(%dualStart.time_left))
 
@@ -92,6 +96,7 @@ func _trigger_game_over() -> void:
 	%dualTimer/Label.text = "You Lost!"
 	await get_tree().create_timer(0.7).timeout
 	$GameOverScreen.show()
+	can_restart = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	round_lost.emit()
 

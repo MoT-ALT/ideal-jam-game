@@ -20,7 +20,7 @@ graph_data = {
 },
 "dialogue_node_2": {
 "char_expand": true,
-"character": "Player_Talking_to_cactus",
+"character": "cactus",
 "dialog_key": "1_DIALOG_2",
 "node_index": 2,
 "node_type": "dialogue_node",
@@ -34,7 +34,7 @@ graph_data = {
 "node_index": 1,
 "node_type": "start_node",
 "offset": Vector2(24, -17),
-"size": Vector2(191, 46),
+"size": Vector2(191, 75),
 "start_id": "1",
 "to_dialog": "",
 "to_node": ["dialogue_node_1"]
@@ -43,19 +43,16 @@ graph_data = {
 }
 dialogs = {
 "1_DIALOG_1": {
-"": "",
-"default": "Hello",
+"default": "Well now. Guess that answers that.",
 "en": ""
 },
 "1_DIALOG_2": {
-"": "",
-"default": "Bam",
+"default": "Don't touch the hat. Everything else is fair game.",
 "en": ""
 }
 }
 characters = {
 "1": {
-"Player_Talking_to_cactus": 6467739772000091068,
 "cactus": 8655597707894758612
 }
 }

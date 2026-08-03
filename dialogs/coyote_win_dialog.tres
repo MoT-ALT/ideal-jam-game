@@ -1,9 +1,9 @@
-[gd_resource type="Resource" script_class="SproutyDialogsDialogueData" format=3 uid="uid://s44wrkn4bi16"]
+[gd_resource type="Resource" script_class="SproutyDialogsDialogueData" format=3 uid="uid://divefpah0j13y"]
 
-[ext_resource type="Script" uid="uid://cbjdca3iwlx36" path="res://addons/sprouty_dialogs/resources/dialogue_data.gd" id="1_ngysg"]
+[ext_resource type="Script" uid="uid://cbjdca3iwlx36" path="res://addons/sprouty_dialogs/resources/dialogue_data.gd" id="1_cw8bp"]
 
 [resource]
-script = ExtResource("1_ngysg")
+script = ExtResource("1_cw8bp")
 graph_data = {
 "1": {
 "dialogue_node_1": {
@@ -12,7 +12,7 @@ graph_data = {
 "dialog_key": "1_DIALOG_1",
 "node_index": 1,
 "node_type": "dialogue_node",
-"offset": Vector2(-540, 0),
+"offset": Vector2(340, 160),
 "portrait": "",
 "size": Vector2(250, 439),
 "to_dialog": "",
@@ -21,8 +21,8 @@ graph_data = {
 "start_node_1": {
 "node_index": 1,
 "node_type": "start_node",
-"offset": Vector2(-1200, -20),
-"size": Vector2(191, 75),
+"offset": Vector2(60, 200),
+"size": Vector2(191, 97),
 "start_id": "1",
 "to_dialog": "",
 "to_node": ["dialogue_node_1"]
@@ -31,7 +31,7 @@ graph_data = {
 }
 dialogs = {
 "1_DIALOG_1": {
-"default": "Surprised? You really didn't see it comin'?",
+"default": "Should've turned back when you had the chance.",
 "en": ""
 }
 }

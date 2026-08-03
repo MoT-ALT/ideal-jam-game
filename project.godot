@@ -134,15 +134,124 @@ internal/last_opened_files=[{
 "path": "res://dialogs/cactus_intro.tres",
 "uid": 2217390277731406286,
 "view_state": {
-"scroll_offset": Vector2(-173, -176.48839),
+"scroll_offset": Vector2(-109.769775, 64.71564),
 "zoom": 0.67578775
 }
 }, {
 "path": "res://dialogs/coyote_intro.tres",
 "uid": 1325067129582911915,
 "view_state": {
-"scroll_offset": Vector2(-691.16223, -9.7304),
-"zoom": 0.48652
+"scroll_offset": Vector2(-697.21436, -108.78375),
+"zoom": 0.8553043
+}
+}, {
+"path": "res://dialogs/grave_digger_before_cactus.tres",
+"uid": 6569045158861190805,
+"view_state": {
+"scroll_offset": Vector2(-272.2342, -438.70996),
+"zoom": 0.666943
+}
+}, {
+"path": "res://dialogs/grave_digger_after_cactus.tres",
+"uid": 887458352162706293,
+"view_state": {
+"scroll_offset": Vector2(-142.53052, -165),
+"zoom": 1.0
+}
+}, {
+"path": "res://dialogs/Town_Dialogs/Bartender_intro.tres",
+"uid": 3904601056577148566,
+"view_state": {
+"scroll_offset": Vector2(0, -165),
+"zoom": 1.0
+}
+}, {
+"path": "res://dialogs/coyote_win_dialog.tres",
+"uid": 7764377318161501168,
+"view_state": {
+"scroll_offset": Vector2(-18.5, 0),
+"zoom": 1.0
+}
+}, {
+"path": "res://dialogs/characters/coyote.tres",
+"uid": 8730363075475109103,
+"view_state": {
+"portrait_search": "",
+"portrait_tree_state": {
+"selected_path": "",
+"tree_items": {}
+},
+"section_visibility": {
+"dialog_box_settings": true,
+"portrait_list": true,
+"portrait_settings": true
+},
+"selected_portrait_path": ""
+}
+}, {
+"path": "res://dialogs/bosses_dialogs/coyote_lose_dialog.tres",
+"uid": 2991064488057007720,
+"view_state": {
+"scroll_offset": Vector2(0, -74.1073),
+"zoom": 1.0
+}
+}, {
+"path": "res://dialogs/Town_Dialogs/coyote_win_dialog.tres",
+"uid": 1706404268327069392,
+"view_state": {
+"scroll_offset": Vector2(-254.08899, -221.40784),
+"zoom": 0.92387015
+}
+}, {
+"path": "res://dialogs/Town_Dialogs/cactus_npc_dialog.tres",
+"uid": 5440575095388731027,
+"view_state": {
+"scroll_offset": Vector2(-173, -165),
+"zoom": 1.0
+}
+}, {
+"path": "res://dialogs/characters/cow_cactus_npc.tres",
+"uid": 4369002243234080413,
+"view_state": {
+"portrait_search": "",
+"portrait_tree_state": {
+"selected_path": "",
+"tree_items": {}
+},
+"section_visibility": {
+"dialog_box_settings": true,
+"portrait_list": true,
+"portrait_settings": true
+},
+"selected_portrait_path": ""
+}
+}, {
+"path": "res://dialogs/coyote_lose_dialog.tres",
+"uid": 6276197589722870097,
+"view_state": {
+"scroll_offset": Vector2(-173, -156.25),
+"zoom": 1.0
+}
+}, {
+"path": "res://dialogs/coyote_outro.tres",
+"uid": 1656156100671014228,
+"view_state": {
+"scroll_offset": Vector2(0, 0),
+"zoom": 1.0
+}
+}, {
+"path": "res://dialogs/bosses_dialogs/cactus_lose_dialog.tres",
+"uid": 1490290497522660676,
+"view_state": {
+"scroll_offset": Vector2(0, 0),
+"zoom": 1.0
+}
+}, {
+"path": "res://dialogs/Town_Dialogs/cactus_win_dialog.tres",
+"uid": 700733806497330277,
+"view_state": {
+"scroll_offset": Vector2(-173, -158.5),
+"zoom": 1.0
 }
 }]
-internal/last_selected_file_index=1
+internal/last_selected_file_index=8
