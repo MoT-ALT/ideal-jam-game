@@ -26,6 +26,10 @@ Boss fights, one per encounter:
 - **Coffinator** *(rename pending)* — duck-hunt style; it digs down to escape your shots.
 - **Coyote** *(rename pending)* — Donkey Kong style; it shoots magic projectiles and chases down its orbs.
 
+Town NPCs (cow cactus, bartender, grave digger) talk with the player and, when
+their dialog ends, trigger the next scene (e.g. the bank-town cactus starts the
+cow cactus boss fight).
+
 ## Project structure
 
 ```
@@ -35,9 +39,10 @@ bosses/           per-boss scenes + scripts
   cow_cactus/     quick-draw fight
   coyote/         projectile/orb fight
 dialogs/          SproutyDialogs data, characters, custom dialog boxes
+npc/              reusable NPC prefab + dialog stage resources
 player/           player + bullet scenes/scripts
 scenes/           main game scene (test_fight) and test scenes
-UI/               menus and UI prototypes
+UI/               menus, UI prototypes, and town levels (i2, tile_map_layer)
 addons/           SproutyDialogs dialog addon
 ```
 

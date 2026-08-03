@@ -4,6 +4,7 @@ extends Node2D
 @onready var grave_npc: NPC = $GraveNPC
 @onready var grave_npc_sprite: Sprite2D = $GraveNPC/Sprite
 @onready var coyote_reveal_sprite: Sprite2D = $GraveNPC/CoyoteReveal
+@onready var prompt_label: Label = $CanvasLayer/Label
 
 var player_is_in_cow_cactus_area : bool
 var player_is_in_coffinator_area : bool
@@ -19,8 +20,12 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	if Input.is_key_pressed(KEY_3):
-		print(Global.Bosses_Beaten)
+	
+	if player_is_in_coffinator_area or player_is_in_cow_cactus_area:
+		prompt_label.show()
+	else: 
+		prompt_label.hide()
+	
 	if Input.is_action_pressed("interact") and player_is_in_cow_cactus_area:
 		SceneTransitionManager.load_scene("res://UI/i2.tscn")
 	

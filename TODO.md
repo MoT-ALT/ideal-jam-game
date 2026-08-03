@@ -6,6 +6,10 @@ TODO List total 51%/100%:
     3. coyote "Rename needed": like original donkey kong in the original super mario he would shoot at you magic projectile and will try to shoot his orbs 
 3. create UI theme 70%
 4. add dialogs with translation 50%
+    1. wired cow cactus + coyote win/lose dialogs (player death and boss defeated)
+    2. added Cow Cactus town NPC (cactus side sprite, flipped) at the bank in `UI/i2.tscn`
+    3. NPC dialog ends -> loads the cow cactus boss fight
+    4. grave digger coyote reveal -> loads the coyote boss fight
 5. complete the world design 60% 
 6. record a video of the gameplay 0% 
 7. export it to html and windows (linux optionally) 0%

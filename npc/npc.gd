@@ -231,6 +231,6 @@ func _flip_toward_player() -> void:
 	flip_sprite.flip_h = player.global_position.x < global_position.x
 
 
-func _set_prompt_visible(visible: bool) -> void:
+func _set_prompt_visible(_visible: bool) -> void:
 	if prompt_label:
-		prompt_label.visible = visible
+		prompt_label.visible = _visible
