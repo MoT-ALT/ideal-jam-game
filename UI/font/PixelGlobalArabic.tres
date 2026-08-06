@@ -1,0 +1,8 @@
+[gd_resource type="FontVariation" format=3 uid="uid://cpdgu2b7r8a0v"]
+
+[ext_resource type="FontFile" uid="uid://c2cbm4lkixqu4" path="res://UI/font/PixelGlobal-Regular.ttf" id="1_pixel"]
+[ext_resource type="FontFile" path="res://UI/font/NotoNaskhArabic-Regular.ttf" id="2_arabic"]
+
+[resource]
+base_font = ExtResource("1_pixel")
+fallbacks/0 = ExtResource("2_arabic")
