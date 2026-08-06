@@ -57,18 +57,23 @@ dialogs = {
 "1_DIALOG_1": {
 "": "",
 "default": "Slow hands.",
-"en": ""
+"en": "Slow hands.",
+"ar": "أيادٍ بطيئة."
 },
 "1_DIALOG_2": {
 "": "",
 "default": "Told you how this'd go.
 ",
-"en": ""
+"en": "Told you how this'd go.
+",
+"ar": "قلت لك كيف ستسير الأمور.
+"
 },
 "1_DIALOG_3": {
 "": "",
 "default": "Bury this one proper.",
-"en": ""
+"en": "Bury this one proper.",
+"ar": "ادفن هذا كما ينبغي."
 }
 }
 characters = {

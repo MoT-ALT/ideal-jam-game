@@ -45,12 +45,14 @@ dialogs = {
 "1_DIALOG_1": {
 "": "",
 "default": "Get him first, and I might have some information on that handsome cat who caused all this.",
-"en": ""
+"en": "Get him first, and I might have some information on that handsome cat who caused all this.",
+"ar": "اقضِ عليه أولاً، وقد يكون لديّ بعض المعلومات عن ذلك القط الوسيم الذي تسبب في كل هذا."
 },
 "1_DIALOG_2": {
 "": "",
 "default": "Go Talk to the Bartender",
-"en": ""
+"en": "Go Talk to the Bartender",
+"ar": "اذهب وتحدث إلى الساقي"
 }
 }
 characters = {

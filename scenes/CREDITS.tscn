@@ -50,7 +50,7 @@ theme = ExtResource("2_46yyy")
 text = "IceFields
 Pimen
 Untiedgames
-Dogobongocat
+kenney
 bakudas"
 script = ExtResource("3_46yyy")
 
@@ -204,7 +204,8 @@ grow_vertical = 2
 scale = Vector2(3.61, 3.61)
 size_flags_horizontal = 4
 theme = ExtResource("2_46yyy")
-text = "Game UI Design by"
+text = "Game Design by"
+horizontal_alignment = 1
 script = ExtResource("3_46yyy")
 
 [node name="THEEND9" type="Label" parent="." unique_id=1103041774]

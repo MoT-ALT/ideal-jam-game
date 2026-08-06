@@ -14,7 +14,7 @@ graph_data = {
 "node_type": "dialogue_node",
 "offset": Vector2(500, 200),
 "portrait": "",
-"size": Vector2(250, 439),
+"size": Vector2(250, 548),
 "to_dialog": "",
 "to_node": ["END"]
 },
@@ -31,8 +31,9 @@ graph_data = {
 }
 dialogs = {
 "1_DIALOG_1": {
+"ar": "التابوت المارق ما زال هناك، يتجول في الأطراف. تذكر ما قلته لك  اضرب الثقب في التابوت.",
 "default": "The loose coffin's still out there, wandering the outskirts. Remember what I told you  hit the hole in the coffin.",
-"en": ""
+"en": "The loose coffin's still out there, wandering the outskirts. Remember what I told you  hit the hole in the coffin."
 }
 }
 characters = {

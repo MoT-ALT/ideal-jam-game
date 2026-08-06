@@ -33,7 +33,8 @@ dialogs = {
 "1_DIALOG_1": {
 "": "",
 "default": "hoho",
-"en": ""
+"en": "hoho",
+"ar": "هوهو"
 }
 }
 characters = {

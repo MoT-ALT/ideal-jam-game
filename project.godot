@@ -22,6 +22,7 @@ Juice="*uid://cbd5j33lx814s"
 Global="*uid://tduhcyiryu0v"
 SceneTransitionManager="*uid://d245pplff6u38"
 AudioManager="*uid://bu5682bbvxduf"
+LangManager="*res://autoloads/lang_manager.gd"
 
 [display]
 
@@ -83,6 +84,10 @@ restart={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":82,"key_label":0,"unicode":114,"location":0,"echo":false,"script":null)
 ]
 }
+Debug={
+"deadzone": 0.2,
+"events": []
+}
 
 [physics]
 
@@ -119,154 +124,73 @@ text/display/max_characters=0
 text/skip/allow_skip_text_reveal=true
 text/skip/can_skip_delay=0.1
 text/skip/continue_delay=0.1
-translation/enable_translations=false
+translation/enable_translations=true
 translation/csv_files/use_csv_files=false
 translation/csv_files/csv_translations_folder=""
 translation/csv_files/fallback_to_resource=true
-translation/characters/translate_character_names=false
+translation/characters/translate_character_names=true
 translation/characters/use_csv_for_character_names=false
 translation/characters/character_names_csv=-1
 translation/localization/default_locale="en"
-translation/localization/locales=["en"]
+translation/localization/locales=["en", "ar"]
 internal/variables={}
 internal/play_dialog_path="res://dialogs/Town_Dialogs/Bartender_intro.tres"
 internal/play_start_id="1"
 internal/last_opened_files=[{
-"path": "res://dialogs/cactus_intro.tres",
-"uid": 2217390277731406286,
+"path": "res://dialogs/grave_digger_before_coffinator.tres",
+"uid": 2478008925985367863,
 "view_state": {
-"scroll_offset": Vector2(-109.769775, 64.71564),
-"zoom": 0.67578775
-}
-}, {
-"path": "res://dialogs/coyote_intro.tres",
-"uid": 1325067129582911915,
-"view_state": {
-"scroll_offset": Vector2(-697.21436, -108.78375),
-"zoom": 0.8553043
-}
-}, {
-"path": "res://dialogs/grave_digger_before_cactus.tres",
-"uid": 6569045158861190805,
-"view_state": {
-"scroll_offset": Vector2(-338.62, -548.2839),
-"zoom": 1.3252443
-}
-}, {
-"path": "res://dialogs/grave_digger_after_cactus.tres",
-"uid": 887458352162706293,
-"view_state": {
-"scroll_offset": Vector2(783.2954, -602.8947),
-"zoom": 1.0
-}
-}, {
-"path": "res://dialogs/Town_Dialogs/Bartender_intro.tres",
-"uid": 3904601056577148566,
-"view_state": {
-"scroll_offset": Vector2(0, -181),
-"zoom": 1.0
-}
-}, {
-"path": "res://dialogs/coyote_win_dialog.tres",
-"uid": 7764377318161501168,
-"view_state": {
-"scroll_offset": Vector2(-18.5, 0),
-"zoom": 1.0
-}
-}, {
-"path": "res://dialogs/characters/coyote.tres",
-"uid": 8730363075475109103,
-"view_state": {
-"portrait_search": "",
-"portrait_tree_state": {
-"selected_path": "",
-"tree_items": {}
-},
-"section_visibility": {
-"dialog_box_settings": true,
-"portrait_list": true,
-"portrait_settings": true
-},
-"selected_portrait_path": ""
-}
-}, {
-"path": "res://dialogs/bosses_dialogs/coyote_lose_dialog.tres",
-"uid": 2991064488057007720,
-"view_state": {
-"scroll_offset": Vector2(0, -74.1073),
-"zoom": 1.0
-}
-}, {
-"path": "res://dialogs/Town_Dialogs/coyote_win_dialog.tres",
-"uid": 1706404268327069392,
-"view_state": {
-"scroll_offset": Vector2(-254.08899, -221.40784),
-"zoom": 0.92387015
-}
-}, {
-"path": "res://dialogs/Town_Dialogs/cactus_npc_dialog.tres",
-"uid": 5440575095388731027,
-"view_state": {
-"scroll_offset": Vector2(-173, -165),
-"zoom": 1.0
-}
-}, {
-"path": "res://dialogs/characters/cow_cactus_npc.tres",
-"uid": 4369002243234080413,
-"view_state": {
-"portrait_search": "",
-"portrait_tree_state": {
-"selected_path": "",
-"tree_items": {}
-},
-"section_visibility": {
-"dialog_box_settings": true,
-"portrait_list": true,
-"portrait_settings": true
-},
-"selected_portrait_path": ""
-}
-}, {
-"path": "res://dialogs/coyote_lose_dialog.tres",
-"uid": 6276197589722870097,
-"view_state": {
-"scroll_offset": Vector2(-173, -156.25),
-"zoom": 1.0
-}
-}, {
-"path": "res://dialogs/coyote_outro.tres",
-"uid": 1656156100671014228,
-"view_state": {
-"scroll_offset": Vector2(0, 0),
+"scroll_offset": Vector2(149, 397.75),
 "zoom": 1.0
 }
 }, {
 "path": "res://dialogs/bosses_dialogs/cactus_lose_dialog.tres",
 "uid": 1490290497522660676,
 "view_state": {
+"scroll_offset": Vector2(561, 209),
+"zoom": 1.0
+}
+}, {
+"path": "res://dialogs/bosses_dialogs/cactus_win_dialog.tres",
+"uid": 4407684648209508802,
+"view_state": {
 "scroll_offset": Vector2(0, 0),
 "zoom": 1.0
 }
 }, {
-"path": "res://dialogs/Town_Dialogs/cactus_win_dialog.tres",
-"uid": 700733806497330277,
+"path": "res://dialogs/bosses_dialogs/coyote_lose_dialog.tres",
+"uid": 2991064488057007720,
 "view_state": {
-"scroll_offset": Vector2(-173, -158.5),
+"scroll_offset": Vector2(0, 0),
 "zoom": 1.0
 }
 }, {
-"path": "res://dialogs/grave_digger_after_coffinator.tres",
-"uid": 8565338112557653493,
+"path": "res://dialogs/coyote_lose_dialog.tres",
+"uid": 6276197589722870097,
 "view_state": {
-"scroll_offset": Vector2(84.13098, 94.8772),
+"scroll_offset": Vector2(0, 400.25),
 "zoom": 1.0
 }
 }, {
-"path": "res://dialogs/grave_digger_before_coffinator.tres",
-"uid": 2478008925985367863,
+"path": "res://dialogs/coyote_intro.tres",
+"uid": 1325067129582911915,
 "view_state": {
-"scroll_offset": Vector2(750, 131.51385),
+"scroll_offset": Vector2(-1075.0854, 56.066162),
+"zoom": 1.0
+}
+}, {
+"path": "res://dialogs/cactus_intro.tres",
+"uid": 2217390277731406286,
+"view_state": {
+"scroll_offset": Vector2(584.5, 707.75),
+"zoom": 1.0
+}
+}, {
+"path": "res://dialogs/Town_Dialogs/cactus_npc_dialog.tres",
+"uid": 5440575095388731027,
+"view_state": {
+"scroll_offset": Vector2(-323, 98),
 "zoom": 1.0
 }
 }]
-internal/last_selected_file_index=16
+internal/last_selected_file_index=7

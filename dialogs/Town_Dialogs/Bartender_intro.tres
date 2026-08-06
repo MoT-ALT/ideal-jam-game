@@ -204,65 +204,86 @@ dialogs = {
 "1_DIALOG_1": {
 "": "",
 "default": "You the new sheriff they sent?",
-"en": ""
+"en": "You the new sheriff they sent?",
+"ar": "أنت الشريف الجديد الذي أرسلوه؟"
 },
 "1_DIALOG_10": {
 "": "",
 "default": "You go up against him, you'd better have fast hands. Slow ones just end up buried.",
-"en": ""
+"en": "You go up against him, you'd better have fast hands. Slow ones just end up buried.",
+"ar": "إذا واجهته، فمن الأفضل أن تكون يدك سريعة. البطيئة تنتهي مدفونة."
 },
 "1_DIALOG_11": {
 "": "",
 "default": "You can find him taking over the Bank in the [color=#ab1200][shake]South[/shake]",
-"en": ""
+"en": "You can find him taking over the Bank in the [color=#ab1200][shake]South[/shake]",
+"ar": "يمكنك أن تجده يسيطر على المصرف في [color=#ab1200][shake]الجنوب[/shake]"
 },
 "1_DIALOG_3": {
 "": "",
 "default": "Well, you can turn right back around. They already sent one before you. Didn't end well.",
-"en": ""
+"en": "Well, you can turn right back around. They already sent one before you. Didn't end well.",
+"ar": "حسناً، يمكنك أن تعود من حيث أتيت. لقد أرسلوا واحداً قبلك. لم تنتهِ الأمور على خير."
 },
 "1_DIALOG_5": {
 "": "",
 "default": "What, they didn't tell you about her? A woman, sent here to do exactly what you're about to do. Those things out there made quick work of her.",
-"en": ""
+"en": "What, they didn't tell you about her? A woman, sent here to do exactly what you're about to do. Those things out there made quick work of her.",
+"ar": "ماذا، ألم يخبروك عنها؟ امرأة، أُرسلت إلى هنا لتفعل بالضبط ما أنت على وشك فعله. تلك الأشياء هناك قضت عليها بسرعة."
 },
 "1_DIALOG_6": {
 "": "",
 "default": "We managed to pull her out while they weren't looking. But I don't think she's gonna make it.",
-"en": ""
+"en": "We managed to pull her out while they weren't looking. But I don't think she's gonna make it.",
+"ar": "تمكّنا من انتشالها بينما لم يكونوا ينظرون. لكنني لا أظن أنها ستنجو."
 },
 "1_DIALOG_7": {
 "": "",
 "default": "Anyway if you still wanna do this after hearing that, I've got some information that might help.
 ",
-"en": ""
+"en": "Anyway if you still wanna do this after hearing that, I've got some information that might help.
+",
+"ar": "على أي حال، إذا كنت لا تزال تريد القيام بذلك بعد سماع هذا، فلديّ بعض المعلومات التي قد تساعدك.
+"
 },
 "1_DIALOG_8": {
 "": "",
 "default": "Huh. Guess you've got some meat on your bones after all.
 ",
-"en": ""
+"en": "Huh. Guess you've got some meat on your bones after all.
+",
+"ar": "هاه. يبدو أن لديك بعض الشجاعة بعد كل شيء.
+"
 },
 "1_DIALOG_9": {
 "": "",
 "default": " happen to know one of the monsters. Calls himself Cow Cact now. Used to be a regular in here fastest gunslinger this town ever saw. Man didn't want anybody messing with him, or his hat , [color=#ab1200][shake]Especially[/shake][/color] the hat.",
-"en": ""
+"en": " happen to know one of the monsters. Calls himself Cow Cact now. Used to be a regular in here fastest gunslinger this town ever saw. Man didn't want anybody messing with him, or his hat , [color=#ab1200][shake]Especially[/shake][/color] the hat.",
+"ar": "أعرف أحد الوحوش. يدعو نفسه صبار البقرة الآن. كان من روّاد هذا المكان، أسرع مسدسيّ عرفته هذه البلدة. لم يكن يريد لأحد أن يعبث معه، أو مع قبعته، [color=#ab1200][shake]خاصةً[/shake][/color] القبعة."
 },
 "1_OPT1_1": {
-"default": "Do it"
+"": "",
+"default": "Do it",
+"en": "Do it",
+"ar": "افعلها"
 },
 "1_OPT1_2": {
-"default": "Turn back and leave"
+"": "",
+"default": "Turn back and leave",
+"en": "Turn back and leave",
+"ar": "عد أدراجك وارحل"
 },
 "UNPLUGGED_DIALOG_2": {
 "": "",
 "default": "Nods",
-"en": ""
+"en": "Nods",
+"ar": "يومئ برأسه"
 },
 "UNPLUGGED_DIALOG_4": {
 "": "",
 "default": "Confused",
-"en": ""
+"en": "Confused",
+"ar": "حائر"
 }
 }
 characters = {

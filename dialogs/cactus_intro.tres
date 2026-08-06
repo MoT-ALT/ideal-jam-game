@@ -14,7 +14,7 @@ graph_data = {
 "node_type": "dialogue_node",
 "offset": Vector2(410, 60),
 "portrait": "",
-"size": Vector2(250, 439),
+"size": Vector2(250, 496),
 "to_dialog": "",
 "to_node": ["dialogue_node_2"]
 },
@@ -24,9 +24,9 @@ graph_data = {
 "dialog_key": "1_DIALOG_2",
 "node_index": 2,
 "node_type": "dialogue_node",
-"offset": Vector2(759, 480),
+"offset": Vector2(760, 480),
 "portrait": "",
-"size": Vector2(292, 439),
+"size": Vector2(292, 521),
 "to_dialog": "",
 "to_node": ["END"]
 },
@@ -34,7 +34,7 @@ graph_data = {
 "node_index": 1,
 "node_type": "start_node",
 "offset": Vector2(24, -17),
-"size": Vector2(191, 51),
+"size": Vector2(191, 75),
 "start_id": "1",
 "to_dialog": "",
 "to_node": ["dialogue_node_1"]
@@ -43,14 +43,14 @@ graph_data = {
 }
 dialogs = {
 "1_DIALOG_1": {
-"": "",
+"ar": "حسناً الآن. أظن أن هذا يجيب على ذلك.",
 "default": "Well now. Guess that answers that.",
-"en": ""
+"en": "Well now. Guess that answers that."
 },
 "1_DIALOG_2": {
-"": "",
+"ar": "لا تلمس القبعة. كل شيء آخر مسموح.",
 "default": "Don't touch the hat. Everything else is fair game.",
-"en": ""
+"en": "Don't touch the hat. Everything else is fair game."
 }
 }
 characters = {

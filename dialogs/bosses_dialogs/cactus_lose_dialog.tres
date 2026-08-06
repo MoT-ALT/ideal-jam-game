@@ -14,7 +14,7 @@ graph_data = {
 "node_type": "dialogue_node",
 "offset": Vector2(600, -20),
 "portrait": "",
-"size": Vector2(250, 439),
+"size": Vector2(250, 469),
 "to_dialog": "",
 "to_node": ["dialogue_node_2"]
 },
@@ -26,7 +26,7 @@ graph_data = {
 "node_type": "dialogue_node",
 "offset": Vector2(960, 160),
 "portrait": "",
-"size": Vector2(250, 439),
+"size": Vector2(250, 521),
 "to_dialog": "",
 "to_node": ["dialogue_node_3"]
 },
@@ -38,7 +38,7 @@ graph_data = {
 "node_type": "dialogue_node",
 "offset": Vector2(1300, 300),
 "portrait": "",
-"size": Vector2(250, 439),
+"size": Vector2(250, 496),
 "to_dialog": "",
 "to_node": ["END"]
 },
@@ -46,7 +46,7 @@ graph_data = {
 "node_index": 1,
 "node_type": "start_node",
 "offset": Vector2(280, 160),
-"size": Vector2(191, 51),
+"size": Vector2(191, 75),
 "start_id": "1",
 "to_dialog": "",
 "to_node": ["dialogue_node_1"]
@@ -55,19 +55,19 @@ graph_data = {
 }
 dialogs = {
 "1_DIALOG_1": {
-"": "",
+"ar": "أليس هذا شيئاً؟",
 "default": "Ain't that somethin'.",
-"en": ""
+"en": "Ain't that somethin'."
 },
 "1_DIALOG_2": {
-"": "",
+"ar": "لم  يلمس احد تلك القبعة منذ مدة طويلة.",
 "default": "Nobody's touched that hat in a long while.",
-"en": ""
+"en": "Nobody's touched that hat in a long while."
 },
 "1_DIALOG_3": {
-"": "",
+"ar": "البلدة ملكك. في الوقت الحالي.",
 "default": "Town's yours. For now.",
-"en": ""
+"en": "Town's yours. For now."
 }
 }
 characters = {

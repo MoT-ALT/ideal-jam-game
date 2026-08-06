@@ -45,12 +45,14 @@ dialogs = {
 "1_DIALOG_1": {
 "": "",
 "default": "Welcome to my saloon, stranger. Quiet night tonight.",
-"en": ""
+"en": "Welcome to my saloon, stranger. Quiet night tonight.",
+"ar": "مرحباً بك في صالوني أيها الغريب. ليلة هادئة الليلة."
 },
 "1_DIALOG_2": {
 "": "",
 "default": "...",
-"en": ""
+"en": "...",
+"ar": "..."
 }
 }
 characters = {

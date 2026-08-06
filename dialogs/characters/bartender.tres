@@ -7,7 +7,8 @@ script = ExtResource("1_qv8ha")
 key_name = "bartender"
 display_name = {
 "default": "Bartender",
-"en": ""
+"en": "Bartender",
+"ar": "الساقي"
 }
 dialog_box_uid = 4846592767281361871
 dialog_box_path = "res://dialogs/Scenes/town/Town_Dialog.tscn"

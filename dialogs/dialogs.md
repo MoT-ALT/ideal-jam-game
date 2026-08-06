@@ -104,3 +104,52 @@ _The Coyote looms over the fallen player_
 **[GAME OVER.]**
 
 ---
+INT. TOWN BANK — DAY
+
+COW CACT
+Heavy on the heel, light on the toe. That's a lawman's walk.
+
+COW CACT
+New sheriff, huh. They keep sendin' 'em.
+
+COW CACT
+Woman before you had good hands. Almost fast enough.
+
+COW CACT
+Walk out that door, or pull. Find out if "almost" runs in the family.
+
+Bank's under my watch, partner. Touch the hat, and you'll be planted next to them graves.
+
+المصرف تحت حراستي يا صاحبي. المس القبعة، وستدفن بجانب تلك القبور.
+
+IF PLAYER STAYS:
+
+COW CACT
+Well now. Guess that answers that.
+
+COW CACT
+Don't touch the hat. Everything else is fair game.
+
+[BOSS FIGHT: COW CACT]
+
+IF PLAYER WINS:
+
+COW CACT
+Ain't that somethin'.
+
+COW CACT
+Nobody's touched that hat in a long while.
+
+COW CACT
+Town's yours. For now.
+
+IF PLAYER LOSES:
+
+COW CACT
+Slow hands.
+
+COW CACT
+Told you how this'd go.
+
+COW CACT
+Bury this one proper.

@@ -31,8 +31,10 @@ graph_data = {
 }
 dialogs = {
 "1_DIALOG_1": {
+"": "",
 "default": "...To think I ever doubted you.",
-"en": ""
+"en": "...To think I ever doubted you.",
+"ar": "...أن أظن أنني شككت فيك يوماً."
 }
 }
 characters = {

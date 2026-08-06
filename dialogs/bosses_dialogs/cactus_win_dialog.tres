@@ -26,7 +26,7 @@ graph_data = {
 "node_type": "dialogue_node",
 "offset": Vector2(120, -100),
 "portrait": "",
-"size": Vector2(250, 439),
+"size": Vector2(250, 548),
 "to_dialog": "",
 "to_node": ["dialogue_node_3"]
 },
@@ -38,7 +38,7 @@ graph_data = {
 "node_type": "dialogue_node",
 "offset": Vector2(480, -20),
 "portrait": "",
-"size": Vector2(250, 439),
+"size": Vector2(250, 469),
 "to_dialog": "",
 "to_node": ["END"]
 },
@@ -55,17 +55,22 @@ graph_data = {
 }
 dialogs = {
 "1_DIALOG_1": {
+"ar": "أيادٍ بطيئة.",
 "default": "Slow hands.",
-"en": ""
+"en": "Slow hands."
 },
 "1_DIALOG_2": {
+"ar": "قلت لك كيف ستسير الأمور.
+",
 "default": "Told you how this'd go.
 ",
-"en": ""
+"en": "Told you how this'd go.
+"
 },
 "1_DIALOG_3": {
+"ar": "ادفن هذا كما ينبغي.",
 "default": "Bury this one proper.",
-"en": ""
+"en": "Bury this one proper."
 }
 }
 characters = {

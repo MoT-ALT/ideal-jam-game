@@ -4,7 +4,7 @@ const SHOOTING := preload("res://SFX/shooting.wav")
 const HIT := preload("res://SFX/hit hurt sound.wav")
 const TEXT_SKIP := preload("res://SFX/text skip.wav")
 const DIGGING := preload("res://SFX/coffin digging.wav")
-const MUSIC := preload("res://vacaroxa--generic-old-west-graphics--v.1.0/Audio/01 - Welcome To The Wild West.ogg")
+const MUSIC := preload("res://vacaroxa--generic-old-west-graphics--v.1.0/Audio/01 - Welcome To The Wild West (Loop Version).ogg")
 
 var _players: Dictionary = {}
 var _music_player: AudioStreamPlayer
@@ -17,6 +17,8 @@ func _ready() -> void:
 	_players["digging"] = _make_player(DIGGING)
 	_music_player = _make_player(MUSIC)
 	_music_player.volume_db = -10.0
+	if _music_player.stream is AudioStreamOggVorbis:
+		(_music_player.stream as AudioStreamOggVorbis).loop = true
 	start_music()
 
 

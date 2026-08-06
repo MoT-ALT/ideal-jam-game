@@ -81,27 +81,32 @@ dialogs = {
 "1_DIALOG_1": {
 "": "",
 "default": "No... no, this ain't — I've outrun sheriffs before, outrun the law itself...",
-"en": ""
+"en": "No... no, this ain't — I've outrun sheriffs before, outrun the law itself...",
+"ar": "لا... لا، هذا ليس — لقد هربت من الشُرَف من قبل، هربت من القانون نفسه..."
 },
 "1_DIALOG_2": {
 "": "",
 "default": "You didn't outrun nothin'. You just hadn't met the right one yet.",
-"en": ""
+"en": "You didn't outrun nothin'. You just hadn't met the right one yet.",
+"ar": "لم تهرب من شيء. أنت فقط لم تكن قد قابلت الشخص المناسب بعد."
 },
 "1_DIALOG_3": {
 "": "",
 "default": "The desert remembers me, lawdog. Long after your bones are dust, they'll still be tellin' tales of the coyote who danced with death...",
-"en": ""
+"en": "The desert remembers me, lawdog. Long after your bones are dust, they'll still be tellin' tales of the coyote who danced with death...",
+"ar": "الصحراء تتذكرني أيها الشرطي. وبعد زمن طويل من أن تصبح عظامك غباراً، سيظلون يروون حكايات عن الذئب الذي رقص مع الموت..."
 },
 "1_DIALOG_4": {
 "": "",
 "default": "Maybe. But it'll be a story that ends right here.",
-"en": ""
+"en": "Maybe. But it'll be a story that ends right here.",
+"ar": "ربما. لكنها ستكون قصة تنتهي هنا."
 },
 "1_DIALOG_5": {
 "": "",
 "default": "Heh... heh heh heh... this ain't over, tin star... it's never over...",
-"en": ""
+"en": "Heh... heh heh heh... this ain't over, tin star... it's never over...",
+"ar": "هيه... هيه هيه هيه... هذه لم تنتهِ، أيها النجمة الصفيحية... لم تنتهِ أبداً..."
 }
 }
 characters = {

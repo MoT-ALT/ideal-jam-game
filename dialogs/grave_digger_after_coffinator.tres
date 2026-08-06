@@ -54,12 +54,16 @@ graph_data = {
 }
 dialogs = {
 "1_DIALOG_1": {
+"": "",
 "default": "Well, well. Just as I expected  from someone who could take down my fastest gunslinger.",
-"en": ""
+"en": "Well, well. Just as I expected  from someone who could take down my fastest gunslinger.",
+"ar": "حسناً، حسناً. تماماً كما توقعتُ ممن يستطيع أن يسقط أسرع مسدسيّ."
 },
 "1_DIALOG_2": {
+"": "",
 "default": "I won't let you take this town from me!",
-"en": ""
+"en": "I won't let you take this town from me!",
+"ar": "لن أسمح لك بأخذ هذه البلدة مني!"
 }
 }
 characters = {

@@ -1,16 +1,17 @@
 [gd_scene format=4 uid="uid://cl251aavy6tbg"]
 
 [ext_resource type="StyleBox" uid="uid://b177ikw2e7gfa" path="res://UI/new_style_box_flat.tres" id="1_m6e0p"]
-[ext_resource type="FontFile" uid="uid://c2cbm4lkixqu4" path="res://UI/font/PixelGlobal-Regular.ttf" id="2_h81ot"]
+[ext_resource type="FontVariation" uid="uid://cpdgu2b7r8a0v" path="res://UI/font/PixelGlobalArabic.tres" id="2_h81ot"]
 [ext_resource type="Texture2D" uid="uid://dsro7t2q28hvm" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/Atlas.png" id="2_nltto"]
 [ext_resource type="Script" uid="uid://cj2ex1i0jq0wb" path="res://UI/exit.gd" id="3_27fn8"]
 [ext_resource type="Script" uid="uid://brv3fcffta604" path="res://UI/play.gd" id="3_y4yjw"]
-[ext_resource type="Script" path="res://UI/music.gd" id="10_music"]
 [ext_resource type="Texture2D" uid="uid://y5hjaneuu2q0" path="res://UI/min/1785497664912.png" id="4_ibotj"]
 [ext_resource type="Texture2D" uid="uid://cheejtrxca7sm" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/Mobs/Coffin/Coffin Back Sheet-patched.png" id="4_n5ude"]
 [ext_resource type="Texture2D" uid="uid://5fcxmnykwj8a" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/Mobs/Cactus/Cactus Back Sheet.png" id="5_y4yjw"]
 [ext_resource type="Texture2D" uid="uid://vj0jbim760nx" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/NPC/NPC's.png" id="8_6rr40"]
 [ext_resource type="Texture2D" uid="uid://dyrqnen8fxti5" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/Mobs/Cactus/Cactus Side Sheet.png" id="9_0w6e5"]
+[ext_resource type="Script" uid="uid://c07b55x0b4odu" path="res://UI/music.gd" id="10_music"]
+[ext_resource type="Script" uid="uid://c8k2d4oax1m3w" path="res://UI/language.gd" id="11_language"]
 
 [sub_resource type="Theme" id="Theme_7wvu4"]
 default_font = ExtResource("2_h81ot")
@@ -3061,6 +3062,13 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 41
 text = "MUSIC: ON"
 script = ExtResource("10_music")
+
+[node name="LANGUAGE" type="Button" parent="NinePatchRect/VBoxContainer" unique_id=641836038]
+z_index = 2000
+layout_mode = 2
+theme_override_font_sizes/font_size = 41
+text = "LANGUAGE: EN"
+script = ExtResource("11_language")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="NinePatchRect/VBoxContainer" unique_id=1928851910]
 tile_map_data = PackedByteArray("AAANAP7/AAAAAAAAAAANAP//AAAAAAEAAAAOAP7/AAABAAAAAAAOAP//AAABAAEAAAD2////AQA4AAUAAAD2/wAAAQA4AAYAAAD2/wEAAQA4AAcAAAD3////AQA5AAUAAAD3/wAAAQA5AAYAAAD3/wEAAQA5AAcAAAA=")

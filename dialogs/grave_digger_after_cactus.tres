@@ -81,27 +81,32 @@ dialogs = {
 "1_DIALOG_1": {
 "": "",
 "default": "Heard you got one of 'em.",
-"en": ""
+"en": "Heard you got one of 'em.",
+"ar": "سمعت أنك قضيت على أحدهم."
 },
 "1_DIALOG_2": {
 "": "",
 "default": "Never thought I'd live long enough to see this town breathe free again.",
-"en": ""
+"en": "Never thought I'd live long enough to see this town breathe free again.",
+"ar": "لم أظن أبداً أنني سأعيش طويلاً لأرى هذه البلدة تتنفس بحرية من جديد."
 },
 "1_DIALOG_3": {
 "": "",
 "default": "...I've got some information on that damn loose coffin roaming the outskirts on the [color=#ab1200][wave]East[/wave][/color]. Might seem impossible to put down, but ",
-"en": ""
+"en": "...I've got some information on that damn loose coffin roaming the outskirts on the [color=#ab1200][wave]East[/wave][/color]. Might seem impossible to put down, but ",
+"ar": "...لديّ بعض المعلومات عن ذلك النعش الفضفاض اللعين الذي يجوب الأطراف في [color=#ab1200][wave]الشرق[/wave][/color]. قد يبدو من المستحيل إسقاطه، لكن "
 },
 "1_DIALOG_4": {
 "": "",
 "default": "Hit the hole in the coffin. That ought to do enough damage to send him back where he came from.",
-"en": ""
+"en": "Hit the hole in the coffin. That ought to do enough damage to send him back where he came from.",
+"ar": "اضرب الثقب في النعش. هذا يجب أن يسبب ضرراً كافياً ليعيده إلى حيث أتى."
 },
 "1_DIALOG_5": {
 "": "",
 "default": "Six feet under. Where he belongs.",
-"en": ""
+"en": "Six feet under. Where he belongs.",
+"ar": "ستة أقدام تحت الأرض. حيث مكانه."
 }
 }
 characters = {

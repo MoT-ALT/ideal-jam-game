@@ -33,7 +33,8 @@ dialogs = {
 "1_DIALOG_1": {
 "": "",
 "default": "Should've turned back when you had the chance.",
-"en": ""
+"en": "Should've turned back when you had the chance.",
+"ar": "كان عليك أن تعود أدراجك عندما أتيحت لك الفرصة."
 }
 }
 characters = {

@@ -12,9 +12,9 @@ graph_data = {
 "dialog_key": "1_DIALOG_1",
 "node_index": 1,
 "node_type": "dialogue_node",
-"offset": Vector2(-360, -600),
+"offset": Vector2(-1100, -200),
 "portrait": "",
-"size": Vector2(250, 439),
+"size": Vector2(250, 548),
 "to_dialog": "",
 "to_node": ["dialogue_node_2"]
 },
@@ -24,17 +24,41 @@ graph_data = {
 "dialog_key": "1_DIALOG_2",
 "node_index": 2,
 "node_type": "dialogue_node",
-"offset": Vector2(-20, -520),
+"offset": Vector2(-800, -100),
 "portrait": "",
-"size": Vector2(250, 439),
+"size": Vector2(250, 521),
+"to_dialog": "",
+"to_node": ["dialogue_node_3"]
+},
+"dialogue_node_3": {
+"char_expand": true,
+"character": "cow_cactus_npc",
+"dialog_key": "1_DIALOG_3",
+"node_index": 3,
+"node_type": "dialogue_node",
+"offset": Vector2(-500, -20),
+"portrait": "",
+"size": Vector2(250, 548),
+"to_dialog": "",
+"to_node": ["dialogue_node_4"]
+},
+"dialogue_node_4": {
+"char_expand": true,
+"character": "cow_cactus_npc",
+"dialog_key": "1_DIALOG_4",
+"node_index": 4,
+"node_type": "dialogue_node",
+"offset": Vector2(-200, 80),
+"portrait": "",
+"size": Vector2(250, 548),
 "to_dialog": "",
 "to_node": ["END"]
 },
 "start_node_1": {
 "node_index": 1,
 "node_type": "start_node",
-"offset": Vector2(-620, -680),
-"size": Vector2(191, 51),
+"offset": Vector2(-1300, -150),
+"size": Vector2(191, 75),
 "start_id": "1",
 "to_dialog": "",
 "to_node": ["dialogue_node_1"]
@@ -43,14 +67,27 @@ graph_data = {
 }
 dialogs = {
 "1_DIALOG_1": {
-"": "",
-"default": "Bank's under my watch, partner. Touch the hat, and you'll be planted next to them graves.",
-"en": ""
+"ar": "ثقيل على الكعب، خفيف على الأصابع. تلك مشية رجل القانون.",
+"default": "Heavy on the heel, light on the toe. That's a lawman's walk.",
+"en": "Heavy on the heel, light on the toe. That's a lawman's walk."
 },
 "1_DIALOG_2": {
-"": "",
-"default": "Everything else in this town is fair game.",
-"en": ""
+"ar": "شريف جديد، هاه. ما زالوا يرسلونهم.",
+"default": "New sheriff, huh. They keep sendin' 'em.",
+"en": "New sheriff, huh. They keep sendin' 'em."
+},
+"1_DIALOG_3": {
+"ar": "المرأة التي سبقتك كانت ماهرة. كادت تكون سريعة بما يكفي.",
+"default": "Woman before you had good hands. Almost fast enough.",
+"en": "Woman before you had good hands. Almost fast enough."
+},
+"1_DIALOG_4": {
+"ar": "المصرف تحت حراستي يا صاحبي. المس القبعة، وستدفن بجانب تلك القبور.
+",
+"default": "Bank's under my watch, partner. Touch the hat, and you'll be planted next to them graves.
+",
+"en": "Bank's under my watch, partner. Touch the hat, and you'll be planted next to them graves.
+"
 }
 }
 characters = {

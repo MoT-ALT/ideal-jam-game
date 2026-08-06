@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://edft7gqw2yrf" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Generic Old West Graphicis/Mobs/Coyote/Coyote Front Sheet.png" id="17_coy"]
 [ext_resource type="Texture2D" uid="uid://qua1jblvlb2o" path="res://Western_HUD/kenney_ui-pack-pixel-adventure/Atlas.png" id="18_t4dhv"]
 [ext_resource type="Theme" uid="uid://bld8u24d1r6g4" path="res://dialogs/new_theme.tres" id="19_tmyq7"]
+[ext_resource type="AudioStream" uid="uid://dg5ygr45bgxkg" path="res://vacaroxa--generic-old-west-graphics--v.1.0/Audio/01 - Welcome To The Wild West (Loop Version).ogg" id="20_o3mbt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ity57"]
 texture = ExtResource("1_0ugm7")
@@ -2594,6 +2595,9 @@ grow_vertical = 0
 theme = ExtResource("19_tmyq7")
 theme_override_font_sizes/font_size = 121
 text = "Press E to interact"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1676242705]
+stream = ExtResource("20_o3mbt")
 
 [connection signal="body_entered" from="Cow_cactus" to="." method="_on_cow_cactus_body_entered"]
 [connection signal="body_exited" from="Cow_cactus" to="." method="_on_cow_cactus_body_exited"]

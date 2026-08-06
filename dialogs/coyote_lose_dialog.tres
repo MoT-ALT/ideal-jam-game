@@ -14,7 +14,7 @@ graph_data = {
 "node_type": "dialogue_node",
 "offset": Vector2(340, 160),
 "portrait": "",
-"size": Vector2(250, 439),
+"size": Vector2(250, 548),
 "to_dialog": "",
 "to_node": ["END"]
 },
@@ -22,7 +22,7 @@ graph_data = {
 "node_index": 1,
 "node_type": "start_node",
 "offset": Vector2(60, 200),
-"size": Vector2(191, 51),
+"size": Vector2(191, 75),
 "start_id": "1",
 "to_dialog": "",
 "to_node": ["dialogue_node_1"]
@@ -31,9 +31,9 @@ graph_data = {
 }
 dialogs = {
 "1_DIALOG_1": {
-"": "",
+"ar": "هذه المدينة كانت ملكي... بنيتها من لا شيء...",
 "default": "This town was mine... I built it from nothing...",
-"en": ""
+"en": "This town was mine... I built it from nothing..."
 }
 }
 characters = {
